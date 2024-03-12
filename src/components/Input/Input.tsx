@@ -2,12 +2,12 @@ import { ChangeEvent } from "react";
 import styles from './Input.module.scss';
 
 type TProps = {
-  title: string,
+  title?: string,
   value: string,
   onChange: (event: ChangeEvent) => void,
 }
 
-export const Input: React.FC<TProps> = ({ title, value, onChange }) => {
+export const Input: React.FC<TProps> = ({ title = 'Input', value, onChange }) => {
   return (
     <label className={styles.wrapper}>
       {title}
