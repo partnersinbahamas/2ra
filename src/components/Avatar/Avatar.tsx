@@ -14,7 +14,7 @@ type TProps = {
 export const Avatar: React.FC<TProps> = ({
   firstName,
   lastName,
-  size
+  size,
 }) => {
   return (
     <AvatarComponent

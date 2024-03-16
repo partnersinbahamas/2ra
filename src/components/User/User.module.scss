@@ -1,0 +1,19 @@
+.user {
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.name {
+  font-family: 'Times New Roman', Times, serif;
+  &-small {
+    font-size: 10px;
+  }
+
+  &-medium {
+    font-size: 14px;
+  }
+
+  &-large {
+    font-size: 18px;
+  }
+}

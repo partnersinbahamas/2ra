@@ -1,19 +1,21 @@
 import { Meta, StoryObj} from "@storybook/react";
 import { User } from "./User";
-import { halfWidth } from '../../../../.storybook/decorators';
+import { halfWidth } from '../../../.storybook/decorators';
 
 const meta = {
-  title: 'Components/Athomic/User',
+  title: 'Displays/User',
   component: User,
   tags: ['autodocs'],
   args: {
     name: 'Denys Bokov',
+    size: 'medium',
   },
   argTypes: {
     name: { control: 'text' },
     withBackGround: { control: 'boolean' },
     backgroundColor: { control: 'color' },
-  }
+    size: { control: 'inline-radio', options: ['small', 'medium', 'large'] }
+  },
   
 } satisfies Meta<typeof User>
 

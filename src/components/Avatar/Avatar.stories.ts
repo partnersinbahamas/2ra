@@ -11,20 +11,17 @@ const meta = {
   args: {
     firstName: 'Denys',
     lastName: 'Bokov',
-    size: 'medium',
   },
   argTypes: {
     firstName: { control: 'text' },
     lastName: { control: 'text' },
     size: {
-      control: 'radio',
+      control: 'inline-radio',
       options: ['small', 'medium', 'large'],
     },
   }
 } satisfies Meta<typeof Avatar>;
-
-export default meta
-
+export default meta;
 type TStory = StoryObj<typeof meta>;
 
 export const Small: TStory = {
@@ -32,13 +29,11 @@ export const Small: TStory = {
     size: 'small',
   },
 };
-
 export const Medium: TStory = {
   args: {
     size: 'medium',
   },
 };
-
 export const Large: TStory = {
   args: {
     size: 'large',
