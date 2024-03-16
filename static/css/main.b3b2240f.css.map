@@ -1,1 +1,0 @@
-{"version":3,"file":"static/css/main.b3b2240f.css","mappings":"AAAA,KAGE,6CAFA,SACA,SACA","sources":["index.scss"],"sourcesContent":["body {\n  margin: 0;\n  padding: 0;\n  font-family: Verdana, Geneva, Tahoma, sans-serif;\n}"],"names":[],"sourceRoot":""}
