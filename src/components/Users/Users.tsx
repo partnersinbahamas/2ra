@@ -16,7 +16,7 @@ export const Users: React.FC<TProps> = ({ title, users = [], styled }) => {
       {users && (
         <ul className={classNames(styles.list, {[styles.styled]: styled})}>
           {users.map((user) => (
-            <User size="small" name={user.name} />
+            <User size="small" user={user} />
           ))}
         </ul>
       )}

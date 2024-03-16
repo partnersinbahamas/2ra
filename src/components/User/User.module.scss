@@ -5,15 +5,35 @@
 
 .name {
   font-family: 'Times New Roman', Times, serif;
-  &-small {
-    font-size: 10px;
-  }
+}
 
-  &-medium {
-    font-size: 14px;
-  }
+.small {
+  font-size: 10px !important;
+}
 
-  &-large {
-    font-size: 18px;
-  }
+.medium {
+  font-size: 14px !important;
+}
+
+.large {
+  font-size: 18px !important;
+}
+
+.button {
+  width: 100%;
+  background-color: transparent;
+  border: 0;
+}
+
+.table-item {
+  padding: 5px !important;
+  border: 0 !important;
+}
+
+.row {
+  border-bottom: 2px solid #ddd;
+}
+
+.head {
+  font-weight: 700 !important;
 }

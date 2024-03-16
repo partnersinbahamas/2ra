@@ -7,11 +7,10 @@ const meta = {
   component: User,
   tags: ['autodocs'],
   args: {
-    name: 'Denys Bokov',
     size: 'medium',
+    user: await (await fetch('https://jsonplaceholder.typicode.com/users/1')).json()
   },
   argTypes: {
-    name: { control: 'text' },
     withBackGround: { control: 'boolean' },
     backgroundColor: { control: 'color' },
     size: { control: 'inline-radio', options: ['small', 'medium', 'large'] }
@@ -23,14 +22,11 @@ export default meta;
 type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
-  args: {
-    name: 'Denys Bokov',
-  }
+  args: {},
 }
 
 export const Background: Story = {
   args: {
-    name: 'Denys Bokov',
     withBackGround: true,
     backgroundColor: '#eee'
   }
