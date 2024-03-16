@@ -28,14 +28,15 @@ export const Default: Story = {
   }
 }
 
-export const WithBackGround: Story = {
+export const Background: Story = {
   args: {
+    name: 'Denys Bokov',
     withBackGround: true,
-    backgroundColor: '#eee',
+    backgroundColor: '#eee'
   }
 }
 
-export const WithHalfWidth: Story = {
+export const Half: Story = {
   args: {
     withBackGround: true,
     backgroundColor: '#eee',
