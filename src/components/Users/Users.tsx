@@ -1,5 +1,6 @@
 import styles from "./Users.module.scss";
 import classNames from "classnames";
+import { User } from "../User/User";
 
 type TProps = {
   title: string,
@@ -15,7 +16,7 @@ export const Users: React.FC<TProps> = ({ title, users = [], styled }) => {
       {users && (
         <ul className={classNames(styles.list, {[styles.styled]: styled})}>
           {users.map((user) => (
-            <li>{user.name}</li>
+            <User size="small" name={user.name} />
           ))}
         </ul>
       )}
