@@ -1,6 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Users } from "./Users";
 
+/**
+ * Displays users component with expanded info's.
+ */
+
 const meta = {
   title: 'Displays/Users',
   component: Users,

@@ -1,6 +1,9 @@
 import { Meta, StoryObj} from "@storybook/react";
 import { User } from "./User";
 import { halfWidth } from '../../../.storybook/decorators';
+/**
+ * Separate user component.
+ */
 
 const meta = {
   title: 'Displays/User',
@@ -28,7 +31,7 @@ export const Default: Story = {
 export const Background: Story = {
   args: {
     withBackGround: true,
-    backgroundColor: '#eee'
+    backgroundColor: '#eee',
   }
 }
 

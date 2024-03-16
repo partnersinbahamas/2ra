@@ -1,6 +1,10 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { Avatar } from '../Avatar/Avatar';
 
+/**
+ * Avatar conponent with user picture and fullname.
+ */
+
 const meta = {
   title: 'Displays/Avatar',
   component: Avatar,

@@ -15,8 +15,8 @@ type TProps = {
 
 export const User: React.FC<TProps> = ({
   user,
-  withBackGround,
-  backgroundColor,
+  withBackGround = true,
+  backgroundColor = '#eee',
   size,
 }) => {
   const [isExpanded, setIsExpanded] = useState<boolean>(false);
