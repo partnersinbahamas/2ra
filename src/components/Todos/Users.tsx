@@ -1,18 +1,18 @@
 type TProps = {
   title: string,
-  todos: any[],
   styled: boolean,
+  users?: any[],
 }
 
-export const Todos: React.FC<TProps> = ({ title, todos, styled }) => {
+export const Users: React.FC<TProps> = ({ title, users = [], styled }) => {
   return (
     <label>
       <span>{title}</span>
 
-      {todos && (
+      {users && (
         <ul style={{listStyle: styled ? 'circle' : 'none'}}>
-          {todos.map((todo) => (
-            <li>{todo.name}</li>
+          {users.map((user) => (
+            <li>{user.name}</li>
           ))}
         </ul>
       )}
