@@ -5,11 +5,12 @@ const meta = {
   title: 'Components/Buttons/SquareButton',
   component: SquareButon,
   tags: ['autodocs'],
+  parameters: {layout: 'centered'},
   argTypes: {
     title: { control: 'text' },
     disabled: { control: 'boolean' },
     radius: { control: 'number' },
-    valiant: { control: 'inline-radio', options: ['primary', 'default'] }
+    valiant: { control: 'inline-radio', options: ['primary', 'default', 'submit'] }
   },
   args: {
     valiant: 'default',
@@ -42,3 +43,10 @@ export const Primary: TStory = {
     valiant: 'primary',
   }
 }
+
+export const Submit: TStory = {
+    args: {
+      title: '=>',
+      valiant: 'submit',
+    }
+  }

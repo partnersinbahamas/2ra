@@ -45,5 +45,12 @@ const PriamaryButton = styled(SquareButtonElement)`
   }
 `
 
+const SubmitButton = styled(SquareButtonElement).attrs({type: 'submit'})`
+  background-color: #F6F209;
+  border-color: #E6E34C;
+  color: #fff;
+  font-weight: 700;
+`
+
 export default SquareButtonElement;
-export { PriamaryButton };
+export { PriamaryButton, SubmitButton };

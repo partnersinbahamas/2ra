@@ -1,8 +1,10 @@
+import React from "react";
 import classNames from "classnames";
 import SquareButtonElement from "./StyledButton.styles";
-import { PriamaryButton } from "./StyledButton.styles";
+import { PriamaryButton, SubmitButton } from "./StyledButton.styles";
+import MarkunreadIcon from '@mui/material';
 
-type TVariat = 'primary' | 'default';
+type TVariat = 'submit' | 'primary' | 'default';
 
 export type TProps = {
   title?: string,
@@ -30,6 +32,17 @@ export const SquareButon: React.FC<TProps> = ({
         >
           {title}
         </ PriamaryButton>
+      )
+    case 'submit':
+      return (
+        <SubmitButton
+          className={classNames({ 'disabled': disabled })}
+          onClick={onClick}
+          disabled={disabled}
+          radius={radius}
+        >
+          {title}
+        </ SubmitButton>
       )
     default:
       return (
