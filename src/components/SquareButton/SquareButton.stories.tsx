@@ -7,7 +7,8 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
-    disabled: { control: 'boolean' }
+    disabled: { control: 'boolean' },
+    radius: { control: 'number' },
   }
 } satisfies Meta<typeof SquareButon>;
 
@@ -23,3 +24,10 @@ export const Disabled: TStory = {
     disabled: true,
   }
 };
+
+export const Radiused: TStory = {
+    args: {
+      title: 'Radius',
+      radius: 10,
+    }
+  };

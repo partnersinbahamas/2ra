@@ -1,6 +1,7 @@
 import styled from "styled-components";
+import { TProps } from './SquareButton';
 
-const SquareButtonElement = styled.button`
+const SquareButtonElement = styled.button<TProps>`
   background-color: #eee;
   border: 3px solid #ddd;
   padding: 5px;
@@ -10,6 +11,7 @@ const SquareButtonElement = styled.button`
   font-weight: 600;
   color: #545454;
   cursor: pointer;
+  border-radius: ${({radius}) => radius ? `${radius}px` : '0'};
 
   &:hover {
     background-color: #ddd;
