@@ -29,4 +29,21 @@ const SquareButtonElement = styled.button<TProps>`
   };
 `;
 
+const PriamaryButton = styled(SquareButtonElement)`
+  background-color: #0BB2FA;
+  color: #fff;
+  border-color: #109DDA;
+
+  &:hover {
+    background-color: #109DDA;
+  }
+
+  &.disabled {
+    background-color: #7DD6FC;
+    border-color: #61B2D5;
+    cursor: not-allowed;
+  }
+`
+
 export default SquareButtonElement;
+export { PriamaryButton };

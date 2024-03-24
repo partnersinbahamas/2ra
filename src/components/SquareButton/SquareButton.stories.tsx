@@ -9,6 +9,10 @@ const meta = {
     title: { control: 'text' },
     disabled: { control: 'boolean' },
     radius: { control: 'number' },
+    valiant: { control: 'inline-radio', options: ['primary', 'default'] }
+  },
+  args: {
+    valiant: 'default',
   }
 } satisfies Meta<typeof SquareButon>;
 
@@ -31,3 +35,10 @@ export const Radiused: TStory = {
       radius: 10,
     }
   };
+
+export const Primary: TStory = {
+  args: {
+    title: 'Primary',
+    valiant: 'primary',
+  }
+}
