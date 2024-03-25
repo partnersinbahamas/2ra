@@ -1,42 +1,47 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { ConnectOnChange } from '../../../.storybook/decorators';
-import { Input } from "./Input";
 import { within, userEvent } from "@storybook/test";
 
+import { ConnectOnChange } from '../../../.storybook/decorators';
+import { Input } from "./Input";
+
 const meta = {
-  title: 'Components/Athomic/Input',
+  title: 'Athomic/Input',
   component: Input,
-  parameters: {
-    layout: 'centered',
-  },
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
     value: { control: 'text' },
+    error: { control: 'text' },
+    disabled: { control: 'boolean' },
+    type: { control: 'radio',
+      options: ['text', 'password', 'email', 'number']
+    },
     onChange: { action: 'changed' },
   },
   decorators: [ConnectOnChange],
 } satisfies Meta<typeof Input>;
-
 export default meta;
-
 type Story = StoryObj<typeof meta>;
-
 export const Default: Story = {
   args: {
     title: 'Input',
     value: 'value',
   }
 }
-
-export const WithPlay: Story = {
+export const Error: Story = {
   args: {
-    value: 'With Play',
+    title: 'Handled error',
+    error: '...pzzz..pz'
+  }
+}
+export const Play: Story = {
+  args: {
+    value: '',
   },
   play: async (context) => {
     const canvas = within(context.canvasElement);
 
-    const inputElement = canvas.getByDisplayValue('With Play');
-    await userEvent.type(inputElement, ' just testing play fn', { delay: 100 });
+    const inputElement = canvas.getByDisplayValue('Play');
+    await userEvent.type(inputElement, ' play fn', { delay: 100 });
   }
 }

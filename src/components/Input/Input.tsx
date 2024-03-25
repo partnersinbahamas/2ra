@@ -1,21 +1,33 @@
-import { ChangeEvent } from "react";
-import styles from './Input.module.scss';
+import React, { InputHTMLAttributes }  from "react";
+import classNames from "classnames";
+import { Error, InputComponent, InputWrapper, Label } from "./Input.styles";
 
-type TProps = {
+export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string,
-  value: string,
-  onChange: (event: ChangeEvent) => void,
-}
-
-export const Input: React.FC<TProps> = ({ title = 'Input', value, onChange }) => {
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
+  error?: string,
+};
+export const Input: React.FC<TProps> = ({
+  title,
+  value,
+  onChange,
+  error,
+  ...props
+}) => {
   return (
-    <label className={styles.wrapper}>
-      {title}
-      <input
-        type="text"
+    <InputWrapper>
+      <Label>{title}</Label>
+      <InputComponent
         value={value}
         onChange={onChange}
+        className={classNames({ error })}
+        {...props}
       />
-    </label>
+      {error && (
+        <Error>
+          {error}
+        </Error>  
+      )}
+    </InputWrapper>
   );
 };
