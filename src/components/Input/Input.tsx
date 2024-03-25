@@ -16,13 +16,15 @@ export const Input: React.FC<TProps> = ({
 }) => {
   return (
     <InputWrapper>
-      <Label>{title}</Label>
+      <Label>
+        {title}
       <InputComponent
         value={value}
         onChange={onChange}
         className={classNames({ error })}
         {...props}
       />
+      </Label>
       {error && (
         <Error>
           {error}
