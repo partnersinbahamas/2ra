@@ -25,19 +25,15 @@ describe("Input", () => {
     expect(container).toMatchInlineSnapshot(`
       <div>
         <div
-          class="sc-beySPh ErGXa 
-            undefined,
-            undefined
-          "
-          id="input"
+          class="sc-beySPh ErGXa"
         >
           <label
             class="sc-dmyCSP jGsYty"
             id="label"
           >
             <h3
+              class="sc-eDLKkx ebsndr"
               id="heading"
-              style="margin: 0px;"
             />
             <input
               class="sc-guDLey QRLu error undefined-error undefined-error"
@@ -46,7 +42,7 @@ describe("Input", () => {
           </label>
           <span
             class="sc-hLQSwg hVgQbk"
-            id="error"
+            id="error-message"
           >
             error
           </span>

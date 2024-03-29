@@ -3,19 +3,15 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa 
-      undefined,
-      undefined
-    "
-    id="input"
+    class="sc-beySPh ErGXa"
   >
     <label
       class="sc-dmyCSP jGsYty"
       id="label"
     >
       <h3
+        class="sc-eDLKkx ebsndr"
         id="heading"
-        style="margin: 0px;"
       />
       <input
         class="sc-guDLey QRLu"
