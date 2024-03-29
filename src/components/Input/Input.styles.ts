@@ -32,4 +32,7 @@ const Label = styled.label`
 const Error = styled.span`
   color: red;
 `;
-export{ InputWrapper, InputComponent, Label, Error };
+const Heading = styled.h3`
+  margin: 0;
+`
+export{ InputWrapper, InputComponent, Label, Error, Heading };

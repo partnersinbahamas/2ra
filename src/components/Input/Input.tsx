@@ -1,6 +1,6 @@
 import React, { InputHTMLAttributes }  from "react";
 import classNames from "classnames";
-import { Error, InputComponent, InputWrapper, Label } from "./Input.styles";
+import { Error, InputComponent, InputWrapper, Label, Heading } from "./Input.styles";
 import styles from './Input.module.scss';
 
 export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
@@ -9,6 +9,7 @@ export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string,
   stile?: 'primary', 
 };
+
 export const Input: React.FC<TProps> = ({
   title,
   value,
@@ -19,12 +20,14 @@ export const Input: React.FC<TProps> = ({
 }) => {
   const { className, ...inputProps } = props;
   return (
-    <InputWrapper id="input" className={`
-      ${props.className},
-      ${ stile && styles[stile]}
-    `}>
+    <InputWrapper className={
+      classNames(
+        props.className,
+        stile && styles[stile]
+      )}
+    >
       <Label id="label">
-      <h3 style={{margin: 0}} id="heading">{title}</h3>
+      <Heading id="heading">{title}</Heading>
       <InputComponent
         id="input"
         value={value}
@@ -38,7 +41,7 @@ export const Input: React.FC<TProps> = ({
       />
       </Label>
       {error && (
-        <Error id="error">
+        <Error id="error-message">
           {error}
         </Error>
       )}

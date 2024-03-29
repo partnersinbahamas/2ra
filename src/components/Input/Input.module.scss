@@ -1,6 +1,6 @@
 .primary {
   [id="heading"] {
-    margin: 3px !important;
+    margin: 3px;
     color: #1ea7fd;
   }
   [id="label"] {
@@ -16,10 +16,10 @@
       border-color: #0085D8;
     }
   }
+  [id="error-message"] {
+    color: #FF9058
+  }
   &-error {
     border-color: #FF9058 !important;
-  }
-  [id="error"] {
-    color: #FF9058
   }
 }
