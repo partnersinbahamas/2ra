@@ -20,6 +20,47 @@ const meta = {
     className: { control: 'text' },
     stile: { control: 'inline-radio', options: ['primary'] },
   },
+  parameters: {
+    docs: {
+      description: {
+        component:
+`
+Please to style your custom input component use the mockup bellow.
+### Guide styles
+
+    .your-class-name {
+      /* use "heading" ID to style h3 element *\
+      [id="heading"] => css.styles
+
+      /* use "label" ID to style label element *\
+      [id="label"] => css.styles
+      
+      /* use "input" ID to style input element *\
+
+      [id="input"] {
+        => css.styles
+        &:focus {
+          => css.styles
+        }
+      }
+
+      /* use "error-message"  to style span element *\
+
+      [id="error-message"] => css.styles
+
+      /* use .your-class-name-error className
+        to style "input" element on error handler *\
+
+
+      &-error {
+        !warning! => use !important here
+        => css.styles
+      }
+    }
+`
+      }
+    }
+  },
   decorators: [ConnectOnChange],
 } satisfies Meta<typeof Input>;
 export default meta;
