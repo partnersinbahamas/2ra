@@ -7,15 +7,15 @@ exports[`Input renders correctly 1`] = `
   >
     <label
       class="sc-dmyCSP jGsYty"
-      id="label"
+      data-name="label"
     >
       <h3
         class="sc-eDLKkx ebsndr"
-        id="heading"
+        data-name="heading"
       />
       <input
         class="sc-guDLey QRLu"
-        id="input"
+        data-name="input"
       />
     </label>
   </div>

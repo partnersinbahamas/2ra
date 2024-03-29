@@ -29,20 +29,20 @@ describe("Input", () => {
         >
           <label
             class="sc-dmyCSP jGsYty"
-            id="label"
+            data-name="label"
           >
             <h3
               class="sc-eDLKkx ebsndr"
-              id="heading"
+              data-name="heading"
             />
             <input
               class="sc-guDLey QRLu error undefined-error undefined-error"
-              id="input"
+              data-name="input"
             />
           </label>
           <span
             class="sc-hLQSwg hVgQbk"
-            id="error-message"
+            data-name="error-message"
           >
             error
           </span>

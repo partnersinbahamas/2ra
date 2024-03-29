@@ -8,6 +8,7 @@ export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
   error?: string,
   stile?: 'primary', 
+  disabled?: boolean,
 };
 
 export const Input: React.FC<TProps> = ({
@@ -16,6 +17,7 @@ export const Input: React.FC<TProps> = ({
   onChange,
   error,
   stile,
+  disabled,
   ...props
 }) => {
   const { className, ...inputProps } = props;
@@ -32,6 +34,7 @@ export const Input: React.FC<TProps> = ({
         data-name="input"
         value={value}
         {...inputProps}
+        disabled={disabled}
         onChange={onChange}
         className={classNames(
           { error },

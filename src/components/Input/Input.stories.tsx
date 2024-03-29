@@ -10,6 +10,10 @@ const meta = {
   tags: ['autodocs'],
   argTypes: {
     title: { control: 'text' },
+    stile: {
+      control: 'inline-radio',
+      options: ['primary']
+    },
     value: { control: 'text' },
     error: { control: 'text' },
     disabled: { control: 'boolean' },
@@ -18,7 +22,6 @@ const meta = {
     },
     onChange: { action: 'changed' },
     className: { control: 'text' },
-    stile: { control: 'inline-radio', options: ['primary'] },
   },
   parameters: {
     docs: {
@@ -71,6 +74,15 @@ export const Default: Story = {
     value: 'value',
   }
 }
+
+export const Primary: Story = {
+  args: {
+    stile: 'primary',
+    value: 'Primary',
+    title: 'Input Primary',
+  },
+};
+
 export const Error: Story = {
   args: {
     title: 'Handled error',
@@ -79,12 +91,12 @@ export const Error: Story = {
 }
 export const Play: Story = {
   args: {
-    value: '',
+    title: 'Play function'
   },
   play: async (context) => {
     const canvas = within(context.canvasElement);
 
-    const inputElement = canvas.getByDisplayValue('Play');
+    const inputElement = canvas.getByRole('textbox');
     await userEvent.type(inputElement, ' play fn', { delay: 100 });
   }
 }
