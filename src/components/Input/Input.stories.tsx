@@ -29,13 +29,13 @@ Please to style your custom input component use the mockup bellow.
 ### Guide styles
 
     .your-class-name {
-      /* use "heading" ID to style h3 element *\
+      /* use "heading" data-name to style h3 element *\
       [id="heading"] => css.styles
 
-      /* use "label" ID to style label element *\
+      /* use "label" data-name to style label element *\
       [id="label"] => css.styles
       
-      /* use "input" ID to style input element *\
+      /* use "input" data-name to style input element *\
 
       [id="input"] {
         => css.styles
@@ -44,7 +44,7 @@ Please to style your custom input component use the mockup bellow.
         }
       }
 
-      /* use "error-message"  to style span element *\
+      /* use "error-message" data-name to style span element *\
 
       [id="error-message"] => css.styles
 

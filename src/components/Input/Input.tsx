@@ -26,10 +26,10 @@ export const Input: React.FC<TProps> = ({
         stile && styles[stile]
       )}
     >
-      <Label id="label">
-      <Heading id="heading">{title}</Heading>
+      <Label data-name="label">
+      <Heading data-name="heading">{title}</Heading>
       <InputComponent
-        id="input"
+        data-name="input"
         value={value}
         {...inputProps}
         onChange={onChange}
@@ -41,7 +41,7 @@ export const Input: React.FC<TProps> = ({
       />
       </Label>
       {error && (
-        <Error id="error-message">
+        <Error data-name="error-message">
           {error}
         </Error>
       )}
