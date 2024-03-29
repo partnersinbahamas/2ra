@@ -17,6 +17,8 @@ const meta = {
       options: ['text', 'password', 'email', 'number']
     },
     onChange: { action: 'changed' },
+    className: { control: 'text' },
+    stile: { control: 'inline-radio', options: ['primary'] },
   },
   decorators: [ConnectOnChange],
 } satisfies Meta<typeof Input>;

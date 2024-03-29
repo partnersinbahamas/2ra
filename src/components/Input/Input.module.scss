@@ -1,0 +1,25 @@
+.primary {
+  [id="heading"] {
+    margin: 3px !important;
+    color: #1ea7fd;
+  }
+  [id="label"] {
+    background-color: #D6EFFF;
+    border-radius: .3rem;
+  }
+  [id="input"] {
+    border-color: #1ea7fd;
+    color: #1ea7fd;
+    font-weight: 700;
+
+    &:focus {
+      border-color: #0085D8;
+    }
+  }
+  &-error {
+    border-color: #FF9058 !important;
+  }
+  [id="error"] {
+    color: #FF9058
+  }
+}

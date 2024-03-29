@@ -1,19 +1,20 @@
 import styled from "styled-components";
 
-const InputWrapper = styled.label`
+const InputWrapper = styled.div`
   width: 100%;
-  font-size: 12px;
+  font-size: 0.75rem;
+
   display: flex;
   font-family: 'Poppins', sans-serif;
   flex-direction: column;
 `;
 const InputComponent = styled.input`
-  box-sizing: border-box;
   width: 100%;
-  padding: 10px;
+  padding: 0.625rem;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
   border: 2px solid #ccc;
   border-radius: 0;
-  font-family: 'Poppins', sans-serif;
   &.error {
     border-color: red;
   }
@@ -23,8 +24,10 @@ const InputComponent = styled.input`
   }
 `;
 const Label = styled.label`
+  margin: 0;
   margin-bottom: 5px;
   font-weight: 600;
+  font-size: 0.625rem;
 `;
 const Error = styled.span`
   color: red;

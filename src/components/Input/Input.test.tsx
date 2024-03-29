@@ -24,22 +24,33 @@ describe("Input", () => {
 
     expect(container).toMatchInlineSnapshot(`
       <div>
-        <label
-          class="sc-beySPh fVqJut"
+        <div
+          class="sc-beySPh ErGXa 
+            undefined,
+            undefined
+          "
+          id="input"
         >
           <label
-            class="sc-dmyCSP hbrvZO"
+            class="sc-dmyCSP jGsYty"
+            id="label"
           >
+            <h3
+              id="heading"
+              style="margin: 0px;"
+            />
             <input
-              class="sc-guDLey hbBLAC error"
+              class="sc-guDLey QRLu error undefined-error undefined-error"
+              id="input"
             />
           </label>
           <span
             class="sc-hLQSwg hVgQbk"
+            id="error"
           >
             error
           </span>
-        </label>
+        </div>
       </div>
     `);
   });

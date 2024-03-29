@@ -2,16 +2,26 @@
 
 exports[`Input renders correctly 1`] = `
 <div>
-  <label
-    class="sc-beySPh fVqJut"
+  <div
+    class="sc-beySPh ErGXa 
+      undefined,
+      undefined
+    "
+    id="input"
   >
     <label
-      class="sc-dmyCSP hbrvZO"
+      class="sc-dmyCSP jGsYty"
+      id="label"
     >
+      <h3
+        id="heading"
+        style="margin: 0px;"
+      />
       <input
-        class="sc-guDLey hbBLAC"
+        class="sc-guDLey QRLu"
+        id="input"
       />
     </label>
-  </label>
+  </div>
 </div>
 `;
