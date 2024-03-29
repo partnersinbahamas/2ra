@@ -39,7 +39,7 @@ export const Input: React.FC<TProps> = ({
         className={classNames(
           { error },
           { [styles[`${stile}-error`]]: error },
-          { [styles[`${props.className}-error`]]: error },
+          { [styles[`${className}-error`]]: error },
         )}
       />
       </Label>
