@@ -18,9 +18,11 @@ export const Avatar: React.FC<TProps> = ({
   lastName,
   size,
   backgroundColor,
+  ...props
 }) => {
   return (
     <AvatarComponent
+      {...props}
       className={classNames(styles[size])}
       sx={{ backgroundColor }}
     >

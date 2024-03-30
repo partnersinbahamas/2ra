@@ -1,6 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
-import { Avatar } from '../Avatar/Avatar';
+
 import { TURQUOISE_300 } from '../Colors/colors';
+import { Avatar } from '../Avatar/Avatar';
+import me from '../../images/me.png';
 
 /**
  * Avatar conponent with user picture and fullname.
@@ -16,7 +18,6 @@ const meta = {
   args: {
     firstName: 'Denys',
     lastName: 'Bokov',
-    backgroundColor: 'color',
   },
   argTypes: {
     firstName: { control: 'text' },
@@ -25,7 +26,8 @@ const meta = {
       control: 'inline-radio',
       options: ['small', 'medium', 'large'],
     },
-    color: {control: 'text'},
+    backgroundColor: {control: 'color'},
+    src: { control: 'text' }
   }
 } satisfies Meta<typeof Avatar>;
 export default meta;
@@ -36,8 +38,13 @@ export const Background: TStory = {
     size: 'large',
     backgroundColor: TURQUOISE_300,
   }
-}
-
+};
+export const BackgroundImage: TStory = {
+  args: {
+    size: 'large',
+    src: me,
+  }
+};
 export const Small: TStory = {
   args: {
     size: 'small',
