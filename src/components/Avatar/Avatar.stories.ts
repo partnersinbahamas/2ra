@@ -27,6 +27,8 @@ const meta = {
       options: ['small', 'medium', 'large'],
     },
     backgroundColor: {control: 'color'},
+    badge: { control: 'boolean' },
+    badgeContent: { control: 'text' },
     src: { control: 'text' }
   }
 } satisfies Meta<typeof Avatar>;

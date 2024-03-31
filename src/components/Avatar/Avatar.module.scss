@@ -1,9 +1,20 @@
-.avatar {
+@import '../utils/colors.scss';
+
+.section-avatar {
+  [data-name="badge"] {
+    min-width: 15px;
+    min-height: 15px;
+    background-color: $green_300;
+    border-radius: 50%;
+  }
+
+  [data-name="avatar"] {
     display: flex;
     align-items: center;
     justify-content: center;
-  border: 1px solid #ccc;
-  border-radius: 50%;
+    border: 1px solid #ccc;
+    border-radius: 50%;
+  }
 }
 
 div.small {
