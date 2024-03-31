@@ -12,6 +12,7 @@ type TProps = AvatarProps & {
   badged?: boolean,
   badgeContent?: any,
   status?: TStatus,
+  onClick?: () => void,
 }
 
 export const Avatar: React.FC<TProps> = ({
@@ -22,6 +23,7 @@ export const Avatar: React.FC<TProps> = ({
   badged,
   badgeContent,
   status = 'default',
+  onClick,
   ...props
 }) => {
   if (!badged) {
@@ -29,12 +31,14 @@ export const Avatar: React.FC<TProps> = ({
       <div className={styles['section-avatar']}>
         <AvatarComponent
           data-name="avatar"
+          data-testid="avatar"
           alt={`${firstName} ${lastName}`}
           className={classNames(styles[size])}
+          onClick={onClick}
           sx={{ backgroundColor }}
           {...props}
         >
-          <span data-name="name">
+          <span data-name="name" data-testid="avatar-name">
             { firstName[0]}{lastName[0] }
           </span>
         </AvatarComponent>
@@ -55,10 +59,12 @@ export const Avatar: React.FC<TProps> = ({
     >
       <AvatarComponent
         data-name="avatar"
+        data-testid="avatar"
         alt={`${firstName} ${lastName}`}
         className={classNames(styles[size])}
         sx={{ backgroundColor }}
         {...props}
+        onClick={onClick}
       >
         <span data-name="name">
           { firstName[0]}{lastName[0] }

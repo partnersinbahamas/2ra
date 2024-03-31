@@ -1,6 +1,5 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { TURQUOISE_300 } from '../Colors/colors';
 import { Avatar } from '../Avatar/Avatar';
 import me from '../../images/me.png';
 
@@ -26,6 +25,7 @@ const meta = {
     badged: { control: 'boolean' },
     badgeContent: { control: 'text' },
     src: { control: 'text' },
+    onClick: { control: 'changed' },
     size: {
       control: 'inline-radio',
       options: ['small', 'medium', 'large'],
@@ -57,18 +57,3 @@ export const BackgroundImage: TStory = {
     src: me,
   }
 };
-export const Small: TStory = {
-  args: {
-    size: 'small',
-  },
-};
-export const Medium: TStory = {
-  args: {
-    size: 'medium',
-  },
-};
-export const Large: TStory = {
-  args: {
-    size: 'large',
-  },
-}; 
