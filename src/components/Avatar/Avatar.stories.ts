@@ -22,23 +22,33 @@ const meta = {
   argTypes: {
     firstName: { control: 'text' },
     lastName: { control: 'text' },
+    backgroundColor: { control: 'color' },
+    badged: { control: 'boolean' },
+    badgeContent: { control: 'text' },
+    src: { control: 'text' },
     size: {
       control: 'inline-radio',
       options: ['small', 'medium', 'large'],
     },
-    backgroundColor: {control: 'color'},
-    badge: { control: 'boolean' },
-    badgeContent: { control: 'text' },
-    src: { control: 'text' }
+    status: {
+      control: 'inline-radio',
+      options: ['online', 'default', 'not-here', 'busy', 'sleep'],
+    },
   }
 } satisfies Meta<typeof Avatar>;
 export default meta;
 type TStory = StoryObj<typeof meta>;
 
-export const Background: TStory = {
+
+export const Default: TStory = {
   args: {
-    size: 'large',
-    backgroundColor: TURQUOISE_300,
+    size: 'medium',
+  }
+};
+export const Badged: TStory = {
+  args: {
+    size: 'medium',
+    badged: true,
   }
 };
 export const BackgroundImage: TStory = {
