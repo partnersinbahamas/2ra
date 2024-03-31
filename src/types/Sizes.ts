@@ -1,1 +1,0 @@
-export type TSizes = 'small' | 'medium' | 'large';

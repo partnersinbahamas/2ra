@@ -2,9 +2,7 @@ import React from "react";
 import classNames from "classnames";
 import { Avatar as AvatarComponent, Badge, AvatarProps, Box } from "@mui/material";
 
-import { TSizes } from "../../types/Sizes";
 import styles from './Avatar.module.scss';
-import { COOL_GRAY_200 } from "../Colors/colors";
 
 type TProps = AvatarProps & {
   firstName: string,
@@ -13,7 +11,7 @@ type TProps = AvatarProps & {
   backgroundColor?: string,
   badged?: boolean,
   badgeContent?: any,
-  status?: 'online' | 'default'
+  status?: TStatus,
 }
 
 export const Avatar: React.FC<TProps> = ({
