@@ -26,16 +26,18 @@ export const Avatar: React.FC<TProps> = ({
   onClick,
   ...props
 }) => {
+  const fullName = `${firstName} ${lastName}`;
+
   if (!badged) {
     return (
       <div className={styles['section-avatar']}>
         <AvatarComponent
           data-name="avatar"
           data-testid="avatar"
-          alt={`${firstName} ${lastName}`}
+          alt={fullName}
           className={classNames(styles[size])}
-          onClick={onClick}
           sx={{ backgroundColor }}
+          onClick={onClick}
           {...props}
         >
           <span data-name="name" data-testid="avatar-name">

@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { SquareButon } from './SquareButton';
 
 const meta = {
-  title: 'Components/Buttons/SquareButton',
+  title: 'Athomic/Buttons/SquareButton',
   component: SquareButon,
   tags: ['autodocs'],
   parameters: {layout: 'centered'},
