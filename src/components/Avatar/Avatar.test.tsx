@@ -56,5 +56,19 @@ describe('Avatar', () => {
     const avatarElement = screen.getByTestId('avatar');
     await user.click(avatarElement);
     expect(onClickHandler).toHaveBeenCalled();
-  })
+  });
+  it('renders with stile primary', () => {
+    const { container } = render(
+      <Avatar
+        size={size}
+        firstName={firstName}
+        lastName={lastName}
+        stile="primary"
+      />
+    );
+
+    const avatarElement = screen.getByTestId('avatar');
+    expect(avatarElement.getAttribute('data-stile')).toBe('primary');
+    expect(container).toMatchSnapshot();
+  });
 })

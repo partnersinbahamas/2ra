@@ -3,7 +3,7 @@
 exports[`Avatar renders correclty 1`] = `
 <div>
   <div
-    class="section-avatar"
+    class="undefined undefined"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
@@ -25,11 +25,34 @@ exports[`Avatar renders correclty 1`] = `
 exports[`Avatar renders with background color 1`] = `
 <div>
   <div
-    class="section-avatar"
+    class="undefined undefined"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-ww4vf0-MuiAvatar-root"
       data-name="avatar"
+      data-testid="avatar"
+    >
+      <span
+        data-name="name"
+        data-testid="avatar-name"
+      >
+        D
+        B
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Avatar renders with stile primary 1`] = `
+<div>
+  <div
+    class="undefined primary"
+  >
+    <div
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      data-name="avatar"
+      data-stile="primary"
       data-testid="avatar"
     >
       <span

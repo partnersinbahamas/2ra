@@ -1,47 +1,60 @@
 @import '../utils/colors.scss';
 
-.section-avatar {
-  [data-name="badge"] {
-    color: $white;
-    min-width: 0.625rem;
-    min-height: 0.625rem;
-    border: 1px solid transparent;
-    border-radius: 50%;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
+// component structur
+[data-name="badge"] {
+  color: $white;
+  min-width: 0.625rem;
+  min-height: 0.625rem;
+  border: 1px solid transparent;
+  border-radius: 50%;
 
-  [data-status="online"] {
-    background-color: $green_400;
-  }
-
-  [data-status="default"] {
-    background-color: $cool_gray_200;
-    border-color: $cool_gray_400;
-  }
-
-  [data-status="sleep"] {
-    background-color: $violet_600;
-  }
-
-    [data-status="busy"] {
-    background-color: $red_400;
-  }
-
-  [data-status="not-here"] {
-    background-color: $orange_400;
-  }
-
-  [data-name="avatar"] {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: $cool_gray_200;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
+
+[data-status="online"] {
+  background-color: $green_400;
+}
+
+[data-status="default"] {
+  background-color: $cool_gray_200;
+  border-color: $cool_gray_400;
+}
+
+[data-status="sleep"] {
+  background-color: $violet_600;
+}
+
+[data-status="busy"] {
+  background-color: $red_400;
+}
+
+[data-status="not-here"] {
+  background-color: $orange_400;
+}
+
+[data-name="avatar"] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: $cool_gray_200;
+}
+
+//classes
+.primary {
+  [data-name="avatar"] {
+    background-color: $cyan_400;
+    border: 3px solid $blue_400;
+    font-weight: 600;
+  }
+
+  [data-status="primary"] {
+    background-color: $blue_400;
+  }
+};
 
 div.small {
   width: 1.25rem;

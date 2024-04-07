@@ -7,6 +7,7 @@ export type PropsAvatar = Omit<AvatarProps, 'slotProps' | 'component'> & {
   lastName: string,
   size: TSizes,
   backgroundColor?: string,
+  stile?: 'primary',
   badged?: boolean,
   badgeContent?: any,
   status?: TStatus,

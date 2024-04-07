@@ -12,18 +12,19 @@ export const Avatar: React.FC<PropsAvatar> = ({
   badged,
   badgeContent,
   status = 'default',
+  stile,
   onClick,
   src,
   ...props
 }) => {
   const fullName = `${firstName} ${lastName}`;
-
   if (!badged) {
     return (
-      <div className={styles['section-avatar']}>
+      <div className={`${props.className} ${stile && styles[stile]}`}>
         <AvatarComponent
           data-name="avatar"
           data-testid="avatar"
+          data-stile={stile && stile}
           alt={fullName}
           className={classNames(styles[size])}
           sx={{ backgroundColor }}
@@ -40,7 +41,7 @@ export const Avatar: React.FC<PropsAvatar> = ({
 
   return (
     <Badge
-      className={styles['section-avatar']}
+      className={`${props.className} ${stile && styles[stile]}`}
       overlap="circular"
       badgeContent={
         <Box data-name="badge" data-status={ status }>
@@ -59,7 +60,7 @@ export const Avatar: React.FC<PropsAvatar> = ({
         sx={{ backgroundColor }}
         {...props}
       >
-        <span data-name="name">
+        <span data-name="name" data-testid="avatar-name">
           { firstName[0]}{lastName[0] }
         </span>
       </AvatarComponent>

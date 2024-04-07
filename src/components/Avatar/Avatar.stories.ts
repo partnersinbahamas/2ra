@@ -26,13 +26,14 @@ const meta = {
     badgeContent: { control: 'text' },
     src: { control: 'text' },
     onClick: { control: 'changed' },
+    stile: { control: 'inline-radio', options: ['primary'] },
     size: {
       control: 'inline-radio',
       options: ['small', 'medium', 'large'],
     },
     status: {
       control: 'inline-radio',
-      options: ['online', 'default', 'not-here', 'busy', 'sleep'],
+      options: ['online', 'default', 'not-here', 'busy', 'sleep', 'primary'],
     },
   }
 } satisfies Meta<typeof Avatar>;
