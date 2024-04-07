@@ -1,21 +1,10 @@
 import React from "react";
 import classNames from "classnames";
-import { Avatar as AvatarComponent, Badge, AvatarProps, Box } from "@mui/material";
+import { Avatar as AvatarComponent, Badge, Box } from "@mui/material";
+import { PropsAvatar } from "../../types/props/avatar";
 
 import styles from './Avatar.module.scss';
-
-type TProps = AvatarProps & {
-  firstName: string,
-  lastName: string,
-  size: TSizes,
-  backgroundColor?: string,
-  badged?: boolean,
-  badgeContent?: any,
-  status?: TStatus,
-  onClick?: () => void,
-}
-
-export const Avatar: React.FC<TProps> = ({
+export const Avatar: React.FC<PropsAvatar> = ({
   firstName,
   lastName,
   size,
@@ -24,6 +13,7 @@ export const Avatar: React.FC<TProps> = ({
   badgeContent,
   status = 'default',
   onClick,
+  src,
   ...props
 }) => {
   const fullName = `${firstName} ${lastName}`;
@@ -60,13 +50,14 @@ export const Avatar: React.FC<TProps> = ({
       anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
     >
       <AvatarComponent
+        src={src}
         data-name="avatar"
         data-testid="avatar"
         alt={`${firstName} ${lastName}`}
         className={classNames(styles[size])}
+        onClick={onClick}
         sx={{ backgroundColor }}
         {...props}
-        onClick={onClick}
       >
         <span data-name="name">
           { firstName[0]}{lastName[0] }

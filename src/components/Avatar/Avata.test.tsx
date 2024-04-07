@@ -2,6 +2,7 @@ import userEvent from "@testing-library/user-event";
 import { Avatar } from "./Avatar";
 import { render, screen } from "@testing-library/react";
 import { YELLOW_600 } from "../Colors/colors";
+import { TSizes } from "../../types/size";
 
 describe('Avatar', () => {
   const user = userEvent.setup();
