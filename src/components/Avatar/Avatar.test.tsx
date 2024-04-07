@@ -3,6 +3,7 @@ import { Avatar } from "./Avatar";
 import { render, screen } from "@testing-library/react";
 import { YELLOW_600 } from "../Colors/colors";
 import { TSizes } from "../../types/size";
+import { toContainElement } from "@testing-library/jest-dom/matchers";
 
 describe('Avatar', () => {
   const user = userEvent.setup();
@@ -22,6 +23,9 @@ describe('Avatar', () => {
     const avatarElement = screen.getByTestId('avatar');
     expect(avatarElement).toBeInTheDocument();
     expect(avatarElement).toHaveClass('medium');
+
+    const badgeElement = screen.queryByTestId('badge');
+    expect(badgeElement).toBeNull();
 
     const nameElement = screen.getByTestId('avatar-name');
     expect(nameElement).toHaveTextContent(`${firstName[0]}${lastName[0]}`);
@@ -71,4 +75,23 @@ describe('Avatar', () => {
     expect(avatarElement.getAttribute('data-stile')).toBe('primary');
     expect(container).toMatchSnapshot();
   });
+  it('renders with badged', () => {
+    const content = 'Badge content';
+    const { container } = render(
+      <Avatar
+        size={size}
+        firstName={firstName}
+        lastName={lastName}
+        badged
+        badgeContent={content}
+      />
+    );
+
+    const badgeElement = screen.queryByTestId('badge');
+    expect(badgeElement).not.toBeNull();
+
+    expect(badgeElement).toHaveTextContent(content);
+
+    expect(container).toMatchSnapshot();
+  })
 })

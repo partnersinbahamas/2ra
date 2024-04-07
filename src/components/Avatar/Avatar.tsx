@@ -44,7 +44,11 @@ export const Avatar: React.FC<PropsAvatar> = ({
       className={`${props.className} ${stile && styles[stile]}`}
       overlap="circular"
       badgeContent={
-        <Box data-name="badge" data-status={ status }>
+        <Box
+          data-testid="badge"
+          data-name="badge"
+          data-status={ status }
+        >
           {badgeContent}
         </Box>
       }
