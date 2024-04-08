@@ -1,10 +1,25 @@
 import React from "react";
 import classNames from "classnames";
-import { Avatar as AvatarComponent, Badge, Box } from "@mui/material";
+import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from "@mui/material";
 import { PropsAvatar } from "../../types/props/avatar";
 
 import styles from './Avatar.module.scss';
-export const Avatar: React.FC<PropsAvatar> = ({
+import { TSizes } from "../../types/size";
+
+
+
+interface IProps extends PropsAvatar {
+  /**
+   * Path to image.
+   */
+  src?: string;
+  /**
+   * Details on MaterialUI.
+   */
+  slots?: AvatarSlots;
+}
+
+export const Avatar: React.FC<IProps> = ({
   firstName,
   lastName,
   size,
