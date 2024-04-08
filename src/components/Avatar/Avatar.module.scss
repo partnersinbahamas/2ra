@@ -1,13 +1,21 @@
 @import '../utils/colors.scss';
 
-
 // component structur
+
+div[data-name="avatar"] {
+  background-color: $cool_gray_200;
+  border: 3px solid $cool_gray_400;
+  color: $cool_gray_400;
+  font-weight: 600;
+}
+
 [data-name="badge"] {
+  box-sizing: border-box;
   color: $white;
   min-width: 0.625rem;
   min-height: 0.625rem;
-  border: 1px solid transparent;
   border-radius: 50%;
+  border: 2px solid transparent;
 
   display: flex;
   align-items: center;
@@ -16,6 +24,7 @@
 
 [data-status="online"] {
   background-color: $green_400;
+  border-color: $green_300;
 }
 
 [data-status="default"] {
@@ -25,14 +34,17 @@
 
 [data-status="sleep"] {
   background-color: $violet_600;
+  border-color: $violet_300;
 }
 
 [data-status="busy"] {
-  background-color: $red_400;
+  background-color: $red_300;
+  border-color: $red_400;
 }
 
 [data-status="not-here"] {
-  background-color: $orange_400;
+  background-color: $orange_300;
+  border-color: $orange_500;
 }
 
 [data-name="avatar"] {
@@ -47,12 +59,18 @@
 .primary {
   [data-name="avatar"] {
     background-color: $cyan_400;
-    border: 3px solid $blue_400;
+    border-color: $blue_400;
+    color: $white;
     font-weight: 600;
   }
 
+  [data-status="badge"] {
+    border: 2px solid transparent;
+  }
+
   [data-status="primary"] {
-    background-color: $blue_400;
+    background-color: $cyan_400;
+    border-color: $blue_400;
   }
 };
 

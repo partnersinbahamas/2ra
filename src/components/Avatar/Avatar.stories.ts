@@ -15,8 +15,8 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    firstName: 'Denys',
-    lastName: 'Bokov',
+    firstName: 'Steve',
+    lastName: 'Jobs',
   },
   argTypes: {
     firstName: { control: 'text' },
