@@ -59,6 +59,36 @@ export const Badged: TStory = {
     badged: true,
   }
 };
+export const Online: TStory = {
+  args: {
+    size: 'medium',
+    status: 'online',
+    badged: true,
+  }
+};
+// status stories
+export const NotHere: TStory = {
+  args: {
+    size: 'medium',
+    status: 'not-here',
+    badged: true,
+  }
+};
+export const Busy: TStory = {
+  args: {
+    size: 'medium',
+    status: 'busy',
+    badged: true,
+  }
+};
+export const Sleep: TStory = {
+  args: {
+    size: 'medium',
+    status: 'sleep',
+    badged: true,
+  }
+};
+// status stories
 export const BackgroundImage: TStory = {
   args: {
     size: 'large',
