@@ -40,12 +40,19 @@ const meta = {
 export default meta;
 type TStory = StoryObj<typeof meta>;
 
-
 export const Default: TStory = {
   args: {
     size: 'medium',
   }
 };
+export const Primary: TStory = {
+  args: {
+    size: 'medium',
+    stile: 'primary',
+    status: 'primary',
+    badged: true,
+  }
+}
 export const Badged: TStory = {
   args: {
     size: 'medium',

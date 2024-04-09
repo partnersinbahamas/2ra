@@ -37,6 +37,7 @@ export const Avatar: React.FC<IProps> = ({
     return (
       <div className={`${props.className} ${stile && styles[stile]}`}>
         <AvatarComponent
+          src={src}
           data-name="avatar"
           data-testid="avatar"
           data-stile={stile && stile}
@@ -73,6 +74,7 @@ export const Avatar: React.FC<IProps> = ({
         src={src}
         data-name="avatar"
         data-testid="avatar"
+        data-stile={stile && stile}
         alt={`${firstName} ${lastName}`}
         className={classNames(styles[size])}
         onClick={onClick}
