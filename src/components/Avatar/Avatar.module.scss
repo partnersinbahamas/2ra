@@ -1,10 +1,8 @@
 @import '../utils/colors.scss';
 
-// component structur
-div[data-name="avatar"] {
+// default component styles
+[data-name="avatar"] {
   background-color: $cool_gray_200;
-  // !important used here, because size classes interrupt border-color.
-  border-color: $cool_gray_400 !important;
   color: $cool_gray_400;
   font-weight: 600;
 }
@@ -55,7 +53,7 @@ div[data-name="avatar"] {
   background-color: $cool_gray_200;
 }
 
-//classes
+// stiles
 .primary {
   [data-name="avatar"] {
     background-color: $cyan_400;
@@ -74,23 +72,25 @@ div[data-name="avatar"] {
   }
 };
 
-div.small {
+
+// sizes
+.small {
   width: 1.25rem;
   height: 1.25rem;
   font-size: 0.5rem;
-  border: 1px solid transparent;
+  border: 1px solid $cool_gray_400;
 }
 
-div.medium {
+.medium {
   width: 2.188rem;
   height: 2.188rem;
   font-size: 0.875rem;
-  border: 2px solid transparent;
+  border: 2px solid $cool_gray_400;
 }
 
-div.large {
+.large {
   width: 3.125rem;
   height: 3.125rem;
   font-size: 1.25rem;
-  border: 3px solid transparent;
+  border: 3px solid $cool_gray_400;
 }
