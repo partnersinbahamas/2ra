@@ -36,12 +36,12 @@ describe("Input", () => {
               data-name="heading"
             />
             <input
-              class="sc-guDLey QRLu error undefined-error undefined-error"
+              class="sc-guDLey caCvKY error undefined-error undefined-error"
               data-name="input"
             />
           </label>
           <span
-            class="sc-hLQSwg hVgQbk"
+            class="sc-hLQSwg gpNhwr"
             data-name="error-message"
           >
             error

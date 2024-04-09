@@ -1,25 +1,27 @@
+@import '../utils/colors.scss';
+
 .primary {
   [data-name="heading"] {
     margin: 3px;
-    color: #1ea7fd;
+    color: $blue_400;
   }
   [data-name="label"] {
-    background-color: #D6EFFF;
-    border-radius: .3rem;
+    background-color: $cyan_200;
+    border-radius: .15rem;
   }
   [data-name="input"] {
-    border-color: #1ea7fd;
-    color: #1ea7fd;
+    border-color: $blue_400;
+    color: $blue_400;
     font-weight: 700;
 
     &:focus {
-      border-color: #0085D8;
+      border-color: $blue_500;
     }
   }
   [data-name="error-message"] {
-    color: #FF9058
+    color: $red_400;
   }
   &-error {
-    border-color: #FF9058 !important;
+    border-color: $red_400 !important;
   }
 }

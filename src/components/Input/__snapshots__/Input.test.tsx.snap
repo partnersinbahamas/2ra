@@ -14,7 +14,7 @@ exports[`Input renders correctly 1`] = `
         data-name="heading"
       />
       <input
-        class="sc-guDLey QRLu"
+        class="sc-guDLey caCvKY"
         data-name="input"
       />
     </label>
