@@ -5,6 +5,7 @@ import { PropsAvatar } from "../../types/props/avatar";
 
 import styles from './Avatar.module.scss';
 import { TSizes } from "../../types/size";
+import { TStatus } from "../../types/props/status";
 
 
 
@@ -17,6 +18,10 @@ interface IProps extends PropsAvatar {
    * Details on MaterialUI.
    */
   slots?: AvatarSlots;
+  /**
+   * You definitely can attach your own statuses and style them.
+   */
+  status?: TStatus;
 }
 
 export const Avatar: React.FC<IProps> = ({
