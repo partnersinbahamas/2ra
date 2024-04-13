@@ -27,10 +27,10 @@ interface IProps extends PropsAvatar {
 export const Avatar: React.FC<IProps> = ({
   firstName,
   lastName,
-  size,
   backgroundColor,
   badged,
   badgeContent,
+  size = 'medium',
   status = 'default',
   stile,
   onClick,
