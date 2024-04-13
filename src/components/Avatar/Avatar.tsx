@@ -4,12 +4,11 @@ import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from "@mui/materia
 import { PropsAvatar } from "../../types/props/avatar";
 
 import styles from './Avatar.module.scss';
-import { TSizes } from "../../types/size";
-import { TStatus } from "../../types/props/status";
-
-
-
 interface IProps extends PropsAvatar {
+  /**
+   * Instead of setting first and last name, you can also set a abbreviation prop.
+   */
+  abbreviation: string;
   /**
    * Path to image.
    */
@@ -27,6 +26,7 @@ interface IProps extends PropsAvatar {
 export const Avatar: React.FC<IProps> = ({
   firstName,
   lastName,
+  abbreviation,
   backgroundColor,
   badged,
   badgeContent,
@@ -53,7 +53,7 @@ export const Avatar: React.FC<IProps> = ({
           {...props}
         >
           <span data-name="name" data-testid="avatar-name">
-            { firstName[0]}{lastName[0] }
+            {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation }
           </span>
         </AvatarComponent>
       </div>
@@ -87,7 +87,7 @@ export const Avatar: React.FC<IProps> = ({
         {...props}
       >
         <span data-name="name" data-testid="avatar-name">
-          { firstName[0]}{lastName[0] }
+          {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation }
         </span>
       </AvatarComponent>
     </Badge>

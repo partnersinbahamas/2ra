@@ -14,8 +14,7 @@ exports[`Avatar renders correclty 1`] = `
         data-name="name"
         data-testid="avatar-name"
       >
-        D
-        B
+        SJ
       </span>
     </div>
   </div>
@@ -36,8 +35,7 @@ exports[`Avatar renders with background color 1`] = `
         data-name="name"
         data-testid="avatar-name"
       >
-        D
-        B
+        SJ
       </span>
     </div>
   </div>
@@ -58,8 +56,7 @@ exports[`Avatar renders with badged 1`] = `
         data-name="name"
         data-testid="avatar-name"
       >
-        D
-        B
+        SJ
       </span>
     </div>
     <span
@@ -78,6 +75,27 @@ exports[`Avatar renders with badged 1`] = `
 </div>
 `;
 
+exports[`Avatar renders with name 1`] = `
+<div>
+  <div
+    class="undefined undefined"
+  >
+    <div
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      data-name="avatar"
+      data-testid="avatar"
+    >
+      <span
+        data-name="name"
+        data-testid="avatar-name"
+      >
+        EM
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Avatar renders with stile primary 1`] = `
 <div>
   <div
@@ -93,8 +111,7 @@ exports[`Avatar renders with stile primary 1`] = `
         data-name="name"
         data-testid="avatar-name"
       >
-        D
-        B
+        SJ
       </span>
     </div>
   </div>

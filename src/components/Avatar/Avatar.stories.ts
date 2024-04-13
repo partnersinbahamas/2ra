@@ -15,12 +15,12 @@ const meta = {
     layout: 'centered',
   },
   args: {
-    firstName: 'Steve',
-    lastName: 'Jobs',
+    abbreviation: 'EM',
   },
   argTypes: {
     firstName: { control: 'text' },
     lastName: { control: 'text' },
+    abbreviation: { control: 'text' },
     backgroundColor: { control: 'color' },
     badged: { control: 'boolean' },
     badgeContent: { control: 'text' },
@@ -43,6 +43,8 @@ type TStory = StoryObj<typeof meta>;
 export const Default: TStory = {
   args: {
     size: 'medium',
+    firstName: 'Steve',
+    lastName: 'Jobs',
   }
 };
 export const Primary: TStory = {

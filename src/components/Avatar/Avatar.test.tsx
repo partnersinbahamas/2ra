@@ -8,16 +8,14 @@ import { toContainElement } from "@testing-library/jest-dom/matchers";
 describe('Avatar', () => {
   const user = userEvent.setup();
 
-  const firstName = 'Denys';
-  const lastName = 'Bokov';
+  const abbreviation = 'SJ';
   const size: TSizes = 'medium';
     
   it('renders correclty', () => {
     const { container } = render(
       <Avatar
         size={size}
-        firstName={firstName}
-        lastName={lastName}
+        abbreviation={abbreviation}
       />
     );
     const avatarElement = screen.getByTestId('avatar');
@@ -28,7 +26,7 @@ describe('Avatar', () => {
     expect(badgeElement).toBeNull();
 
     const nameElement = screen.getByTestId('avatar-name');
-    expect(nameElement).toHaveTextContent(`${firstName[0]}${lastName[0]}`);
+    expect(nameElement).toHaveTextContent(abbreviation);
     expect(container).toMatchSnapshot();
   });
   it('renders with background color', () => {
@@ -36,8 +34,7 @@ describe('Avatar', () => {
     const { container } = render(
       <Avatar
         size={size}
-        firstName={firstName}
-        lastName={lastName}
+        abbreviation={abbreviation}
         backgroundColor={bgc}
       />
     );
@@ -51,8 +48,7 @@ describe('Avatar', () => {
     render(
       <Avatar
         size={size}
-        firstName={firstName}
-        lastName={lastName}
+        abbreviation={abbreviation}
         onClick={onClickHandler}
       />
     );
@@ -65,8 +61,7 @@ describe('Avatar', () => {
     const { container } = render(
       <Avatar
         size={size}
-        firstName={firstName}
-        lastName={lastName}
+        abbreviation={abbreviation}
         stile="primary"
       />
     );
@@ -80,8 +75,7 @@ describe('Avatar', () => {
     const { container } = render(
       <Avatar
         size={size}
-        firstName={firstName}
-        lastName={lastName}
+        abbreviation={abbreviation}
         badged
         badgeContent={content}
       />
@@ -91,6 +85,24 @@ describe('Avatar', () => {
     expect(badgeElement).not.toBeNull();
 
     expect(badgeElement).toHaveTextContent(content);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders with name', () => {
+    const firstName = 'Elon';
+    const lastName = 'Musk';
+    const fullNameAbbreviation = `${firstName[0]}${lastName[0]}`;
+    const { container } = render(
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        firstName={firstName}
+        lastName={lastName}
+      />
+    );
+    const avatarNameElement = screen.getByTestId('avatar-name');
+    expect(avatarNameElement).toHaveTextContent(fullNameAbbreviation);
 
     expect(container).toMatchSnapshot();
   })
