@@ -3,7 +3,6 @@ import { Avatar } from "./Avatar";
 import { render, screen } from "@testing-library/react";
 import { YELLOW_600 } from "../Colors/colors";
 import { TSizes } from "../../types/size";
-import { toContainElement } from "@testing-library/jest-dom/matchers";
 
 describe('Avatar', () => {
   const user = userEvent.setup();
@@ -103,6 +102,24 @@ describe('Avatar', () => {
     );
     const avatarNameElement = screen.getByTestId('avatar-name');
     expect(avatarNameElement).toHaveTextContent(fullNameAbbreviation);
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it('renders on disabled', () => {
+    const { container } = render(
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        disabled
+        badged
+      />
+    );
+
+    const badgeElement = screen.getByTestId('badge');
+    expect(badgeElement.getAttribute('aria-disabled')).toEqual('true');
+    const avatarElement = screen.getByTestId('avatar');
+    expect(avatarElement.getAttribute('aria-disabled')).toEqual('true');
 
     expect(container).toMatchSnapshot();
   })

@@ -29,6 +29,7 @@ export const Avatar: React.FC<IProps> = ({
   abbreviation,
   backgroundColor,
   badged,
+  disabled,
   badgeContent,
   size = 'medium',
   status = 'default',
@@ -40,11 +41,14 @@ export const Avatar: React.FC<IProps> = ({
   const fullName = `${firstName} ${lastName}`;
   if (!badged) {
     return (
-      <div className={`${props.className} ${stile && styles[stile]}`}>
+      <div
+        className={`${props.className} ${stile && styles[stile]}`}
+      >
         <AvatarComponent
           src={src}
           data-name="avatar"
           data-testid="avatar"
+          aria-disabled={disabled}
           data-stile={stile && stile}
           alt={fullName}
           className={classNames(styles[size])}
@@ -68,6 +72,7 @@ export const Avatar: React.FC<IProps> = ({
         <Box
           data-testid="badge"
           data-name="badge"
+          aria-disabled={disabled}
           data-status={ status }
         >
           {badgeContent}
@@ -79,6 +84,7 @@ export const Avatar: React.FC<IProps> = ({
         src={src}
         data-name="avatar"
         data-testid="avatar"
+        aria-disabled={disabled}
         data-stile={stile && stile}
         alt={`${firstName} ${lastName}`}
         className={classNames(styles[size])}

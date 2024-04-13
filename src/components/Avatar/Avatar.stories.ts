@@ -23,6 +23,7 @@ const meta = {
     abbreviation: { control: 'text' },
     backgroundColor: { control: 'color' },
     badged: { control: 'boolean' },
+    disabled: { control: 'boolean' },
     badgeContent: { control: 'text' },
     src: { control: 'text' },
     onClick: { control: 'changed' },
@@ -45,6 +46,13 @@ export const Default: TStory = {
     size: 'medium',
     firstName: 'Steve',
     lastName: 'Jobs',
+  }
+};
+export const Disabled: TStory = {
+  args: {
+    size: 'medium',
+    disabled: true,
+    badged: true,
   }
 };
 export const Primary: TStory = {
