@@ -2,13 +2,13 @@ import userEvent from "@testing-library/user-event";
 import { Avatar } from "./Avatar";
 import { render, screen } from "@testing-library/react";
 import { YELLOW_600 } from "../Colors/colors";
-import { TSizes } from "../../types/size";
+import { TSize } from "../../types/size";
 
 describe('Avatar', () => {
   const user = userEvent.setup();
 
   const abbreviation = 'SJ';
-  const size: TSizes = 'medium';
+  const size: TSize = 'medium';
     
   it('renders correclty', () => {
     const { container } = render(
