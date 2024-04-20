@@ -1,7 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import { Avatar } from '../Avatar/Avatar';
 import me from '../../images/me.png';
+import { Avatar } from '../Avatar/Avatar';
+import { story } from '../utils/story';
 
 /**
  * Avatar conponent with user picture and fullname.
@@ -18,24 +19,18 @@ const meta = {
     abbreviation: 'EM',
   },
   argTypes: {
-    firstName: { control: 'text' },
-    lastName: { control: 'text' },
-    abbreviation: { control: 'text' },
-    backgroundColor: { control: 'color' },
-    badged: { control: 'boolean' },
-    disabled: { control: 'boolean' },
+    firstName: story.name,
+    lastName: story.name,
+    abbreviation: story.abbreviation,
+    backgroundColor: story.backgroundColor,
+    badged: story.badged,
+    disabled: story.disabled,
+    src: story.src,
+    onClick: story.onClick,
+    stile: story.stile,
+    size: story.size,
+    status: story.status,
     badgeContent: { control: 'text' },
-    src: { control: 'text' },
-    onClick: { control: 'changed' },
-    stile: { control: 'inline-radio', options: ['primary'] },
-    size: {
-      control: 'inline-radio',
-      options: ['small', 'medium', 'large'],
-    },
-    status: {
-      control: 'inline-radio',
-      options: ['online', 'default', 'not-here', 'busy', 'sleep', 'primary'],
-    },
   }
 } satisfies Meta<typeof Avatar>;
 export default meta;
