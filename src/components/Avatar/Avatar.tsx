@@ -1,12 +1,14 @@
 import React from "react";
 import classNames from "classnames";
 import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from "@mui/material";
+
 import { PropsAvatar } from "../../types/props/avatar";
+import useMute from "../../hooks/useMute";
 
 import styles from './Avatar.module.scss';
 interface IProps extends PropsAvatar {
   /**
-   * Instead of setting first and last name, you can also set a abbreviation prop.
+   * Instead of setting first and last name, you can also set an abbreviation prop.
    */
   abbreviation: string;
   /**
@@ -33,16 +35,18 @@ export const Avatar: React.FC<IProps> = ({
   badgeContent,
   size = 'medium',
   status = 'default',
-  stile,
+  stile = 'default',
   onClick,
   src,
   ...props
 }) => {
   const fullName = `${firstName} ${lastName}`;
+  const { muteState } = useMute(stile);
+
   if (!badged) {
     return (
       <div
-        className={`${props.className} ${stile && styles[stile]}`}
+        className={`${props.className} ${!muteState && styles[stile]}`}
       >
         <AvatarComponent
           src={src}
@@ -66,14 +70,14 @@ export const Avatar: React.FC<IProps> = ({
 
   return (
     <Badge
-      className={`${props.className} ${stile && styles[stile]}`}
+      className={`${props.className} ${!muteState && styles[stile]}`}
       overlap="circular"
       badgeContent={
         <Box
           data-testid="badge"
+          data-status={status}
           data-name="badge"
           aria-disabled={disabled}
-          data-status={ status }
         >
           {badgeContent}
         </Box>
