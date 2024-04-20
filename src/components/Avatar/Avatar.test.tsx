@@ -24,7 +24,7 @@ describe('Avatar', () => {
     const badgeElement = screen.queryByTestId('badge');
     expect(badgeElement).toBeNull();
 
-    const nameElement = screen.getByTestId('avatar-name');
+    const nameElement = screen.getByTestId('avatar-abbreviation');
     expect(nameElement).toHaveTextContent(abbreviation);
     expect(container).toMatchSnapshot();
   });
@@ -100,7 +100,7 @@ describe('Avatar', () => {
         lastName={lastName}
       />
     );
-    const avatarNameElement = screen.getByTestId('avatar-name');
+    const avatarNameElement = screen.getByTestId('avatar-abbreviation');
     expect(avatarNameElement).toHaveTextContent(fullNameAbbreviation);
 
     expect(container).toMatchSnapshot();

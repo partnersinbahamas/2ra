@@ -56,7 +56,7 @@ export const Avatar: React.FC<IProps> = ({
           onClick={onClick}
           {...props}
         >
-          <span data-name="name" data-testid="avatar-name">
+          <span data-name="abbreviation" data-testid="avatar-abbreviation">
             {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation }
           </span>
         </AvatarComponent>
@@ -92,7 +92,7 @@ export const Avatar: React.FC<IProps> = ({
         sx={{ backgroundColor }}
         {...props}
       >
-        <span data-name="name" data-testid="avatar-name">
+        <span data-name="abbreviation" data-testid="avatar-abbreviation">
           {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation }
         </span>
       </AvatarComponent>
