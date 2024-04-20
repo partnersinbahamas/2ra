@@ -1,22 +1,7 @@
-@import '../utils/colors.scss';
+@import '../utils/styles/colors.scss';
+@import '../utils/styles/placeholders.scss';
 
 //default component styles
-[data-name="avatar"] {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background-color: $cool_gray_200;
-  color: $cool_gray_400;
-  font-weight: 600;
-
-  &[aria-disabled="true"] {
-    background-color: $cool_gray_400;
-    border-color: $cool_gray_500;
-    color: $cool_gray_200;
-  }
-}
-
 [data-name="badge"] {
   box-sizing: border-box;
   color: $white;
@@ -36,34 +21,38 @@
   }
 }
 
-[data-status="online"] {
-  background-color: $green_400;
-  border-color: $green_300;
-}
-
-[data-status="default"] {
-  background-color: $cool_gray_200;
-  border-color: $cool_gray_400;
-}
-
-[data-status="sleep"] {
-  background-color: $violet_600;
-  border-color: $violet_300;
-}
-
-[data-status="busy"] {
-  background-color: $red_300;
-  border-color: $red_400;
-}
-
-[data-status="not-here"] {
-  background-color: $orange_300;
-  border-color: $orange_500;
-}
-
 // stiles
-.primary {
+.default {
+  @extend %PAvatarStatuses;
   [data-name="avatar"] {
+    border: 2px solid $cool_gray_400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $cool_gray_200;
+    color: $cool_gray_400;
+    font-weight: 600;
+  
+    &[aria-disabled="true"] {
+      background-color: $cool_gray_400;
+      border-color: $cool_gray_500;
+      color: $cool_gray_200;
+    }
+  }
+
+  [data-name="badge"] {  
+    &[aria-disabled="true"] {
+      background-color: $cool_gray_400;
+      border-color: $cool_gray_500;
+      color: $cool_gray_200;
+    }
+  }
+}
+.primary {
+  @extend %PAvatarStatuses;
+  [data-name="avatar"] {
+    border: 2px solid $cool_gray_400;
     background-color: $cyan_400;
     border-color: $blue_400;
     color: $white;
@@ -89,25 +78,19 @@
   }
 };
 
-
 // sizes
-.small {
+div.small {
   width: 1.25rem;
   height: 1.25rem;
   font-size: 0.5rem;
-  border: 1px solid $cool_gray_400;
 }
-
-.medium {
+div.medium {
   width: 2.188rem;
   height: 2.188rem;
   font-size: 0.875rem;
-  border: 2px solid $cool_gray_400;
 }
-
-.large {
+div.large {
   width: 3.125rem;
   height: 3.125rem;
   font-size: 1.25rem;
-  border: 3px solid $cool_gray_400;
 }
