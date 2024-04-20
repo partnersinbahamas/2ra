@@ -1,14 +1,14 @@
 import { AvatarProps } from "@mui/material";
-import { TStatus } from "./status";
-import { TSizes } from "../size";
+import { TStile } from "../stile";
+import { TSize } from "../size";
 
 export type PropsAvatar = Omit<AvatarProps, 'slotProps' | 'component'> & {
   firstName?: string,
   lastName?: string,
   abbreviation: string,
-  size?: TSizes,
+  size?: TSize,
   backgroundColor?: string,
-  stile?: 'primary',
+  stile?: TStile,
   badged?: boolean,
   disabled?: boolean,
   badgeContent?: any,
