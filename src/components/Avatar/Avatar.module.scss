@@ -68,10 +68,19 @@
     border-color: $blue_400;
     color: $white;
     font-weight: 600;
+
+    &[aria-disabled="true"] {
+      background-color: $cyan_500;
+      border-color: $blue_500;
+      color: $cool_gray_200;
+    }
   }
 
-  [data-status="badge"] {
-    border: 2px solid transparent;
+  [data-name="badge"] {
+    &[aria-disabled="true"] {
+      background-color: $cyan_500;
+      border-color: $blue_500;
+    }
   }
 
   [data-status="primary"] {
