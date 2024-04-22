@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { TStile } from "../types/stile";
 
 function useMute(stile: TStile) {

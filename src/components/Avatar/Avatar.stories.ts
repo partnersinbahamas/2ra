@@ -12,9 +12,6 @@ const meta = {
   title: 'Athomic/Avatar',
   component: Avatar,
   tags: ['autodocs'],
-  parameters: {
-    layout: 'centered',
-  },
   args: {
     abbreviation: 'EM',
   },
@@ -31,7 +28,32 @@ const meta = {
     size: story.size,
     status: story.status,
     badgeContent: { control: 'text' },
-  }
+  },
+  parameters: {
+    layout: 'centered',
+    docs: {
+      description: {
+        component:
+`
+Please to style your custom input component use the mockup bellow.
+### Guide styles
+
+    .className {
+      [data-name="avatar"] {
+        &[aria-disabled="true"] {}
+      };
+
+      [data-name="badge"] {
+        &[aria-disabled="true"] {}
+      };
+
+      [data-name="abbreviation"] {}
+      [data-status="primary"] {}
+    };  
+`
+      }
+    }
+  },
 } satisfies Meta<typeof Avatar>;
 export default meta;
 type TStory = StoryObj<typeof meta>;

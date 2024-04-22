@@ -49,6 +49,7 @@
     }
   }
 }
+
 .primary {
   @extend %PAvatarStatuses;
   [data-name="avatar"] {
@@ -70,6 +71,10 @@
       background-color: $cyan_500;
       border-color: $blue_500;
     }
+  }
+
+  [data-name="abbreviation"] {
+    color: blue;
   }
 
   [data-status="primary"] {
