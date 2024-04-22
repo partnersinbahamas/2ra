@@ -31,34 +31,13 @@ const meta = {
 Please to style your custom input component use the mockup bellow.
 ### Guide styles
 
-    .your-class-name {
-      /* use "heading" data-name to style h3 element *\
-      [id="heading"] => css.styles
-
-      /* use "label" data-name to style label element *\
-      [id="label"] => css.styles
+    .className {
+      [data-name="heading"] {}
+      [data-name="label"] {}
+      [data-name="input"] {}
+      [data-name="error-message"] {}
       
-      /* use "input" data-name to style input element *\
-
-      [id="input"] {
-        => css.styles
-        &:focus {
-          => css.styles
-        }
-      }
-
-      /* use "error-message" data-name to style span element *\
-
-      [id="error-message"] => css.styles
-
-      /* use .your-class-name-error className
-        to style "input" element on error handler *\
-
-
-      &-error {
-        !warning! => use !important here
-        => css.styles
-      }
+      &-error {}
     }
 `
       }
