@@ -14,6 +14,7 @@ const meta = {
   tags: ['autodocs'],
   args: {
     abbreviation: 'EM',
+    anchorOrigin: { horizontal: 'right', vertical: 'bottom' },
   },
   argTypes: {
     firstName: story.name,
@@ -28,6 +29,21 @@ const meta = {
     size: story.size,
     status: story.status,
     badgeContent: { control: 'text' },
+    anchorOrigin: {
+      control: {
+        type: 'object', // Указываем, что это объект
+        keys: {
+          horizontal: {
+            type: 'select',
+            options: ['left', 'right'],
+          },
+          vertical: {
+            type: 'select',
+            options: ['top', 'bottom'],
+          },
+        },
+      },
+    },
   },
   parameters: {
     layout: 'centered',

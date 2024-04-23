@@ -13,6 +13,7 @@ export type PropsAvatar = Omit<AvatarProps, 'slotProps' | 'component'> & {
   disabled?: boolean,
   badgeContent?: any,
   status?: TStringOrStatus,
+  anchorOrigin?: IAnchorOrigin,
   src?: string,
   onClick?: () => void,
 };

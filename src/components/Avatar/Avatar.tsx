@@ -34,6 +34,7 @@ export const Avatar: React.FC<IProps> = ({
   badged,
   disabled,
   badgeContent,
+  anchorOrigin = { vertical: 'bottom', horizontal: 'right' },
   size = 'medium',
   status = 'default',
   stile = 'default',
@@ -83,7 +84,7 @@ export const Avatar: React.FC<IProps> = ({
           {badgeContent}
         </Box>
       }
-      anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
+      anchorOrigin={anchorOrigin}
     >
       <AvatarComponent
         src={src}
