@@ -1,1 +1,0 @@
-export type TStile = 'primary' | 'default' | 'mute';

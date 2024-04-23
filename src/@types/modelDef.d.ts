@@ -1,1 +1,0 @@
-type TStringOrStatus = TStatus | string;

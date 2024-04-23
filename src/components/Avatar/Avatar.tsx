@@ -2,10 +2,11 @@ import React from "react";
 import classNames from "classnames";
 import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from "@mui/material";
 
-import { PropsAvatar } from "../../types/props/avatar";
+import { PropsAvatar } from "../utils/types/props/avatar";
 import useMute from "../../hooks/useMute";
 
 import styles from './Avatar.module.scss';
+import { TStringOrStatus } from "../utils/types/types";
 interface IProps extends PropsAvatar {
   /**
    * Instead of setting first and last name, you can also set an abbreviation prop.

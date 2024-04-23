@@ -1,1 +1,0 @@
-export type TStatus = "online" | "default" | "busy" | "not-here" | "sleep" | "primary";
