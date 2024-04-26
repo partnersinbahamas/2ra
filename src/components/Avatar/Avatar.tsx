@@ -1,12 +1,12 @@
-import React from "react";
-import classNames from "classnames";
-import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from "@mui/material";
+import React from 'react';
+import classNames from 'classnames';
+import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from '@mui/material';
 
-import { PropsAvatar } from "../utils/types/props/avatar";
-import useMute from "../../hooks/useMute";
+import { PropsAvatar } from '../utils/types/props/avatar';
+import useMute from '../../hooks/useMute';
 
 import styles from './Avatar.module.scss';
-import { TStringOrStatus } from "../utils/types/types";
+import { TStringOrStatus } from '../utils/types/types';
 interface IProps extends PropsAvatar {
   /**
    * Instead of setting first and last name, you can also set an abbreviation prop.
@@ -47,9 +47,7 @@ export const Avatar: React.FC<IProps> = ({
 
   if (!badged) {
     return (
-      <div
-        className={`${props.className} ${!muteState && styles[stile]}`}
-      >
+      <div className={`${props.className} ${!muteState && styles[stile]}`}>
         <AvatarComponent
           src={src}
           data-name="avatar"
@@ -63,24 +61,19 @@ export const Avatar: React.FC<IProps> = ({
           {...props}
         >
           <span data-name="abbreviation" data-testid="avatar-abbreviation">
-            {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation }
+            {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
           </span>
         </AvatarComponent>
       </div>
-    )
-  };
+    );
+  }
 
   return (
     <Badge
       className={`${props.className} ${!muteState && styles[stile]}`}
       overlap="circular"
       badgeContent={
-        <Box
-          data-testid="badge"
-          data-status={status}
-          data-name="badge"
-          aria-disabled={disabled}
-        >
+        <Box data-testid="badge" data-status={status} data-name="badge" aria-disabled={disabled}>
           {badgeContent}
         </Box>
       }
@@ -99,7 +92,7 @@ export const Avatar: React.FC<IProps> = ({
         {...props}
       >
         <span data-name="abbreviation" data-testid="avatar-abbreviation">
-          {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation }
+          {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
         </span>
       </AvatarComponent>
     </Badge>

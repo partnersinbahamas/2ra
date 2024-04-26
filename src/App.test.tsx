@@ -3,6 +3,6 @@ import App from './App';
 
 test('renders learn react link', () => {
   render(<App />);
-  const application = screen.getByRole('main')
+  const application = screen.getByRole('main');
   expect(application).toBeInTheDocument();
 });

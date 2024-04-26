@@ -1,6 +1,6 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { COOL_GRAY_400, COOL_GRAY_500, RED_400,  } from "../Colors/colors";
+import { COOL_GRAY_400, COOL_GRAY_500, RED_400 } from '../Colors/colors';
 
 const InputWrapper = styled.div`
   width: 100%;
@@ -36,5 +36,5 @@ const Error = styled.span`
 `;
 const Heading = styled.h3`
   margin: 0;
-`
-export{ InputWrapper, InputComponent, Label, Error, Heading };
+`;
+export { InputWrapper, InputComponent, Label, Error, Heading };

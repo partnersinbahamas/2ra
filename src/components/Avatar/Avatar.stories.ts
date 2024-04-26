@@ -49,8 +49,7 @@ const meta = {
     layout: 'centered',
     docs: {
       description: {
-        component:
-`
+        component: `
 Please to style your custom input component use the mockup bellow.
 ### Guide styles
 
@@ -66,9 +65,9 @@ Please to style your custom input component use the mockup bellow.
       [data-name="abbreviation"] {}
       [data-status="primary"] {}
     };  
-`
-      }
-    }
+`,
+      },
+    },
   },
 } satisfies Meta<typeof Avatar>;
 export default meta;
@@ -79,14 +78,14 @@ export const Default: TStory = {
     size: 'medium',
     firstName: 'Steve',
     lastName: 'Jobs',
-  }
+  },
 };
 export const Disabled: TStory = {
   args: {
     size: 'medium',
     disabled: true,
     badged: true,
-  }
+  },
 };
 export const Primary: TStory = {
   args: {
@@ -94,20 +93,20 @@ export const Primary: TStory = {
     stile: 'primary',
     status: 'primary',
     badged: true,
-  }
-}
+  },
+};
 export const Badged: TStory = {
   args: {
     size: 'medium',
     badged: true,
-  }
+  },
 };
 export const Online: TStory = {
   args: {
     size: 'medium',
     status: 'online',
     badged: true,
-  }
+  },
 };
 // status stories
 export const NotHere: TStory = {
@@ -115,26 +114,26 @@ export const NotHere: TStory = {
     size: 'medium',
     status: 'not-here',
     badged: true,
-  }
+  },
 };
 export const Busy: TStory = {
   args: {
     size: 'medium',
     status: 'busy',
     badged: true,
-  }
+  },
 };
 export const Sleep: TStory = {
   args: {
     size: 'medium',
     status: 'sleep',
     badged: true,
-  }
+  },
 };
 // status stories
 export const BackgroundImage: TStory = {
   args: {
     size: 'large',
     src: me,
-  }
+  },
 };

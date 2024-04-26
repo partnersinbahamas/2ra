@@ -1,15 +1,15 @@
-import React, { InputHTMLAttributes }  from "react";
-import classNames from "classnames";
-import { Error, InputComponent, InputWrapper, Label, Heading } from "./Input.styles";
+import React, { InputHTMLAttributes } from 'react';
+import classNames from 'classnames';
+import { Error, InputComponent, InputWrapper, Label, Heading } from './Input.styles';
 import styles from './Input.module.scss';
 
 export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
-  title?: string,
-  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void,
-  error?: string,
-  stile?: 'primary', 
-  disabled?: boolean,
-};
+  title?: string;
+  onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  error?: string;
+  stile?: 'primary';
+  disabled?: boolean;
+}
 
 export const Input: React.FC<TProps> = ({
   title,
@@ -22,32 +22,23 @@ export const Input: React.FC<TProps> = ({
 }) => {
   const { className, ...inputProps } = props;
   return (
-    <InputWrapper className={
-      classNames(
-        props.className,
-        stile && styles[stile]
-      )}
-    >
+    <InputWrapper className={classNames(props.className, stile && styles[stile])}>
       <Label data-name="label">
-      <Heading data-name="heading">{title}</Heading>
-      <InputComponent
-        data-name="input"
-        value={value}
-        {...inputProps}
-        disabled={disabled}
-        onChange={onChange}
-        className={classNames(
-          { error },
-          { [styles[`${stile}-error`]]: error },
-          { [styles[`${className}-error`]]: error },
-        )}
-      />
+        <Heading data-name="heading">{title}</Heading>
+        <InputComponent
+          data-name="input"
+          value={value}
+          {...inputProps}
+          disabled={disabled}
+          onChange={onChange}
+          className={classNames(
+            { error },
+            { [styles[`${stile}-error`]]: error },
+            { [styles[`${className}-error`]]: error },
+          )}
+        />
       </Label>
-      {error && (
-        <Error data-name="error-message">
-          {error}
-        </Error>
-      )}
+      {error && <Error data-name="error-message">{error}</Error>}
     </InputWrapper>
   );
 };

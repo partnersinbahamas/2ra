@@ -1,15 +1,15 @@
 @import '../utils/styles/colors.scss';
 
 .primary {
-  [data-name="heading"] {
+  [data-name='heading'] {
     margin: 3px;
     color: $blue_400;
   }
-  [data-name="label"] {
+  [data-name='label'] {
     background-color: $cyan_200;
-    border-radius: .15rem;
+    border-radius: 0.15rem;
   }
-  [data-name="input"] {
+  [data-name='input'] {
     border-color: $blue_400;
     color: $blue_400;
     font-weight: 700;
@@ -18,7 +18,7 @@
       border-color: $blue_500;
     }
   }
-  [data-name="error-message"] {
+  [data-name='error-message'] {
     color: $red_400;
   }
   &-error {

@@ -1,25 +1,25 @@
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
-import { Input } from "./Input";
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
+import { Input } from './Input';
 
-describe("Input", () => {
+describe('Input', () => {
   const user = userEvent.setup();
 
-  it("renders correctly", () => {
+  it('renders correctly', () => {
     const { container } = render(<Input />);
     expect(container).toMatchSnapshot();
   });
-  it("renders with input typing", async () => {
+  it('renders with input typing', async () => {
     render(<Input />);
 
-    const inputElement = screen.getByRole("textbox");
-    await user.type(inputElement, "user typing...");
-    expect(inputElement).toHaveValue("user typing...");
+    const inputElement = screen.getByRole('textbox');
+    await user.type(inputElement, 'user typing...');
+    expect(inputElement).toHaveValue('user typing...');
   });
-  it("renders with error", () => {
+  it('renders with error', () => {
     const { container } = render(<Input error="error" />);
 
-    const errorElement = screen.queryByText("error");
+    const errorElement = screen.queryByText('error');
     expect(errorElement).toBeInTheDocument();
 
     expect(container).toMatchInlineSnapshot(`

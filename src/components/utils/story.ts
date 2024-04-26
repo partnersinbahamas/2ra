@@ -1,4 +1,3 @@
-
 // NOTE: story controls-options object;
 export const story = {
   // controles
@@ -12,7 +11,7 @@ export const story = {
   // options
   stile: {
     control: 'inline-radio',
-    options: ['primary', 'default', 'mute']
+    options: ['primary', 'default', 'mute'],
   },
   size: {
     control: 'inline-radio',

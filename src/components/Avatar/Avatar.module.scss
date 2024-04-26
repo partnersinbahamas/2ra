@@ -2,7 +2,7 @@
 @import '../utils/styles/placeholders.scss';
 
 //default component styles
-[data-name="badge"] {
+[data-name='badge'] {
   box-sizing: border-box;
   color: $white;
   min-width: 0.625rem;
@@ -14,7 +14,7 @@
   align-items: center;
   justify-content: center;
 
-  &[aria-disabled="true"] {
+  &[aria-disabled='true'] {
     background-color: $cool_gray_400;
     border-color: $cool_gray_500;
     color: $cool_gray_200;
@@ -24,7 +24,7 @@
 // stiles
 .default {
   @extend %PAvatarStatuses;
-  [data-name="avatar"] {
+  [data-name='avatar'] {
     border: 2px solid $cool_gray_400;
     display: flex;
     align-items: center;
@@ -33,16 +33,16 @@
     background-color: $cool_gray_200;
     color: $cool_gray_400;
     font-weight: 600;
-  
-    &[aria-disabled="true"] {
+
+    &[aria-disabled='true'] {
       background-color: $cool_gray_400;
       border-color: $cool_gray_500;
       color: $cool_gray_200;
     }
   }
 
-  [data-name="badge"] {  
-    &[aria-disabled="true"] {
+  [data-name='badge'] {
+    &[aria-disabled='true'] {
       background-color: $cool_gray_400;
       border-color: $cool_gray_500;
       color: $cool_gray_200;
@@ -52,36 +52,36 @@
 
 .primary {
   @extend %PAvatarStatuses;
-  [data-name="avatar"] {
+  [data-name='avatar'] {
     border: 2px solid $cool_gray_400;
     background-color: $cyan_400;
     border-color: $blue_400;
     color: $white;
     font-weight: 600;
 
-    &[aria-disabled="true"] {
+    &[aria-disabled='true'] {
       background-color: $cyan_500;
       border-color: $blue_500;
       color: $cool_gray_200;
     }
   }
 
-  [data-name="badge"] {
-    &[aria-disabled="true"] {
+  [data-name='badge'] {
+    &[aria-disabled='true'] {
       background-color: $cyan_500;
       border-color: $blue_500;
     }
   }
 
-  [data-name="abbreviation"] {
+  [data-name='abbreviation'] {
     color: blue;
   }
 
-  [data-status="primary"] {
+  [data-status='primary'] {
     background-color: $cyan_400;
     border-color: $blue_400;
   }
-};
+}
 
 // sizes
 div.small {

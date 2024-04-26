@@ -5,16 +5,16 @@ const meta = {
   title: 'Athomic/Buttons/SquareButton',
   component: SquareButon,
   tags: ['autodocs'],
-  parameters: {layout: 'centered'},
+  parameters: { layout: 'centered' },
   argTypes: {
     title: { control: 'text' },
     disabled: { control: 'boolean' },
     radius: { control: 'number' },
-    valiant: { control: 'inline-radio', options: ['primary', 'default', 'submit'] }
+    valiant: { control: 'inline-radio', options: ['primary', 'default', 'submit'] },
   },
   args: {
     valiant: 'default',
-  }
+  },
 } satisfies Meta<typeof SquareButon>;
 
 export default meta;
@@ -27,26 +27,26 @@ export const Disabled: TStory = {
   args: {
     title: 'Disabled',
     disabled: true,
-  }
+  },
 };
 
 export const Radiused: TStory = {
-    args: {
-      title: 'Radius',
-      radius: 10,
-    }
-  };
+  args: {
+    title: 'Radius',
+    radius: 10,
+  },
+};
 
 export const Primary: TStory = {
   args: {
     title: 'Primary',
     valiant: 'primary',
-  }
-}
+  },
+};
 
 export const Submit: TStory = {
-    args: {
-      title: '=>',
-      valiant: 'submit',
-    }
-  }
+  args: {
+    title: '=>',
+    valiant: 'submit',
+  },
+};

@@ -1,8 +1,8 @@
-import { Meta, StoryObj } from "@storybook/react";
-import { within, userEvent } from "@storybook/test";
+import { Meta, StoryObj } from '@storybook/react';
+import { within, userEvent } from '@storybook/test';
 
 import { ConnectOnChange } from '../../../.storybook/decorators';
-import { Input } from "./Input";
+import { Input } from './Input';
 
 const meta = {
   title: 'Athomic/Input',
@@ -12,22 +12,19 @@ const meta = {
     title: { control: 'text' },
     stile: {
       control: 'inline-radio',
-      options: ['primary']
+      options: ['primary'],
     },
     value: { control: 'text' },
     error: { control: 'text' },
     disabled: { control: 'boolean' },
-    type: { control: 'radio',
-      options: ['text', 'password', 'email', 'number']
-    },
+    type: { control: 'radio', options: ['text', 'password', 'email', 'number'] },
     onChange: { action: 'changed' },
     className: { control: 'text' },
   },
   parameters: {
     docs: {
       description: {
-        component:
-`
+        component: `
 Please to style your custom input component use the mockup bellow.
 ### Guide styles
 
@@ -39,9 +36,9 @@ Please to style your custom input component use the mockup bellow.
       
       &-error {}
     }
-`
-      }
-    }
+`,
+      },
+    },
   },
   decorators: [ConnectOnChange],
 } satisfies Meta<typeof Input>;
@@ -51,8 +48,8 @@ export const Default: Story = {
   args: {
     title: 'Input',
     value: 'value',
-  }
-}
+  },
+};
 
 export const Primary: Story = {
   args: {
@@ -65,17 +62,17 @@ export const Primary: Story = {
 export const Error: Story = {
   args: {
     title: 'Handled error',
-    error: '...pzzz..pz'
-  }
-}
+    error: '...pzzz..pz',
+  },
+};
 export const Play: Story = {
   args: {
-    title: 'Play function'
+    title: 'Play function',
   },
-  play: async (context) => {
+  play: async context => {
     const canvas = within(context.canvasElement);
 
     const inputElement = canvas.getByRole('textbox');
     await userEvent.type(inputElement, ' play fn', { delay: 100 });
-  }
-}
+  },
+};

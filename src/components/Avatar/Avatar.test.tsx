@@ -1,22 +1,17 @@
-import userEvent from "@testing-library/user-event";
-import { Avatar } from "./Avatar";
-import { render, screen } from "@testing-library/react";
-import { YELLOW_600 } from "../Colors/colors";
-import { TSize } from "../utils/types/types";
+import userEvent from '@testing-library/user-event';
+import { Avatar } from './Avatar';
+import { render, screen } from '@testing-library/react';
+import { YELLOW_600 } from '../Colors/colors';
+import { TSize } from '../utils/types/types';
 
 describe('Avatar', () => {
   const user = userEvent.setup();
 
   const abbreviation = 'SJ';
   const size: TSize = 'medium';
-    
+
   it('renders correclty', () => {
-    const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-      />
-    );
+    const { container } = render(<Avatar size={size} abbreviation={abbreviation} />);
     const avatarElement = screen.getByTestId('avatar');
     expect(avatarElement).toBeInTheDocument();
     expect(avatarElement).toHaveClass('medium');
@@ -31,26 +26,16 @@ describe('Avatar', () => {
   it('renders with background color', () => {
     const bgc = YELLOW_600;
     const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        backgroundColor={bgc}
-      />
+      <Avatar size={size} abbreviation={abbreviation} backgroundColor={bgc} />,
     );
     const avatarElement = screen.getByTestId('avatar');
     expect(avatarElement).toHaveStyle(`backgroundColor: ${bgc}`);
     expect(container).toMatchSnapshot();
   });
-  it('renders on click', async() => {
+  it('renders on click', async () => {
     const onClickHandler = jest.fn();
 
-    render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        onClick={onClickHandler}
-      />
-    );
+    render(<Avatar size={size} abbreviation={abbreviation} onClick={onClickHandler} />);
 
     const avatarElement = screen.getByTestId('avatar');
     await user.click(avatarElement);
@@ -58,11 +43,7 @@ describe('Avatar', () => {
   });
   it('renders with stile primary', () => {
     const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        stile="primary"
-      />
+      <Avatar size={size} abbreviation={abbreviation} stile="primary" />,
     );
 
     const avatarElement = screen.getByTestId('avatar');
@@ -72,12 +53,7 @@ describe('Avatar', () => {
   it('renders with badged', () => {
     const content = 'Badge content';
     const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        badged
-        badgeContent={content}
-      />
+      <Avatar size={size} abbreviation={abbreviation} badged badgeContent={content} />,
     );
 
     const badgeElement = screen.queryByTestId('badge');
@@ -93,12 +69,7 @@ describe('Avatar', () => {
     const lastName = 'Musk';
     const fullNameAbbreviation = `${firstName[0]}${lastName[0]}`;
     const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        firstName={firstName}
-        lastName={lastName}
-      />
+      <Avatar size={size} abbreviation={abbreviation} firstName={firstName} lastName={lastName} />,
     );
     const avatarNameElement = screen.getByTestId('avatar-abbreviation');
     expect(avatarNameElement).toHaveTextContent(fullNameAbbreviation);
@@ -108,12 +79,7 @@ describe('Avatar', () => {
 
   it('renders on disabled', () => {
     const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        disabled
-        badged
-      />
+      <Avatar size={size} abbreviation={abbreviation} disabled badged />,
     );
 
     const badgeElement = screen.getByTestId('badge');
@@ -122,5 +88,5 @@ describe('Avatar', () => {
     expect(avatarElement.getAttribute('aria-disabled')).toEqual('true');
 
     expect(container).toMatchSnapshot();
-  })
-})
+  });
+});

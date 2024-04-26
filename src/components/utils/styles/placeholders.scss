@@ -1,22 +1,22 @@
 %PAvatarStatuses {
-  [data-status="online"] {
+  [data-status='online'] {
     background-color: $green_400;
     border-color: $green_300;
   }
-  [data-status="default"] {
+  [data-status='default'] {
     background-color: $cool_gray_200;
     border-color: $cool_gray_400;
   }
-  [data-status="sleep"] {
+  [data-status='sleep'] {
     background-color: $violet_600;
     border-color: $violet_300;
   }
-  [data-status="busy"] {
+  [data-status='busy'] {
     background-color: $red_300;
     border-color: $red_400;
   }
-  [data-status="not-here"] {
+  [data-status='not-here'] {
     background-color: $orange_300;
     border-color: $orange_500;
   }
-};
+}
