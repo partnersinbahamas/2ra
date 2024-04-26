@@ -31,7 +31,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prettier": "prettier --write 'src/**/*.{js,json,ts,tsx,css,scss}'"
   },
   "eslintConfig": {
     "extends": [
