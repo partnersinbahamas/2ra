@@ -32,7 +32,8 @@
     "deploy": "gh-pages -d build",
     "sb": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prettier": "prettier --write 'src/**/*.{js,json,ts,tsx,css,scss}'"
+    "prettier": "prettier --write 'src/**/*.{js,json,ts,tsx,css,scss}'",
+    "lint": "eslint src/"
   },
   "eslintConfig": {
     "extends": [
