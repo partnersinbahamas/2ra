@@ -2,7 +2,6 @@ import React from 'react';
 import classNames from 'classnames';
 import SquareButtonElement from './StyledButton.styles';
 import { PriamaryButton, SubmitButton } from './StyledButton.styles';
-import MarkunreadIcon from '@mui/material';
 
 type TVariat = 'submit' | 'primary' | 'default';
 
