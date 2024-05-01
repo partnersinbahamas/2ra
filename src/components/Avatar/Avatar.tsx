@@ -3,7 +3,6 @@ import classNames from 'classnames';
 import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from '@mui/material';
 
 import { PropsAvatar } from '../utils/types/props/avatar';
-import useMute from '../../hooks/useMute';
 
 import styles from './Avatar.module.scss';
 import { TStringOrStatus } from '../utils/types/types';
