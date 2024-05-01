@@ -15,6 +15,7 @@ const meta = {
   args: {
     abbreviation: 'EM',
     anchorOrigin: { horizontal: 'right', vertical: 'bottom' },
+    stile: 'default',
   },
   argTypes: {
     firstName: story.name,
@@ -88,6 +89,14 @@ Please to style your custom input component use the mockup bellow.
 export default meta;
 type TStory = StoryObj<typeof meta>;
 
+export const Muted: TStory = {
+  args: {
+    size: 'medium',
+    firstName: 'Steve',
+    lastName: 'Jobs',
+    stile: 'mute',
+  },
+};
 export const Default: TStory = {
   args: {
     size: 'medium',
