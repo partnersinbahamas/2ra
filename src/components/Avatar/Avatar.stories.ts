@@ -52,6 +52,21 @@ const meta = {
         component: `
 Please to style your custom input component use the mockup bellow.
 ### Guide styles
+  .scss
+
+  use the "div" prefix to make the class more specific
+
+    div.className {
+      &-avatar {
+        &[aria-disabled='true'] {}
+      }
+      &-badge {
+        &[aria-disabled='true'] {}
+        &-"status" {}
+      }
+    }
+
+.module.scss
 
     .className {
       [data-name="avatar"] {
@@ -64,7 +79,7 @@ Please to style your custom input component use the mockup bellow.
 
       [data-name="abbreviation"] {}
       [data-status="primary"] {}
-    };  
+    };
 `,
       },
     },
