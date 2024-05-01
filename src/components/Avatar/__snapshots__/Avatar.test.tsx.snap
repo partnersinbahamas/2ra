@@ -3,12 +3,12 @@
 exports[`Avatar renders correclty 1`] = `
 <div>
   <div
-    class="undefined default"
+    class="undefined mute"
   >
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="default"
+      data-stile="mute"
       data-testid="avatar"
     >
       <span
@@ -25,16 +25,17 @@ exports[`Avatar renders correclty 1`] = `
 exports[`Avatar renders on disabled 1`] = `
 <div>
   <span
-    class="MuiBadge-root undefined default css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root undefined mute css-1c32n2y-MuiBadge-root"
   >
     <div
       aria-disabled="true"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="default"
+      data-stile="mute"
       data-testid="avatar"
     >
       <span
+        class="undefined-abbreviation"
         data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
@@ -46,7 +47,7 @@ exports[`Avatar renders on disabled 1`] = `
     >
       <div
         aria-disabled="true"
-        class="MuiBox-root css-0"
+        class="undefined-badge undefined-badge-default MuiBox-root css-0"
         data-name="badge"
         data-status="default"
         data-testid="badge"
@@ -59,12 +60,12 @@ exports[`Avatar renders on disabled 1`] = `
 exports[`Avatar renders with background color 1`] = `
 <div>
   <div
-    class="undefined default"
+    class="undefined mute"
   >
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-ww4vf0-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-ww4vf0-MuiAvatar-root"
       data-name="avatar"
-      data-stile="default"
+      data-stile="mute"
       data-testid="avatar"
     >
       <span
@@ -81,15 +82,16 @@ exports[`Avatar renders with background color 1`] = `
 exports[`Avatar renders with badged 1`] = `
 <div>
   <span
-    class="MuiBadge-root undefined default css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root undefined mute css-1c32n2y-MuiBadge-root"
   >
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="default"
+      data-stile="mute"
       data-testid="avatar"
     >
       <span
+        class="undefined-abbreviation"
         data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
@@ -100,7 +102,7 @@ exports[`Avatar renders with badged 1`] = `
       class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
     >
       <div
-        class="MuiBox-root css-0"
+        class="undefined-badge undefined-badge-default MuiBox-root css-0"
         data-name="badge"
         data-status="default"
         data-testid="badge"
@@ -115,12 +117,12 @@ exports[`Avatar renders with badged 1`] = `
 exports[`Avatar renders with name 1`] = `
 <div>
   <div
-    class="undefined default"
+    class="undefined mute"
   >
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="default"
+      data-stile="mute"
       data-testid="avatar"
     >
       <span
@@ -140,7 +142,7 @@ exports[`Avatar renders with stile primary 1`] = `
     class="undefined primary"
   >
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
       data-stile="primary"
       data-testid="avatar"

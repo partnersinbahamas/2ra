@@ -37,28 +37,28 @@ export const Avatar: React.FC<IProps> = ({
   anchorOrigin = { vertical: 'bottom', horizontal: 'right' },
   size = 'medium',
   status = 'default',
-  stile = 'default',
+  stile = 'mute',
   onClick,
   src,
   ...props
 }) => {
+  const { className } = props;
   const fullName = `${firstName} ${lastName}`;
-  const { muteState } = useMute(stile);
 
   if (!badged) {
     return (
-      <div className={`${props.className} ${!muteState && styles[stile]}`}>
+      <div className={`${className} ${styles[stile]}`}>
         <AvatarComponent
+          {...props}
           src={src}
           data-name="avatar"
           data-testid="avatar"
-          aria-disabled={disabled}
           data-stile={stile && stile}
+          aria-disabled={disabled}
           alt={fullName}
-          className={classNames(styles[size])}
           sx={{ backgroundColor }}
           onClick={onClick}
-          {...props}
+          className={classNames(styles[size], `${className}-avatar`)}
         >
           <span data-name="abbreviation" data-testid="avatar-abbreviation">
             {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
@@ -70,28 +70,38 @@ export const Avatar: React.FC<IProps> = ({
 
   return (
     <Badge
-      className={`${props.className} ${!muteState && styles[stile]}`}
+      className={`${className} ${styles[stile]}`}
       overlap="circular"
       badgeContent={
-        <Box data-testid="badge" data-status={status} data-name="badge" aria-disabled={disabled}>
+        <Box
+          data-testid="badge"
+          data-name="badge"
+          data-status={status}
+          aria-disabled={disabled}
+          className={`${className}-badge ${className}-badge-${status}`}
+        >
           {badgeContent}
         </Box>
       }
       anchorOrigin={anchorOrigin}
     >
       <AvatarComponent
+        {...props}
         src={src}
         data-name="avatar"
         data-testid="avatar"
         aria-disabled={disabled}
         data-stile={stile && stile}
         alt={`${firstName} ${lastName}`}
-        className={classNames(styles[size])}
-        onClick={onClick}
         sx={{ backgroundColor }}
-        {...props}
+        onClick={onClick}
+        className={classNames(styles[size], `${className}-avatar`)}
       >
-        <span data-name="abbreviation" data-testid="avatar-abbreviation">
+        <span
+          data-name="abbreviation"
+          className={`${className}-abbreviation`}
+          data-testid="avatar-abbreviation"
+        >
           {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
         </span>
       </AvatarComponent>
