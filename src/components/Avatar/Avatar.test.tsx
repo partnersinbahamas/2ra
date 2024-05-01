@@ -89,4 +89,14 @@ describe('Avatar', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('renders with className props', () => {
+    const className = 'avatar-className';
+    const { container } = render(
+      <Avatar size={size} abbreviation={abbreviation} badged className={className} />,
+    );
+    const avatarElement = screen.getByTestId('badge');
+    expect(avatarElement).toHaveClass(`${className}-badge`);
+    expect(container).toMatchSnapshot();
+  });
 });
