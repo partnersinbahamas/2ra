@@ -119,6 +119,15 @@ export const Primary: TStory = {
     badged: true,
   },
 };
+export const PrimaryDisabled: TStory = {
+  args: {
+    size: 'medium',
+    stile: 'primary',
+    status: 'primary',
+    badged: true,
+    disabled: true,
+  },
+};
 export const Badged: TStory = {
   args: {
     size: 'medium',
