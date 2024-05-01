@@ -59,7 +59,11 @@ export const Avatar: React.FC<IProps> = ({
           onClick={onClick}
           className={classNames(styles[size], `${className}-avatar`)}
         >
-          <span data-name="abbreviation" data-testid="avatar-abbreviation">
+          <span
+            data-name="abbreviation"
+            data-testid="avatar-abbreviation"
+            className={`${className}-abbreviation`}
+          >
             {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
           </span>
         </AvatarComponent>
@@ -98,8 +102,8 @@ export const Avatar: React.FC<IProps> = ({
       >
         <span
           data-name="abbreviation"
-          className={`${className}-abbreviation`}
           data-testid="avatar-abbreviation"
+          className={`${className}-abbreviation`}
         >
           {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
         </span>
