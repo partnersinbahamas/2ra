@@ -21,33 +21,6 @@ describe('Input', () => {
 
     const errorElement = screen.queryByText('error');
     expect(errorElement).toBeInTheDocument();
-
-    expect(container).toMatchInlineSnapshot(`
-      <div>
-        <div
-          class="sc-beySPh ErGXa"
-        >
-          <label
-            class="sc-dmyCSP jGsYty"
-            data-name="label"
-          >
-            <h3
-              class="sc-eDLKkx ebsndr"
-              data-name="heading"
-            />
-            <input
-              class="sc-guDLey caCvKY error undefined-error undefined-error"
-              data-name="input"
-            />
-          </label>
-          <span
-            class="sc-hLQSwg gpNhwr"
-            data-name="error-message"
-          >
-            error
-          </span>
-        </div>
-      </div>
-    `);
+    expect(container).toMatchSnapshot();
   });
 });

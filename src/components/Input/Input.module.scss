@@ -17,11 +17,12 @@
     &:focus {
       border-color: $blue_500;
     }
+
+    &[data-error='true'] {
+      border-color: $red_400;
+    }
   }
   [data-name='error-message'] {
     color: $red_400;
-  }
-  &-error {
-    border-color: $red_400 !important;
   }
 }
