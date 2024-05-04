@@ -18,10 +18,7 @@ export const ConnectOnChange: Decorator = (StoryFn, ctx) => {
     setState((prev) => ({...prev, value: ctx.args.value}));
   }, [ctx.args.value])
   
-
-  function onChange(event: React.ChangeEvent<HTMLInputElement>) {
-    const { value } = event.target;
-
+  function onChangeValue(value: string) {
     setState((prev) => ({...prev, value}));
 
     if (ctx.args.value !== undefined) {
@@ -29,7 +26,7 @@ export const ConnectOnChange: Decorator = (StoryFn, ctx) => {
     }
   }
 
-  return <StoryFn args={{...ctx.args, value, onChange}} />
+  return <StoryFn args={{...ctx.args, value, onChangeValue}} />
 }
 
 export const globalDecorators: Decorator[] = [];
