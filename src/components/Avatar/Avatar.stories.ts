@@ -2,7 +2,7 @@ import { Meta, StoryObj } from '@storybook/react';
 
 import me from '../../images/me.png';
 import { Avatar } from '../Avatar/Avatar';
-import { story } from '../utils/story';
+import { story } from '../utils/variables/story';
 
 /**
  * Avatar conponent with user picture and fullname.
