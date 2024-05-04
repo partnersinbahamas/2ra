@@ -32,7 +32,7 @@ const meta = {
     badgeContent: { control: 'text' },
     anchorOrigin: {
       control: {
-        type: 'object', // Указываем, что это объект
+        type: 'object', // indicate that is an object
         keys: {
           horizontal: {
             type: 'select',
@@ -59,11 +59,11 @@ Please to style your custom input component use the mockup bellow.
 
     div.className {
       &-avatar {
-        &[aria-disabled='true'] {}
+        &[aria-disabled='true'] {};
       }
       &-badge {
-        &[aria-disabled='true'] {}
-        &-"status" {}
+        &[aria-disabled='true'] {};
+        &-"status" {};
       }
     }
 
@@ -71,15 +71,15 @@ Please to style your custom input component use the mockup bellow.
 
     .className {
       [data-name="avatar"] {
-        &[aria-disabled="true"] {}
+        &[aria-disabled="true"] {};
       };
 
       [data-name="badge"] {
-        &[aria-disabled="true"] {}
+        &[aria-disabled="true"] {};
       };
 
-      [data-name="abbreviation"] {}
-      [data-status="primary"] {}
+      [data-name="abbreviation"] {};
+      [data-status="primary"] {};
     };
 `,
       },

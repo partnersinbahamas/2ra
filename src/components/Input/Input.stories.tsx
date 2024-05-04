@@ -27,13 +27,16 @@ Please to style your custom input component use the mockup bellow.
 ### Guide styles
 
     .className {
-      [data-name="heading"] {}
-      [data-name="label"] {}
-      [data-name="input"] {}
-      [data-name="error-message"] {}
-      
-      &-error {}
-    }
+      [data-name='heading'] {};
+      [data-name='label'] {};
+      [data-name='input'] {    
+        &[data-error='true'] {
+          border-color: $red_400;
+        };
+      };
+
+      [data-name='error-message'] {};
+    };
 `,
       },
     },
