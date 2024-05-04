@@ -1,5 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/test';
+import { story } from '../utils/variables/story';
 
 import { ConnectOnChange } from '../../../.storybook/decorators';
 import { Input } from './Input';
@@ -9,17 +10,14 @@ const meta = {
   component: Input,
   tags: ['autodocs'],
   argTypes: {
-    title: { control: 'text' },
-    stile: {
-      control: 'inline-radio',
-      options: ['primary'],
-    },
-    value: { control: 'text' },
-    error: { control: 'text' },
-    disabled: { control: 'boolean' },
-    type: { control: 'radio', options: ['text', 'password', 'email', 'number'] },
-    onChange: { action: 'changed' },
-    className: { control: 'text' },
+    title: story.title,
+    stile: story.stile,
+    value: story.stringValue,
+    error: story.stringError,
+    disabled: story.disabled,
+    type: story.inputType,
+    onChange: story.onChange,
+    className: story.className,
   },
   parameters: {
     docs: {
