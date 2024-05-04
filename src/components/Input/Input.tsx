@@ -41,6 +41,7 @@ export const Input: React.FC<TProps> = ({
           {title}
         </Heading>
         <InputComponent
+          stile={stile}
           data-name="input"
           data-error={!!error}
           value={value}

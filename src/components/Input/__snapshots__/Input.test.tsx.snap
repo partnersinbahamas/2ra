@@ -3,20 +3,23 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa"
+    class="sc-beySPh ErGXa mute"
   >
     <label
-      class="sc-dmyCSP jGsYty"
+      class="sc-dmyCSP eBqJxY"
       data-name="label"
+      stile="mute"
     >
       <h3
-        class="sc-eDLKkx ebsndr"
+        class="sc-eDLKkx cIQrnR"
         data-name="heading"
+        stile="mute"
       />
       <input
-        class="sc-guDLey caCvKY"
+        class="sc-guDLey jofGtu"
         data-error="false"
         data-name="input"
+        stile="mute"
       />
     </label>
   </div>
@@ -26,20 +29,23 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders with error 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa"
+    class="sc-beySPh ErGXa mute"
   >
     <label
-      class="sc-dmyCSP jGsYty"
+      class="sc-dmyCSP eBqJxY"
       data-name="label"
+      stile="mute"
     >
       <h3
-        class="sc-eDLKkx ebsndr"
+        class="sc-eDLKkx cIQrnR"
         data-name="heading"
+        stile="mute"
       />
       <input
-        class="sc-guDLey caCvKY error undefined-error"
+        class="sc-guDLey jofGtu error undefined-error"
         data-error="true"
         data-name="input"
+        stile="mute"
       />
     </label>
     <span

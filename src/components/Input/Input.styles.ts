@@ -1,6 +1,17 @@
 import styled from 'styled-components';
+import { TProps } from './Input';
+import useMute from '../../hooks/useMute';
 
-import { COOL_GRAY_400, COOL_GRAY_500, RED_400 } from '../Colors/colors';
+import {
+  COOL_GRAY_100,
+  COOL_GRAY_300,
+  COOL_GRAY_400,
+  COOL_GRAY_500,
+  RED_400,
+} from '../Colors/colors';
+import { TStile } from '../utils/types/types';
+
+const stiled = (stile?: TStile) => stile && !useMute(stile).muteState;
 
 const InputWrapper = styled.div`
   width: 100%;
@@ -10,31 +21,53 @@ const InputWrapper = styled.div`
   font-family: 'Poppins', sans-serif;
   flex-direction: column;
 `;
-const InputComponent = styled.input`
-  width: 100%;
-  padding: 0.625rem;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-  border: 2px solid ${COOL_GRAY_400};
-  border-radius: 0;
-  &.error {
-    border-color: ${RED_400};
-  }
-  &:focus {
-    outline: none;
-    border-color: ${COOL_GRAY_500};
-  }
+const InputComponent = styled.input<TProps>`
+  ${({ stile }) =>
+    stiled(stile) &&
+    `
+    transition: .5s;
+    box-sizing: border-box;
+
+    width: 100%;
+    padding: 0.625rem;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    color: ${COOL_GRAY_400};
+    border: 2px solid ${COOL_GRAY_300};
+    border-radius: 0;
+    &.error {
+      border-color: ${RED_400};
+    }
+    &:focus {
+      outline: none;
+      border-color: ${COOL_GRAY_400};
+      color: ${COOL_GRAY_500};
+    }
+  `}
 `;
-const Label = styled.label`
-  margin: 0;
-  margin-bottom: 5px;
-  font-weight: 600;
-  font-size: 0.625rem;
+const Label = styled.label<TProps>`
+  font-size: 0.6rem;
+
+  ${({ stile }) =>
+    stiled(stile) &&
+    `
+    transition: .5s;
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 0.625rem;
+    background-color: ${COOL_GRAY_100};
+    border-radius: 0.15rem;
+    color: ${COOL_GRAY_500};
+  `}
 `;
 const Error = styled.span`
   color: ${RED_400};
 `;
-const Heading = styled.h3`
-  margin: 0;
+
+const Heading = styled.h3<TProps>`
+  margin: 3px;
+  transition: 0.5s;
+
+  ${({ stile }) => !stiled(stile) && `margin: 0`}
 `;
 export { InputWrapper, InputComponent, Label, Error, Heading };
