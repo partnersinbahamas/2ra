@@ -3,23 +3,23 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa mute"
+    class="sc-beySPh ErGXa default"
   >
     <label
-      class="sc-dmyCSP eBqJxY undefined-label"
+      class="sc-dmyCSP ihRrHi undefined-label"
       data-name="label"
-      stile="mute"
+      stile="default"
     >
       <h3
-        class="sc-eDLKkx gySIDl undefined-heading"
+        class="sc-eDLKkx gVYdGR undefined-heading"
         data-name="heading"
-        stile="mute"
+        stile="default"
       />
       <input
-        class="sc-guDLey jofGtu undefined-input"
+        class="sc-guDLey fvRQIL undefined-input"
         data-error="false"
         data-name="input"
-        stile="mute"
+        stile="default"
       />
     </label>
   </div>
@@ -29,23 +29,23 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders with error 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa mute"
+    class="sc-beySPh ErGXa default"
   >
     <label
-      class="sc-dmyCSP eBqJxY undefined-label"
+      class="sc-dmyCSP ihRrHi undefined-label"
       data-name="label"
-      stile="mute"
+      stile="default"
     >
       <h3
-        class="sc-eDLKkx gySIDl undefined-heading"
+        class="sc-eDLKkx gVYdGR undefined-heading"
         data-name="heading"
-        stile="mute"
+        stile="default"
       />
       <input
-        class="sc-guDLey jofGtu error undefined-error undefined-input"
+        class="sc-guDLey fvRQIL error undefined-error undefined-input"
         data-error="true"
         data-name="input"
-        stile="mute"
+        stile="default"
       />
     </label>
     <span

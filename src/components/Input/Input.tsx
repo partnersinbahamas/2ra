@@ -3,6 +3,7 @@ import classNames from 'classnames';
 import { Error, InputComponent, InputWrapper, Label, Heading } from './Input.styles';
 import styles from './Input.module.scss';
 import { TStile } from '../utils/types/types';
+import defaultProps from '../utils/variables/defaultProps';
 
 export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string;
@@ -19,7 +20,7 @@ export const Input: React.FC<TProps> = ({
   onChange,
   onChangeValue,
   error,
-  stile = 'mute',
+  stile = defaultProps.stile,
   disabled,
   ...props
 }) => {

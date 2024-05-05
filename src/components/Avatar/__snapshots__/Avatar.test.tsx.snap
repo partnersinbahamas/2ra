@@ -3,12 +3,12 @@
 exports[`Avatar renders correclty 1`] = `
 <div>
   <div
-    class="undefined mute"
+    class="undefined default"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="mute"
+      data-stile="default"
       data-testid="avatar"
     >
       <span
@@ -26,13 +26,13 @@ exports[`Avatar renders correclty 1`] = `
 exports[`Avatar renders on disabled 1`] = `
 <div>
   <span
-    class="MuiBadge-root undefined mute css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root undefined default css-1c32n2y-MuiBadge-root"
   >
     <div
       aria-disabled="true"
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="mute"
+      data-stile="default"
       data-testid="avatar"
     >
       <span
@@ -61,12 +61,12 @@ exports[`Avatar renders on disabled 1`] = `
 exports[`Avatar renders with background color 1`] = `
 <div>
   <div
-    class="undefined mute"
+    class="undefined default"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-ww4vf0-MuiAvatar-root"
       data-name="avatar"
-      data-stile="mute"
+      data-stile="default"
       data-testid="avatar"
     >
       <span
@@ -84,12 +84,12 @@ exports[`Avatar renders with background color 1`] = `
 exports[`Avatar renders with badged 1`] = `
 <div>
   <span
-    class="MuiBadge-root undefined mute css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root undefined default css-1c32n2y-MuiBadge-root"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="mute"
+      data-stile="default"
       data-testid="avatar"
     >
       <span
@@ -119,12 +119,12 @@ exports[`Avatar renders with badged 1`] = `
 exports[`Avatar renders with className props 1`] = `
 <div>
   <span
-    class="MuiBadge-root avatar-className mute css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root avatar-className default css-1c32n2y-MuiBadge-root"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-className-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="mute"
+      data-stile="default"
       data-testid="avatar"
     >
       <span
@@ -152,12 +152,12 @@ exports[`Avatar renders with className props 1`] = `
 exports[`Avatar renders with name 1`] = `
 <div>
   <div
-    class="undefined mute"
+    class="undefined default"
   >
     <div
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
       data-name="avatar"
-      data-stile="mute"
+      data-stile="default"
       data-testid="avatar"
     >
       <span

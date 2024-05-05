@@ -6,6 +6,7 @@ import { PropsAvatar } from '../utils/types/props/avatar';
 
 import styles from './Avatar.module.scss';
 import { TStringOrStatus } from '../utils/types/types';
+import defaultProps from '../utils/variables/defaultProps';
 interface IProps extends PropsAvatar {
   /**
    * Instead of setting first and last name, you can also set an abbreviation prop.
@@ -33,10 +34,10 @@ export const Avatar: React.FC<IProps> = ({
   badged,
   disabled,
   badgeContent,
-  anchorOrigin = { vertical: 'bottom', horizontal: 'right' },
-  size = 'medium',
-  status = 'default',
-  stile = 'mute',
+  anchorOrigin = defaultProps.anchorOrigin,
+  size = defaultProps.size,
+  status = defaultProps.status,
+  stile = defaultProps.stile,
   onClick,
   src,
   ...props
