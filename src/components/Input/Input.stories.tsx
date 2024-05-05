@@ -25,14 +25,23 @@ const meta = {
         component: `
 Please to style your custom input component use the mockup bellow.
 ### Guide styles
+  .scss
+
+    .className {
+      &-heading {};
+      &-label {};
+      &-input {};
+      &-error {};
+      &-error-message {};
+    };
+
+.module.scss
 
     .className {
       [data-name='heading'] {};
       [data-name='label'] {};
       [data-name='input'] {    
-        &[data-error='true'] {
-          border-color: $red_400;
-        };
+        &[data-error='true'] {};
       };
 
       [data-name='error-message'] {};

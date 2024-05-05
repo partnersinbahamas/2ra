@@ -6,17 +6,17 @@ exports[`Input renders correctly 1`] = `
     class="sc-beySPh ErGXa mute"
   >
     <label
-      class="sc-dmyCSP eBqJxY"
+      class="sc-dmyCSP eBqJxY undefined-label"
       data-name="label"
       stile="mute"
     >
       <h3
-        class="sc-eDLKkx cIQrnR"
+        class="sc-eDLKkx gySIDl undefined-heading"
         data-name="heading"
         stile="mute"
       />
       <input
-        class="sc-guDLey jofGtu"
+        class="sc-guDLey jofGtu undefined-input"
         data-error="false"
         data-name="input"
         stile="mute"
@@ -32,24 +32,24 @@ exports[`Input renders with error 1`] = `
     class="sc-beySPh ErGXa mute"
   >
     <label
-      class="sc-dmyCSP eBqJxY"
+      class="sc-dmyCSP eBqJxY undefined-label"
       data-name="label"
       stile="mute"
     >
       <h3
-        class="sc-eDLKkx cIQrnR"
+        class="sc-eDLKkx gySIDl undefined-heading"
         data-name="heading"
         stile="mute"
       />
       <input
-        class="sc-guDLey jofGtu error undefined-error"
+        class="sc-guDLey jofGtu error undefined-error undefined-input"
         data-error="true"
         data-name="input"
         stile="mute"
       />
     </label>
     <span
-      class="sc-hLQSwg gpNhwr"
+      class="sc-hLQSwg gpNhwr undefined-error-message"
       data-name="error-message"
     >
       error

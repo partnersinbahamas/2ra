@@ -36,8 +36,8 @@ export const Input: React.FC<TProps> = ({
 
   return (
     <InputWrapper className={classNames(className, stile && styles[stile])}>
-      <Label stile={stile} data-name="label">
-        <Heading stile={stile} data-name="heading">
+      <Label stile={stile} data-name="label" className={`${className}-label`}>
+        <Heading stile={stile} data-name="heading" className={`${className}-heading`}>
           {title}
         </Heading>
         <InputComponent
@@ -48,10 +48,14 @@ export const Input: React.FC<TProps> = ({
           {...inputProps}
           disabled={disabled}
           onChange={handleChange}
-          className={classNames({ error }, { [styles[`${className}-error`]]: error })}
+          className={classNames({ error }, { [`${className}-error`]: error }, `${className}-input`)}
         />
       </Label>
-      {error && <Error data-name="error-message">{error}</Error>}
+      {error && (
+        <Error data-name="error-message" className={`${className}-error-message`}>
+          {error}
+        </Error>
+      )}
     </InputWrapper>
   );
 };
