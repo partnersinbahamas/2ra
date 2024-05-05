@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MailIcon 1`] = `
+<div>
+  <svg
+    class="sc-beySPh jroDkm"
+    fill="currentcolor"
+    viewBox="0 0 18 12"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0 3.421v8.578h18V3.421l-9 5.25z"
+    />
+    <path
+      d="M0 0v1.5l9 5.25 9-5.25V0z"
+    />
+  </svg>
+</div>
+`;

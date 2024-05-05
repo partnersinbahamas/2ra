@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SheetClockIcon 1`] = `
+<div>
+  <svg
+    class="sc-beySPh jroDkm"
+    fill="currentcolor"
+    stroke="currentcolor"
+    viewBox="2 3 19.2 19.5"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M24 23.25a.752.752 0 0 1-.75.75H.75a.752.752 0 0 1-.75-.75V.75A.752.752 0 0 1 .75 0h22.5a.752.752 0 0 1 .75.75z"
+      fill="none"
+      stroke="none"
+    />
+    <path
+      d="M21.158 21.068H9.396V2.921h8.009l3.753 3.888v14.258zM10.965 4.521v15.125h8.663V7.479h-2.954V4.521z"
+      stroke="none"
+    />
+    <g
+      fill="#fff"
+      stroke-width="2"
+      transform="translate(2.191 9.396)"
+    >
+      <circle
+        cx="6.572"
+        cy="6.572"
+        r="6.572"
+        stroke="none"
+      />
+      <circle
+        cx="6.572"
+        cy="6.572"
+        fill="none"
+        r="5.572"
+      />
+    </g>
+    <path
+      d="M9.493 12.317h-1.46v5.112h3.651v-1.46H9.493z"
+      stroke="none"
+    />
+  </svg>
+</div>
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`StarIcon renders 1`] = `
+<div>
+  <svg
+    class="sc-beySPh jroDkm"
+    viewBox="14.5 717 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <polygon
+        points="31.5,730.5 38.5,725.5 29.5,725.5 26.5,716.5 23.5,725.5 14.5,725.5 21.5,730.5 18.5,739.5  26.5,733.9004 34.5,739.5"
+        style="fill: #000000; stroke: transparent;"
+      />
+    </g>
+  </svg>
+</div>
+`;
+
+exports[`StarIcon renders half-filled 1`] = `
+<div>
+  <svg
+    class="sc-beySPh jroDkm"
+    viewBox="14.5 717 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <defs>
+      <lineargradient
+        id="gradient"
+      >
+        <stop
+          offset="50%"
+          stop-color="red"
+        />
+        <stop
+          offset="50%"
+          stop-color="white"
+        />
+      </lineargradient>
+    </defs>
+    <g>
+      <polygon
+        points="31.5,730.5 38.5,725.5 29.5,725.5 26.5,716.5 23.5,725.5 14.5,725.5 21.5,730.5 18.5,739.5  26.5,733.9004 34.5,739.5"
+        style="fill: url(#gradient); stroke: black;"
+      />
+    </g>
+  </svg>
+</div>
+`;

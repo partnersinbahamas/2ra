@@ -1,0 +1,35 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CheckCircleSolidIcon renders default 1`] = `
+<div>
+  <svg
+    class="sc-guDLey kBBjNb"
+    fill="currentcolor"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M8 0C12.41 0 16 3.563 16 7.99C16 12.405 12.41 16 8 16C3.59 16 0 12.405 0 7.99C0 3.595 3.59 0 8 0ZM11.493 4.732L6.595 9.629L4.51 7.548L3.066 8.953L6.621 12.429L12.938 6.156L11.494 4.732H11.493Z"
+      fill-rule="evenodd"
+    />
+  </svg>
+</div>
+`;
+
+exports[`CheckCircleSolidIcon renders small 1`] = `
+<div>
+  <svg
+    class="sc-guDLey kBBjNb"
+    fill="currentcolor"
+    viewBox="0 0 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M8 0C12.41 0 16 3.563 16 7.99C16 12.405 12.41 16 8 16C3.59 16 0 12.405 0 7.99C0 3.595 3.59 0 8 0ZM11.493 4.732L6.595 9.629L4.51 7.548L3.066 8.953L6.621 12.429L12.938 6.156L11.494 4.732H11.493Z"
+      fill-rule="evenodd"
+    />
+  </svg>
+</div>
+`;

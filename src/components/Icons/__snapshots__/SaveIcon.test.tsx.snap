@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SaveIcon renders default 1`] = `
+<div>
+  <svg
+    class="sc-hLQSwg hewGWh"
+    fill="none"
+    stroke="currentcolor"
+    viewBox="3 3 26 26"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M25.3333 28H6.66667C5.95942 28 5.28115 27.719 4.78105 27.219C4.28095 26.7189 4 26.0406 4 25.3333V6.66667C4 5.95942 4.28095 5.28115 4.78105 4.78105C5.28115 4.28095 5.95942 4 6.66667 4H21.3333L28 10.6667V25.3333C28 26.0406 27.719 26.7189 27.219 27.219C26.7189 27.719 26.0406 28 25.3333 28Z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M22.6673 27.9999V17.3333H9.33398V27.9999"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M9.33398 4V10.6667H20.0007"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`SaveIcon renders large 1`] = `
+<div>
+  <svg
+    class="sc-hLQSwg hewGWh"
+    fill="none"
+    stroke="currentcolor"
+    viewBox="3 3 26 26"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M25.3333 28H6.66667C5.95942 28 5.28115 27.719 4.78105 27.219C4.28095 26.7189 4 26.0406 4 25.3333V6.66667C4 5.95942 4.28095 5.28115 4.78105 4.78105C5.28115 4.28095 5.95942 4 6.66667 4H21.3333L28 10.6667V25.3333C28 26.0406 27.719 26.7189 27.219 27.219C26.7189 27.719 26.0406 28 25.3333 28Z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M22.6673 27.9999V17.3333H9.33398V27.9999"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M9.33398 4V10.6667H20.0007"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`SaveIcon renders medium 1`] = `
+<div>
+  <svg
+    class="sc-dmyCSP dRcSrL"
+    fill="none"
+    stroke="currentcolor"
+    viewBox="2 2 20 20"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M19 21H5C4.46957 21 3.96086 20.7893 3.58579 20.4142C3.21071 20.0391 3 19.5304 3 19V5C3 4.46957 3.21071 3.96086 3.58579 3.58579C3.96086 3.21071 4.46957 3 5 3H16L21 8V19C21 19.5304 20.7893 20.0391 20.4142 20.4142C20.0391 20.7893 19.5304 21 19 21Z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M17 21V13H7V21"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M7 3V8H15"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;
+
+exports[`SaveIcon renders small 1`] = `
+<div>
+  <svg
+    class="sc-guDLey kBBjNb"
+    fill="none"
+    stroke="currentcolor"
+    viewBox="2 2 16 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M15.4444 17H4.55556C4.143 17 3.74733 16.8361 3.45561 16.5444C3.16389 16.2527 3 15.857 3 15.4444V4.55556C3 4.143 3.16389 3.74733 3.45561 3.45561C3.74733 3.16389 4.143 3 4.55556 3H13.1111L17 6.88889V15.4444C17 15.857 16.8361 16.2527 16.5444 16.5444C16.2527 16.8361 15.857 17 15.4444 17Z"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M14 17V11H6V17"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+    <path
+      d="M6 3V7H12"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+    />
+  </svg>
+</div>
+`;

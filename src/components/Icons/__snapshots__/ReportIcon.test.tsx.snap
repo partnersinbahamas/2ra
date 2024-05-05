@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ReportIcon 1`] = `
+<div>
+  <svg
+    class="sc-beySPh jroDkm"
+    fill="currentcolor"
+    viewBox="0 0 12 16"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M8 0c.25 0 .5.094.688.281l3.03 3A.99.99 0 0112 4v11c0 .563-.438 1-1 1H1c-.563 0-1-.438-1-1V1c0-.563.438-1 1-1h7zM6.969 2H2v12h8V5H7.969c-.563 0-1-.438-1-1V2zM4 7h4v1.969H4V7zm0 3h4v2H4v-2z"
+      fill-rule="evenodd"
+    />
+  </svg>
+</div>
+`;

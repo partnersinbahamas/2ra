@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ArrowDownIcon 1`] = `
+<div>
+  <svg
+    class="sc-beySPh jroDkm"
+    fill="currentcolor"
+    viewBox="5 9 22 15"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <polygon
+        points="5,13 8,10 16,18 24,10 27,13 16,24"
+      />
+    </g>
+  </svg>
+</div>
+`;
