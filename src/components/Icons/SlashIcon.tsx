@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const CheckIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  size,
-  style,
-  withBox,
-}) => {
+const CheckIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
   switch (size) {
     case 'SMALL':
       return (
@@ -21,14 +15,7 @@ const CheckIcon: React.FC<TIcon> = ({
           stroke={color}
           style={style}
         >
-          <line
-            x1="2"
-            y1="22"
-            x2="22"
-            y2="4"
-            strokeWidth="4"
-            strokeLinecap="round"
-          />
+          <line x1="2" y1="22" x2="22" y2="4" strokeWidth="4" strokeLinecap="round" />
         </SmallSvg>
       );
 
@@ -41,14 +28,7 @@ const CheckIcon: React.FC<TIcon> = ({
           stroke={color}
           style={style}
         >
-          <line
-            x1="1.5"
-            y1="22.5"
-            x2="22.5"
-            y2="1.5"
-            strokeWidth="3"
-            strokeLinecap="round"
-          />
+          <line x1="1.5" y1="22.5" x2="22.5" y2="1.5" strokeWidth="3" strokeLinecap="round" />
         </MediumSvg>
       );
 
@@ -62,14 +42,7 @@ const CheckIcon: React.FC<TIcon> = ({
           stroke={color}
           style={style}
         >
-          <line
-            x1="1"
-            y1="23"
-            x2="23"
-            y2="1"
-            strokeWidth="2"
-            strokeLinecap="round"
-          />
+          <line x1="1" y1="23" x2="23" y2="1" strokeWidth="2" strokeLinecap="round" />
         </LargeSvg>
       );
   }

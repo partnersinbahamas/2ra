@@ -13,12 +13,7 @@ type TProps = {
  * @deprecated Use RefreshIcon size=SMALL instead
  */
 const ReplaceIcon: React.FC<TProps> = ({ className, color, style }) => (
-  <Svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 15 18"
-    style={style}
-    className={className}
-  >
+  <Svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 18" style={style} className={className}>
     <path
       fillRule="evenodd"
       clipRule="evenodd"

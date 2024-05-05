@@ -13,12 +13,7 @@ type TProps = {
   withBox?: boolean;
 };
 
-const SheetClockIcon: React.FC<TProps> = ({
-  className,
-  color,
-  style,
-  withBox,
-}) => (
+const SheetClockIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={withBox ? '0 0 24 24' : '2 3 19.2 19.5'}

@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const ExclamationMarkIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  size,
-  style,
-  withBox,
-}) => {
+const ExclamationMarkIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
   switch (size) {
     case 'SOLID':
       return (

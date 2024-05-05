@@ -11,12 +11,7 @@ type TProps = {
   withBox?: boolean;
 };
 
-const DownloadCSVIcon: React.FC<TProps> = ({
-  className,
-  color,
-  style,
-  withBox,
-}) => {
+const DownloadCSVIcon: React.FC<TProps> = ({ className, color, style, withBox }) => {
   const id = uniqueId('download_csv_');
   return (
     <Svg

@@ -17,10 +17,7 @@ const LockIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
     fill={color}
     className={className}
   >
-    <path
-      d="M1 0h30c.6 0 1 .4 1 1v30c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1V1c0-.6.4-1 1-1z"
-      fill="none"
-    />
+    <path d="M1 0h30c.6 0 1 .4 1 1v30c0 .6-.4 1-1 1H1c-.6 0-1-.4-1-1V1c0-.6.4-1 1-1z" fill="none" />
     <path
       d="M18.1 19.8c0-1.2-.9-2.1-2.1-2.1s-2.1.9-2.1 2.1c0 .7.4 1.4.9 1.7l-.9 5.6h4.2l-.9-5.6c.5-.4.9-1 .9-1.7zM16 6.1c-3.2 0-6.3 2.6-6.3 5.8v3.7h12.6v-3.7c0-3.2-3.1-5.8-6.3-5.8z"
       fill="none"

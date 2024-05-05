@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg } from './Svg';
 import { TIcon } from '.';
 
-const ArrowClockIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  size,
-  style,
-  withBox,
-}) => {
+const ArrowClockIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
   switch (size) {
     case 'SMALL':
     case 'MEDIUM':

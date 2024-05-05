@@ -5,13 +5,7 @@ import { SmallSvg, MediumSvg, LargeSvg } from './Svg';
 
 import { TIcon } from '.';
 
-const MinusIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  size,
-  style,
-  withBox,
-}) => {
+const MinusIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
   switch (size) {
     case 'SMALL':
       return (

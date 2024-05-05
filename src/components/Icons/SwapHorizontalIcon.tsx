@@ -4,12 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const SwapHorizontalIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  size,
-  style,
-}) => {
+const SwapHorizontalIcon: React.FC<TIcon> = ({ className, color, size, style }) => {
   switch (size) {
     case 'SMALL':
       return (

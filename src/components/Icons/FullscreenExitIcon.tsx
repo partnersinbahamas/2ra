@@ -9,12 +9,7 @@ type TProps = {
   withBox?: boolean;
 };
 
-const FullscreenExitIcon: React.FC<TProps> = ({
-  className,
-  color,
-  style,
-  withBox,
-}) => (
+const FullscreenExitIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={withBox ? '-8 -9 84 84' : '0 0 66 66'}

@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const ChatIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  size,
-  style,
-  withBox,
-}) => {
+const ChatIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
   switch (size) {
     case 'SOLID':
       return (

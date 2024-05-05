@@ -8,12 +8,7 @@ type TProps = {
   withBox?: boolean;
 };
 
-const NoTelemetryDataIcon: React.FC<TProps> = ({
-  className,
-  color,
-  style,
-  withBox,
-}) => (
+const NoTelemetryDataIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
   <Svg
     style={style}
     className={className}

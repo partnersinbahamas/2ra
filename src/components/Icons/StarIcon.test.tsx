@@ -10,12 +10,7 @@ describe('StarIcon', () => {
 
   it('renders half-filled', () => {
     const { container } = render(
-      <StarIcon
-        backgroundColor="white"
-        color="red"
-        borderColor="black"
-        isHalfFilled
-      />
+      <StarIcon backgroundColor="white" color="red" borderColor="black" isHalfFilled />,
     );
     expect(container).toMatchSnapshot();
   });

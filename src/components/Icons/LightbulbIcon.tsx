@@ -11,13 +11,7 @@ type TProps = {
   withBox?: boolean;
 };
 
-const LightbulbIcon: React.FC<TProps> = ({
-  className,
-  color,
-  fillColor,
-  style,
-  withBox,
-}) => (
+const LightbulbIcon: React.FC<TProps> = ({ className, color, fillColor, style, withBox }) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={withBox ? '-5 -2 24 24' : '0 0 14 20'}

@@ -4,13 +4,7 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const ServiceIcon: React.FC<TIcon> = ({
-  className,
-  color,
-  style,
-  size,
-  withBox,
-}) => {
+const ServiceIcon: React.FC<TIcon> = ({ className, color, style, size, withBox }) => {
   switch (size) {
     case 'SMALL':
       return (

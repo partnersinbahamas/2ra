@@ -11,17 +11,8 @@ type TProps = {
   withBox?: boolean;
 };
 
-const CopyIconSimple: React.FC<TProps> = ({
-  className,
-  color,
-  style,
-  withBox,
-}: TProps) => (
-  <Svg
-    viewBox={withBox ? '0 0 20 20' : '3 2 14 16'}
-    style={style}
-    className={className}
-  >
+const CopyIconSimple: React.FC<TProps> = ({ className, color, style, withBox }: TProps) => (
+  <Svg viewBox={withBox ? '0 0 20 20' : '3 2 14 16'} style={style} className={className}>
     <path
       style={{ fill: color }}
       fillRule="evenodd"

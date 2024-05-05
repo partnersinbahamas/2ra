@@ -9,12 +9,7 @@ type TProps = {
   withBox?: boolean;
 };
 
-const CancelCircleIcon: React.FC<TProps> = ({
-  className,
-  color,
-  style,
-  withBox,
-}) => (
+const CancelCircleIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={withBox ? '-2 -2 32 32' : '0 0 28 28'}
