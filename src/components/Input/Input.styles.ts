@@ -1,7 +1,6 @@
 import styled from 'styled-components';
-import { TProps } from './Input';
-import useMute from '../../hooks/useMute';
 
+import useMute from '../../hooks/useMute';
 import {
   COOL_GRAY_100,
   COOL_GRAY_300,
@@ -10,6 +9,7 @@ import {
   RED_400,
 } from '../Colors/colors';
 import { TStile } from '../utils/types/types';
+import { TProps } from './Input';
 
 const stiled = (stile?: TStile) => stile && !useMute(stile).muteState;
 

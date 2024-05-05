@@ -1,8 +1,9 @@
 import userEvent from '@testing-library/user-event';
-import { Avatar } from './Avatar';
 import { render, screen } from '@testing-library/react';
+
 import { YELLOW_600 } from '../Colors/colors';
 import { TSize } from '../utils/types/types';
+import { Avatar } from './Avatar';
 
 describe('Avatar', () => {
   const user = userEvent.setup();

@@ -1,8 +1,8 @@
 import { Meta, StoryObj } from '@storybook/react';
 import { within, userEvent } from '@storybook/test';
-import { story } from '../utils/variables/story';
 
 import { ConnectOnChange } from '../../../.storybook/decorators';
+import { story } from '../utils/variables/story';
 import { Input } from './Input';
 
 const meta = {
