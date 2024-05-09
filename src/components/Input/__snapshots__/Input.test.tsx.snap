@@ -6,6 +6,7 @@ exports[`Input renders correctly 1`] = `
     class="sc-beySPh fOhtuL default"
   >
     <label
+      aria-label="label"
       class="sc-dmyCSP ihRrHi undefined-label"
       data-name="label"
       stile="default"
@@ -26,12 +27,100 @@ exports[`Input renders correctly 1`] = `
 </div>
 `;
 
+exports[`Input renders with each stile 1`] = `
+<div>
+  <div
+    class="sc-beySPh fOhtuL mute"
+  >
+    <label
+      aria-label="Input-label"
+      class="sc-dmyCSP eBqJxY undefined-label"
+      data-name="label"
+      stile="mute"
+    >
+      <h3
+        class="sc-eDLKkx gySIDl undefined-heading"
+        data-name="heading"
+        stile="mute"
+      >
+        Input
+      </h3>
+      <input
+        class="sc-guDLey jofGtu undefined-input"
+        data-error="false"
+        data-name="input"
+        stile="mute"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Input renders with each stile 2`] = `
+<div>
+  <div
+    class="sc-beySPh fOhtuL default"
+  >
+    <label
+      aria-label="Input-label"
+      class="sc-dmyCSP ihRrHi undefined-label"
+      data-name="label"
+      stile="default"
+    >
+      <h3
+        class="sc-eDLKkx gVYdGR undefined-heading"
+        data-name="heading"
+        stile="default"
+      >
+        Input
+      </h3>
+      <input
+        class="sc-guDLey fpCSGi undefined-input"
+        data-error="false"
+        data-name="input"
+        stile="default"
+      />
+    </label>
+  </div>
+</div>
+`;
+
+exports[`Input renders with each stile 3`] = `
+<div>
+  <div
+    class="sc-beySPh fOhtuL primary"
+  >
+    <label
+      aria-label="Input-label"
+      class="sc-dmyCSP ihRrHi undefined-label"
+      data-name="label"
+      stile="primary"
+    >
+      <h3
+        class="sc-eDLKkx gVYdGR undefined-heading"
+        data-name="heading"
+        stile="primary"
+      >
+        Input
+      </h3>
+      <input
+        class="sc-guDLey fpCSGi undefined-input"
+        data-error="false"
+        data-name="input"
+        stile="primary"
+      />
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Input renders with error 1`] = `
 <div>
   <div
     class="sc-beySPh fOhtuL default"
   >
     <label
+      aria-label="label"
       class="sc-dmyCSP ihRrHi undefined-label"
       data-name="label"
       stile="default"

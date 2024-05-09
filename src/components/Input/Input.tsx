@@ -25,6 +25,7 @@ export const Input: React.FC<TProps> = ({
   ...props
 }) => {
   const { className, ...inputProps } = props;
+  const label = title ? `${title}-label` : 'label';
 
   const handleChange = useCallback(
     (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -37,7 +38,13 @@ export const Input: React.FC<TProps> = ({
 
   return (
     <InputWrapper disabled={disabled} className={classNames(styles[stile], className)}>
-      <Label data-name="label" stile={stile} disabled={disabled} className={`${className}-label`}>
+      <Label
+        data-name="label"
+        aria-label={label}
+        stile={stile}
+        disabled={disabled}
+        className={`${className}-label`}
+      >
         <Heading data-name="heading" stile={stile} className={`${className}-heading`}>
           {title}
         </Heading>
