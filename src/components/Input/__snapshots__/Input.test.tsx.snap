@@ -3,7 +3,7 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh dEAswb default"
+    class="sc-beySPh fOhtuL default"
   >
     <label
       class="sc-dmyCSP ihRrHi undefined-label"
@@ -29,7 +29,7 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders with error 1`] = `
 <div>
   <div
-    class="sc-beySPh dEAswb default"
+    class="sc-beySPh fOhtuL default"
   >
     <label
       class="sc-dmyCSP ihRrHi undefined-label"

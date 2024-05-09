@@ -1,18 +1,29 @@
 @import '../utils/styles/styles.scss';
 
 .primary {
-  [data-name='heading'] {
-    margin: 3px;
-    color: $blue_400;
-  }
   [data-name='label'] {
     background-color: $cyan_200;
     border-radius: 0.15rem;
+
+    &[disabled] {
+      background-color: $cyan_400;
+      border-color: $blue_500;
+    }
+  }
+  [data-name='heading'] {
+    margin: 3px;
+    color: $blue_400;
   }
   [data-name='input'] {
     border-color: $blue_400;
     color: $blue_400;
     font-weight: 700;
+
+    &:disabled {
+      background-color: $cyan_600;
+      border-color: $blue_500;
+      color: $blue_200;
+    }
 
     &:focus {
       border-color: $blue_500;

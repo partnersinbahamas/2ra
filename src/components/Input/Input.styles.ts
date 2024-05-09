@@ -17,6 +17,7 @@ const stiled = (stile?: TStile) => stile && !useMute(stile).muteState;
 const InputWrapper = styled.div<TProps>`
   width: 100%;
   font-size: 0.75rem;
+  box-sizing: border-box;
 
   display: flex;
   font-family: 'Poppins', sans-serif;

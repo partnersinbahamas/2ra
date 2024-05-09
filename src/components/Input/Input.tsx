@@ -36,18 +36,18 @@ export const Input: React.FC<TProps> = ({
   );
 
   return (
-    <InputWrapper className={classNames(className, stile && styles[stile])} disabled={disabled}>
-      <Label stile={stile} data-name="label" className={`${className}-label lol`} disabled={disabled}>
-        <Heading stile={stile} data-name="heading" className={`${className}-heading`}>
+    <InputWrapper disabled={disabled} className={classNames(styles[stile], className)}>
+      <Label data-name="label" stile={stile} disabled={disabled} className={`${className}-label`}>
+        <Heading data-name="heading" stile={stile} className={`${className}-heading`}>
           {title}
         </Heading>
         <InputComponent
-          stile={stile}
           data-name="input"
           data-error={!!error}
+          stile={stile}
           value={value}
-          {...inputProps}
           disabled={disabled}
+          {...inputProps}
           onChange={handleChange}
           className={classNames({ error }, { [`${className}-error`]: error }, `${className}-input`)}
         />
