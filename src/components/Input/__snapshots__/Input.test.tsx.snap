@@ -27,6 +27,38 @@ exports[`Input renders correctly 1`] = `
 </div>
 `;
 
+exports[`Input renders on disabled 1`] = `
+<div>
+  <div
+    class="sc-beySPh jyiaZj default"
+    disabled=""
+  >
+    <label
+      aria-label="Input-label"
+      class="sc-dmyCSP jRQXxX undefined-label"
+      data-name="label"
+      disabled=""
+      stile="default"
+    >
+      <h3
+        class="sc-eDLKkx gVYdGR undefined-heading"
+        data-name="heading"
+        stile="default"
+      >
+        Input
+      </h3>
+      <input
+        class="sc-guDLey fpCSGi undefined-input"
+        data-error="false"
+        data-name="input"
+        disabled=""
+        stile="default"
+      />
+    </label>
+  </div>
+</div>
+`;
+
 exports[`Input renders with each stile 1`] = `
 <div>
   <div

@@ -1,9 +1,10 @@
 import React, { InputHTMLAttributes, useCallback } from 'react';
 import classNames from 'classnames';
-import { Error, InputComponent, InputWrapper, Label, Heading } from './Input.styles';
-import styles from './Input.module.scss';
+
 import { TStile } from '../utils/types/types';
 import defaultProps from '../utils/variables/defaultProps';
+import { Error, InputComponent, InputWrapper, Label, Heading } from './Input.styles';
+import styles from './Input.module.scss';
 
 export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string;

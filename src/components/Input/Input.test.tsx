@@ -4,6 +4,7 @@ import { stiles } from '../utils/variables';
 import { Input } from './Input';
 
 describe('Input', () => {
+  const title = 'Input';
   const user = userEvent.setup();
 
   it('renders correctly', () => {
@@ -25,7 +26,6 @@ describe('Input', () => {
     expect(container).toMatchSnapshot();
   });
   it.each(stiles)('renders with each stile', stile => {
-    const title = 'Input';
     const { container } = render(<Input stile={stile} title={title} />);
 
     const labelElement = screen.getByLabelText(`${title}-label`);
@@ -35,6 +35,19 @@ describe('Input', () => {
     expect(labelElement.getAttribute('stile')).toBe(stile);
     expect(headingElement.getAttribute('stile')).toBe(stile);
     expect(inputElement.getAttribute('stile')).toBe(stile);
+
+    expect(container).toMatchSnapshot();
+  });
+  it('renders on disabled', () => {
+    const { container } = render(<Input disabled={true} title={title} />);
+
+    const parentElement = screen.getByLabelText(`${title}-label`).parentElement;
+    const labelElement = screen.getByLabelText(`${title}-label`);
+    const inputElement = screen.getByRole('textbox');
+
+    expect(parentElement).toHaveAttribute('disabled');
+    expect(labelElement).toHaveAttribute('disabled');
+    expect(inputElement).toBeDisabled();
 
     expect(container).toMatchSnapshot();
   });
