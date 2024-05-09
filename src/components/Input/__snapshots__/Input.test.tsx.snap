@@ -3,7 +3,7 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa default"
+    class="sc-beySPh dEAswb default"
   >
     <label
       class="sc-dmyCSP ihRrHi undefined-label"
@@ -16,7 +16,7 @@ exports[`Input renders correctly 1`] = `
         stile="default"
       />
       <input
-        class="sc-guDLey fvRQIL undefined-input"
+        class="sc-guDLey fpCSGi undefined-input"
         data-error="false"
         data-name="input"
         stile="default"
@@ -29,7 +29,7 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders with error 1`] = `
 <div>
   <div
-    class="sc-beySPh ErGXa default"
+    class="sc-beySPh dEAswb default"
   >
     <label
       class="sc-dmyCSP ihRrHi undefined-label"
@@ -42,7 +42,7 @@ exports[`Input renders with error 1`] = `
         stile="default"
       />
       <input
-        class="sc-guDLey fvRQIL error undefined-error undefined-input"
+        class="sc-guDLey fpCSGi error undefined-error undefined-input"
         data-error="true"
         data-name="input"
         stile="default"

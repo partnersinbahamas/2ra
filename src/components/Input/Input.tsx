@@ -36,8 +36,8 @@ export const Input: React.FC<TProps> = ({
   );
 
   return (
-    <InputWrapper className={classNames(className, stile && styles[stile])}>
-      <Label stile={stile} data-name="label" className={`${className}-label`}>
+    <InputWrapper className={classNames(className, stile && styles[stile])} disabled={disabled}>
+      <Label stile={stile} data-name="label" className={`${className}-label lol`} disabled={disabled}>
         <Heading stile={stile} data-name="heading" className={`${className}-heading`}>
           {title}
         </Heading>
