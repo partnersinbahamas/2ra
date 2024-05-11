@@ -7,7 +7,7 @@ exports[`Input renders correctly 1`] = `
   >
     <label
       aria-label="label"
-      class="sc-dmyCSP ihRrHi undefined-label"
+      class="sc-dmyCSP enyBlq undefined-label"
       data-name="label"
       stile="default"
     >
@@ -18,7 +18,6 @@ exports[`Input renders correctly 1`] = `
       />
       <input
         class="sc-guDLey fpCSGi undefined-input"
-        data-error="false"
         data-name="input"
         stile="default"
       />
@@ -49,7 +48,6 @@ exports[`Input renders on disabled 1`] = `
       </h3>
       <input
         class="sc-guDLey fpCSGi undefined-input"
-        data-error="false"
         data-name="input"
         disabled=""
         stile="default"
@@ -79,7 +77,6 @@ exports[`Input renders with each stile 1`] = `
       </h3>
       <input
         class="sc-guDLey jofGtu undefined-input"
-        data-error="false"
         data-name="input"
         stile="mute"
       />
@@ -95,7 +92,7 @@ exports[`Input renders with each stile 2`] = `
   >
     <label
       aria-label="Input-label"
-      class="sc-dmyCSP ihRrHi undefined-label"
+      class="sc-dmyCSP enyBlq undefined-label"
       data-name="label"
       stile="default"
     >
@@ -108,7 +105,6 @@ exports[`Input renders with each stile 2`] = `
       </h3>
       <input
         class="sc-guDLey fpCSGi undefined-input"
-        data-error="false"
         data-name="input"
         stile="default"
       />
@@ -124,7 +120,7 @@ exports[`Input renders with each stile 3`] = `
   >
     <label
       aria-label="Input-label"
-      class="sc-dmyCSP ihRrHi undefined-label"
+      class="sc-dmyCSP enyBlq undefined-label"
       data-name="label"
       stile="primary"
     >
@@ -137,7 +133,6 @@ exports[`Input renders with each stile 3`] = `
       </h3>
       <input
         class="sc-guDLey fpCSGi undefined-input"
-        data-error="false"
         data-name="input"
         stile="primary"
       />
@@ -153,7 +148,7 @@ exports[`Input renders with error 1`] = `
   >
     <label
       aria-label="label"
-      class="sc-dmyCSP ihRrHi undefined-label"
+      class="sc-dmyCSP enyBlq undefined-label"
       data-name="label"
       stile="default"
     >
@@ -164,8 +159,8 @@ exports[`Input renders with error 1`] = `
       />
       <input
         class="sc-guDLey fpCSGi error undefined-error undefined-input"
-        data-error="true"
         data-name="input"
+        error="error"
         stile="default"
       />
     </label>

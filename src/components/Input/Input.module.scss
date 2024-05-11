@@ -2,11 +2,11 @@
 
 .primary {
   [data-name='label'] {
-    background-color: $cyan_200;
+    background-color: $blue_200;
     border-radius: 0.15rem;
 
     &[disabled] {
-      background-color: $cyan_400;
+      background-color: $blue_300;
       border-color: $blue_500;
     }
   }
@@ -20,7 +20,7 @@
     font-weight: 700;
 
     &:disabled {
-      background-color: $cyan_600;
+      background-color: $blue_400;
       border-color: $blue_500;
       color: $blue_200;
     }
@@ -29,7 +29,7 @@
       border-color: $blue_500;
     }
 
-    &[data-error='true'] {
+    &[error] {
       border-color: $red_400;
     }
   }
