@@ -51,7 +51,7 @@ export const Input: React.FC<TProps> = ({
         </Heading>
         <InputComponent
           data-name="input"
-          data-error={!!error}
+          error={error?.length ? error : undefined}
           stile={stile}
           value={value}
           disabled={disabled}
