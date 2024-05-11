@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import useMute from '../../hooks/useMute';
 import {
-  COOL_GRAY_100,
   COOL_GRAY_200,
   COOL_GRAY_300,
   COOL_GRAY_400,

@@ -9,6 +9,10 @@ const meta = {
   title: 'Athomic/Input',
   component: Input,
   tags: ['autodocs'],
+  args: {
+    title: 'Input',
+    value: 'value',
+  },
   argTypes: {
     title: story.title,
     stile: story.stile,
@@ -38,12 +42,13 @@ Please to style your custom input component use the mockup bellow.
 .module.scss
 
     .className {
-      [data-name='heading'] {};
-      [data-name='label'] {};
-      [data-name='input'] {    
-        &[data-error='true'] {};
+      [data-name='label'] {
+        &[disabled] {};
       };
-
+      [data-name='heading'] {};
+      [data-name='input'] {
+        &[error] {};
+      };
       [data-name='error-message'] {};
     };
 `,
@@ -54,31 +59,24 @@ Please to style your custom input component use the mockup bellow.
 } satisfies Meta<typeof Input>;
 export default meta;
 type Story = StoryObj<typeof meta>;
-export const Default: Story = {
-  args: {
-    title: 'Input',
-    value: 'value',
-  },
-};
-
-export const Primary: Story = {
+export const Default: Story = {};
+export const Default_disabled: Story = { args: { disabled: true } };
+export const Default_error: Story = { args: { error: 'Error' } };
+export const Primary: Story = { args: { stile: 'primary' } };
+export const Primary_disabled: Story = {
   args: {
     stile: 'primary',
-    value: 'Primary',
-    title: 'Input Primary',
+    disabled: true,
   },
 };
-
-export const Error: Story = {
+export const Primary_error: Story = {
   args: {
-    title: 'Handled error',
-    error: '...pzzz..pz',
+    error: 'Error',
+    stile: 'primary',
   },
 };
+export const Mute: Story = { args: { stile: 'mute' } };
 export const Play: Story = {
-  args: {
-    title: 'Play function',
-  },
   play: async context => {
     const canvas = within(context.canvasElement);
 
