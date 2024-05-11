@@ -67,9 +67,9 @@ const Label = styled.label<TProps>`
     margin-bottom: 5px;
     font-weight: 600;
     font-size: 0.625rem;
-    background-color: ${disabled ? COOL_GRAY_300 : COOL_GRAY_100};
+    background-color: ${disabled ? COOL_GRAY_300 : COOL_GRAY_200};
     border-radius: 0.15rem;
-    color: ${disabled ? COOL_GRAY_500 : COOL_GRAY_500};
+    color: ${COOL_GRAY_500};
   `}
 `;
 const Error = styled.span`
