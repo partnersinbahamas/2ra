@@ -1,39 +1,84 @@
 @import '../utils/styles/styles.scss';
 
 .primary {
-  [data-name='label'] {
-    background-color: $blue_200;
-    border-radius: 0.15rem;
+  // [data-name='label'] {
+  //   background-color: $blue_200;
+  //   border-radius: 0.15rem;
 
-    &[disabled] {
-      background-color: $blue_300;
-      border-color: $blue_500;
-    }
-  }
-  [data-name='heading'] {
-    margin: 3px;
-    color: $blue_400;
-  }
-  [data-name='input'] {
-    border-color: $blue_400;
-    color: $blue_400;
-    font-weight: 700;
+  //   &[disabled] {
+  //     background-color: $blue_300;
+  //     border-color: $blue_500;
+  //   }
+  // }
+  // [data-name='heading'] {
+  //   color: $blue_400;
 
-    &:disabled {
-      background-color: $blue_400;
-      border-color: $blue_500;
-      color: $blue_200;
-    }
+  //   &[disabled] {
+  //     color: $blue_500;
+  //   }
+  // }
+  // [data-name='input'] {
+  //   border-color: $blue_400;
+  //   color: $blue_400;
+  //   font-weight: 700;
 
-    &:focus {
-      border-color: $blue_500;
-    }
+  //   &:disabled {
+  //     background-color: $blue_400;
+  //     border-color: $blue_500;
+  //     color: $blue_200;
+  //   }
 
-    &[error] {
-      border-color: $red_400;
-    }
+  //   &:focus {
+  //     border-color: $blue_500;
+  //   }
+
+  //   &[error] {
+  //     border-color: $red_400;
+  //   }
+  // }
+  // [data-name='error-message'] {
+  //   color: $red_400;
+  // }
+}
+
+label.label {
+  background-color: $blue_200;
+  border-radius: 0.15rem;
+
+  &[disabled] {
+    background-color: $blue_300;
+    border-color: $blue_500;
   }
-  [data-name='error-message'] {
-    color: $red_400;
+}
+
+h3.heading {
+  color: $blue_400;
+
+  &[disabled] {
+    color: $blue_500;
   }
+}
+
+input.input {
+  border-color: $blue_400;
+  color: $blue_400;
+  font-weight: 700;
+
+  &:disabled {
+    background-color: $blue_400;
+    border-color: $blue_500;
+    color: $blue_200;
+  }
+
+  &:focus {
+    border-color: $blue_500;
+  }
+
+  &[error] {
+    border-color: $red_400;
+  }
+}
+
+.error-message {
+  color: $red_400;
 }

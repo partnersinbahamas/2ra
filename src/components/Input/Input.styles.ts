@@ -10,6 +10,7 @@ import {
 } from '../Colors/colors';
 import { TStile } from '../utils/types/types';
 import { TProps } from './Input';
+import { title } from 'process';
 
 const stiled = (stile?: TStile) => stile && !useMute(stile).muteState;
 
@@ -61,6 +62,7 @@ const Label = styled.label<TProps>`
 
   ${({ stile, disabled }) =>
     stiled(stile) &&
+    stile !== 'primary' &&
     `
     transition: .5s;
     margin-bottom: 5px;
@@ -76,9 +78,9 @@ const Error = styled.span`
 `;
 
 const Heading = styled.h3<TProps>`
-  margin: 3px;
+  margin: 0;
   transition: 0.5s;
 
-  ${({ stile }) => !stiled(stile) && `margin: 0`}
+  ${({ stile, title }) => (stiled(stile) || title) && `margin: 3px`};
 `;
 export { InputWrapper, InputComponent, Label, Error, Heading };
