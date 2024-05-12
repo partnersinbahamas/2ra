@@ -13,6 +13,7 @@ export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string;
   stile?: TStile;
   disabled?: boolean;
+  className?: any
 }
 
 export const Input: React.FC<TProps> = ({
@@ -23,9 +24,10 @@ export const Input: React.FC<TProps> = ({
   error,
   stile = defaultProps.stile,
   disabled,
+  className,
   ...props
 }) => {
-  const { className, ...inputProps } = props;
+  // const { className, ...inputProps } = props;
   const label = title ? `${title}-label` : 'label';
 
   const handleChange = useCallback(
@@ -37,16 +39,31 @@ export const Input: React.FC<TProps> = ({
     [onChange, onChangeValue],
   );
 
+  // console.log(styles, className['label']);
+
+  const primed = stile === 'primary';
+
   return (
     <InputWrapper disabled={disabled} className={classNames(styles[stile], className)}>
       <Label
         data-name="label"
         aria-label={label}
-        stile={stile}
+        // stile={stile}
         disabled={disabled}
-        className={`${className}-label`}
+        className={classNames(
+          primed && styles['label'],
+          className && (`${className['input-label']} ${className}-label`),
+        )}
       >
-        <Heading data-name="heading" stile={stile} className={`${className}-heading`}>
+        <Heading
+          data-name="heading"
+          // stile={stile}
+          disabled={disabled}
+          className={classNames(
+            primed && styles['heading'],
+            className && (`${className['heading']} ${className}-heading`),
+          )}
+        >
           {title}
         </Heading>
         <InputComponent
@@ -55,13 +72,22 @@ export const Input: React.FC<TProps> = ({
           stile={stile}
           value={value}
           disabled={disabled}
-          {...inputProps}
+          {...props}
           onChange={handleChange}
-          className={classNames({ error }, { [`${className}-error`]: error }, `${className}-input`)}
+          className={classNames(
+            { error },
+            className && (className['input'], `${className}-input`),
+            primed && styles['input']
+          )}
         />
       </Label>
       {error && (
-        <Error data-name="error-message" className={`${className}-error-message`}>
+        <Error
+          data-name="error-message"
+          className={classNames(
+            className && (className['error-message'], `${className}-error-message`),
+            primed && styles['error-message'])}
+          >
           {error}
         </Error>
       )}
