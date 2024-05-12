@@ -86,8 +86,9 @@ export const Input: React.FC<TProps> = ({
           data-name="error-message"
           className={classNames(
             className && (className['error-message'], `${className}-error-message`),
-            primed && styles['error-message'])}
-          >
+            primed && styles['error-message'],
+          )}
+        >
           {error}
         </Error>
       )}

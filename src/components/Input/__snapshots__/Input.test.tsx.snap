@@ -7,17 +7,15 @@ exports[`Input renders correctly 1`] = `
   >
     <label
       aria-label="label"
-      class="sc-dmyCSP enyBlq undefined-label"
+      class="sc-dmyCSP eBqJxY"
       data-name="label"
-      stile="default"
     >
       <h3
-        class="sc-eDLKkx gVYdGR undefined-heading"
+        class="sc-eDLKkx dyNiMt"
         data-name="heading"
-        stile="default"
       />
       <input
-        class="sc-guDLey fpCSGi undefined-input"
+        class="sc-guDLey fpCSGi"
         data-name="input"
         stile="default"
       />
@@ -34,20 +32,19 @@ exports[`Input renders on disabled 1`] = `
   >
     <label
       aria-label="Input-label"
-      class="sc-dmyCSP jRQXxX undefined-label"
+      class="sc-dmyCSP eBqJxY"
       data-name="label"
       disabled=""
-      stile="default"
     >
       <h3
-        class="sc-eDLKkx gVYdGR undefined-heading"
+        class="sc-eDLKkx dyNiMt"
         data-name="heading"
-        stile="default"
+        disabled=""
       >
         Input
       </h3>
       <input
-        class="sc-guDLey fpCSGi undefined-input"
+        class="sc-guDLey fpCSGi"
         data-name="input"
         disabled=""
         stile="default"
@@ -148,24 +145,22 @@ exports[`Input renders with error 1`] = `
   >
     <label
       aria-label="label"
-      class="sc-dmyCSP enyBlq undefined-label"
+      class="sc-dmyCSP eBqJxY"
       data-name="label"
-      stile="default"
     >
       <h3
-        class="sc-eDLKkx gVYdGR undefined-heading"
+        class="sc-eDLKkx dyNiMt"
         data-name="heading"
-        stile="default"
       />
       <input
-        class="sc-guDLey fpCSGi error undefined-error undefined-input"
+        class="sc-guDLey fpCSGi error"
         data-name="input"
         error="error"
         stile="default"
       />
     </label>
     <span
-      class="sc-hLQSwg gpNhwr undefined-error-message"
+      class="sc-hLQSwg gpNhwr"
       data-name="error-message"
     >
       error
