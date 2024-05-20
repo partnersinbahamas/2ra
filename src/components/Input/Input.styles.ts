@@ -10,7 +10,6 @@ import {
 } from '../Colors/colors';
 import { TStile } from '../utils/types/types';
 import { TProps } from './Input';
-import { title } from 'process';
 
 const stiled = (stile?: TStile) => stile && !useMute(stile).muteState;
 

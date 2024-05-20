@@ -3,20 +3,19 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL default"
+    class="sc-beySPh fOhtuL"
   >
     <label
       aria-label="label"
-      class="sc-dmyCSP eBqJxY"
-      data-name="label"
+      class="sc-dmyCSP enyBlq undefined-label"
+      stile="default"
     >
       <h3
-        class="sc-eDLKkx dyNiMt"
-        data-name="heading"
+        class="sc-eDLKkx huaXkC undefined-heading"
+        stile="default"
       />
       <input
-        class="sc-guDLey fpCSGi"
-        data-name="input"
+        class="sc-guDLey fpCSGi undefined-input"
         stile="default"
       />
     </label>
@@ -27,25 +26,24 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders on disabled 1`] = `
 <div>
   <div
-    class="sc-beySPh jyiaZj default"
+    class="sc-beySPh jyiaZj"
     disabled=""
   >
     <label
       aria-label="Input-label"
-      class="sc-dmyCSP eBqJxY"
-      data-name="label"
+      class="sc-dmyCSP jRQXxX undefined-label"
       disabled=""
+      stile="default"
     >
       <h3
-        class="sc-eDLKkx dyNiMt"
-        data-name="heading"
+        class="sc-eDLKkx huaXkC undefined-heading"
         disabled=""
+        stile="default"
       >
         Input
       </h3>
       <input
-        class="sc-guDLey fpCSGi"
-        data-name="input"
+        class="sc-guDLey fpCSGi undefined-input"
         disabled=""
         stile="default"
       />
@@ -57,24 +55,21 @@ exports[`Input renders on disabled 1`] = `
 exports[`Input renders with each stile 1`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL mute"
+    class="sc-beySPh fOhtuL"
   >
     <label
       aria-label="Input-label"
       class="sc-dmyCSP eBqJxY undefined-label"
-      data-name="label"
       stile="mute"
     >
       <h3
-        class="sc-eDLKkx gySIDl undefined-heading"
-        data-name="heading"
+        class="sc-eDLKkx dyNiMt undefined-heading"
         stile="mute"
       >
         Input
       </h3>
       <input
         class="sc-guDLey jofGtu undefined-input"
-        data-name="input"
         stile="mute"
       />
     </label>
@@ -85,24 +80,21 @@ exports[`Input renders with each stile 1`] = `
 exports[`Input renders with each stile 2`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL default"
+    class="sc-beySPh fOhtuL"
   >
     <label
       aria-label="Input-label"
       class="sc-dmyCSP enyBlq undefined-label"
-      data-name="label"
       stile="default"
     >
       <h3
-        class="sc-eDLKkx gVYdGR undefined-heading"
-        data-name="heading"
+        class="sc-eDLKkx huaXkC undefined-heading"
         stile="default"
       >
         Input
       </h3>
       <input
         class="sc-guDLey fpCSGi undefined-input"
-        data-name="input"
         stile="default"
       />
     </label>
@@ -117,20 +109,17 @@ exports[`Input renders with each stile 3`] = `
   >
     <label
       aria-label="Input-label"
-      class="sc-dmyCSP enyBlq undefined-label"
-      data-name="label"
+      class="sc-dmyCSP eBqJxY label undefined-label"
       stile="primary"
     >
       <h3
-        class="sc-eDLKkx gVYdGR undefined-heading"
-        data-name="heading"
+        class="sc-eDLKkx huaXkC heading undefined-heading"
         stile="primary"
       >
         Input
       </h3>
       <input
-        class="sc-guDLey fpCSGi undefined-input"
-        data-name="input"
+        class="sc-guDLey fpCSGi input undefined-input"
         stile="primary"
       />
     </label>
@@ -141,27 +130,25 @@ exports[`Input renders with each stile 3`] = `
 exports[`Input renders with error 1`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL default"
+    class="sc-beySPh fOhtuL"
   >
     <label
       aria-label="label"
-      class="sc-dmyCSP eBqJxY"
-      data-name="label"
+      class="sc-dmyCSP enyBlq undefined-label"
+      stile="default"
     >
       <h3
-        class="sc-eDLKkx dyNiMt"
-        data-name="heading"
+        class="sc-eDLKkx huaXkC undefined-heading"
+        stile="default"
       />
       <input
-        class="sc-guDLey fpCSGi error"
-        data-name="input"
+        class="sc-guDLey fpCSGi error undefined-input"
         error="error"
         stile="default"
       />
     </label>
     <span
-      class="sc-hLQSwg gpNhwr"
-      data-name="error-message"
+      class="sc-hLQSwg gpNhwr undefined-error-message"
     >
       error
     </span>

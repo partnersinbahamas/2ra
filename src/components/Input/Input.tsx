@@ -5,6 +5,9 @@ import { TStile } from '../utils/types/types';
 import defaultProps from '../utils/variables/defaultProps';
 import { Error, InputComponent, InputWrapper, Label, Heading } from './Input.styles';
 import styles from './Input.module.scss';
+import { useIDS } from '../../providers/IDSProvider';
+import usePrime from '../../hooks/usePrime';
+import useModuleExtention from '../../hooks/useModuleExtention';
 
 export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string;
@@ -27,7 +30,12 @@ export const Input: React.FC<TProps> = ({
   className,
   ...props
 }) => {
-  // const { className, ...inputProps } = props;
+  const { stylesExtention } = useIDS();
+  const moduleExtention = useModuleExtention(
+    stylesExtention as TStylesExtension,
+  ).moduleExtentionState;
+  const prime = usePrime(stile).primeState;
+
   const label = title ? `${title}-label` : 'label';
 
   const handleChange = useCallback(
@@ -39,56 +47,45 @@ export const Input: React.FC<TProps> = ({
     [onChange, onChangeValue],
   );
 
-  // console.log(styles, className['label']);
-
-  const primed = stile === 'primary';
+  const classes = {
+    wrapper: className && moduleExtention ? className['wrapper'] : className,
+    label: className && moduleExtention ? className['label'] : `${className}-label`,
+    heading: className && moduleExtention ? className['heading'] : `${className}-heading`,
+    input: className && moduleExtention ? className['input'] : `${className}-input`,
+    'error-message':
+      className && moduleExtention ? className['error-message'] : `${className}-error-message`,
+  };
 
   return (
-    <InputWrapper disabled={disabled} className={classNames(styles[stile], className)}>
+    <InputWrapper
+      disabled={disabled}
+      className={classNames(prime && styles[stile], classes.wrapper)}
+    >
       <Label
-        data-name="label"
         aria-label={label}
-        // stile={stile}
+        stile={stile}
         disabled={disabled}
-        className={classNames(
-          primed && styles['label'],
-          className && (`${className['input-label']} ${className}-label`),
-        )}
+        className={classNames(prime && styles['label'], classes.label)}
       >
         <Heading
-          data-name="heading"
-          // stile={stile}
+          stile={stile}
           disabled={disabled}
-          className={classNames(
-            primed && styles['heading'],
-            className && (`${className['heading']} ${className}-heading`),
-          )}
+          className={classNames(prime && styles['heading'], classes.heading)}
         >
           {title}
         </Heading>
         <InputComponent
-          data-name="input"
+          {...props}
           error={error?.length ? error : undefined}
           stile={stile}
           value={value}
           disabled={disabled}
-          {...props}
           onChange={handleChange}
-          className={classNames(
-            { error },
-            className && (className['input'], `${className}-input`),
-            primed && styles['input']
-          )}
+          className={classNames({ error }, prime && styles['input'], classes.input)}
         />
       </Label>
       {error && (
-        <Error
-          data-name="error-message"
-          className={classNames(
-            className && (className['error-message'], `${className}-error-message`),
-            primed && styles['error-message'],
-          )}
-        >
+        <Error className={classNames(prime && styles['error-message'], classes['error-message'])}>
           {error}
         </Error>
       )}
