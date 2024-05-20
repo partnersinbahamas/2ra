@@ -16,7 +16,7 @@ export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   error?: string;
   stile?: TStile;
   disabled?: boolean;
-  className?: any
+  className?: any;
 }
 
 export const Input: React.FC<TProps> = ({
@@ -58,11 +58,7 @@ export const Input: React.FC<TProps> = ({
   );
 
   return (
-    <InputWrapper
-      disabled={disabled}
-      error={isError}
-      className={classNames(prime && styles[stile], classes.wrapper)}
-    >
+    <InputWrapper disabled={disabled} error={isError} className={classNames(classes.wrapper)}>
       <Label
         aria-label={label}
         stile={stile}

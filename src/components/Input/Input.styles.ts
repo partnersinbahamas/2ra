@@ -61,7 +61,6 @@ const Label = styled.label<TProps>`
 
   ${({ stile, disabled }) =>
     stiled(stile) &&
-    stile !== 'primary' &&
     `
     transition: .5s;
     margin-bottom: 5px;

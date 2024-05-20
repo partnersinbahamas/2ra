@@ -105,11 +105,11 @@ exports[`Input renders with each stile 2`] = `
 exports[`Input renders with each stile 3`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL primary"
+    class="sc-beySPh fOhtuL"
   >
     <label
       aria-label="Input-label"
-      class="sc-dmyCSP eBqJxY label undefined-label"
+      class="sc-dmyCSP enyBlq label undefined-label"
       stile="primary"
     >
       <h3
