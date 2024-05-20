@@ -5,3 +5,5 @@ interface IAnchorOrigin {
   horizontal: IHorizontal;
   vertical: IVertical;
 }
+
+type TStylesExtension = '.scss' | '.module.scss';
