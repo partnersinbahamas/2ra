@@ -31,26 +31,62 @@ Please to style your custom input component use the mockup bellow.
 ### Guide styles
   .scss
 
-    .className {
-      &-heading {};
-      &-label {};
-      &-input {};
-      &-error {};
-      &-error-message {};
+    div.className {
+      &[error] {};
+      &[disabled] {};
+
+      .className-label {
+        &[error] {};
+        &[disabled] {};
+      };
+
+      .className-heading {
+        &[error] {};
+        &[disabled] {};
+      };
+
+      .className-input {
+        &[error] {};
+        &[disabled] {};
+      };
+
+      .className-error-message {
+        &[disabled] {};
+      };
     };
+
+    import './myClassName.scss';
+    <Input className="className" />
+    
 
 .module.scss
 
-    .className {
-      [data-name='label'] {
-        &[disabled] {};
-      };
-      [data-name='heading'] {};
-      [data-name='input'] {
-        &[error] {};
-      };
-      [data-name='error-message'] {};
-    };
+    div.wrapper {
+      &[error] {};
+      &[disabled] {};
+    }
+
+    label.label {
+      &[error] {};
+      &[disabled] {};
+    }
+
+    h3.heading {
+      &[error] {};
+      &[disabled] {};
+    }
+
+    input.input {
+      &[error] {};
+      &[disabled] {};
+    }
+
+    span.error-message {
+      &[disabled] {};
+    }
+
+    import styles from './myClassName.module.scss';
+    <Input className={styles} />
 `,
       },
     },
