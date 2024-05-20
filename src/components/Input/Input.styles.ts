@@ -72,7 +72,7 @@ const Label = styled.label<TProps>`
     color: ${COOL_GRAY_500};
   `}
 `;
-const Error = styled.span`
+const Error = styled.span<TProps>`
   color: ${RED_400};
 `;
 

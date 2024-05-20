@@ -131,14 +131,17 @@ exports[`Input renders with error 1`] = `
 <div>
   <div
     class="sc-beySPh fOhtuL"
+    error="error"
   >
     <label
       aria-label="label"
       class="sc-dmyCSP enyBlq undefined-label"
+      error="error"
       stile="default"
     >
       <h3
         class="sc-eDLKkx huaXkC undefined-heading"
+        error="error"
         stile="default"
       />
       <input

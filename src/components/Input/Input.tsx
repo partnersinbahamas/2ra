@@ -37,15 +37,7 @@ export const Input: React.FC<TProps> = ({
   const prime = usePrime(stile).primeState;
 
   const label = title ? `${title}-label` : 'label';
-
-  const handleChange = useCallback(
-    (event: React.ChangeEvent<HTMLInputElement>) => {
-      const { value } = event.target;
-      if (onChange) onChange(event);
-      if (onChangeValue) onChangeValue(value);
-    },
-    [onChange, onChangeValue],
-  );
+  const isError = error?.length ? error : undefined;
 
   const classes = {
     wrapper: className && moduleExtention ? className['wrapper'] : className,
@@ -56,36 +48,51 @@ export const Input: React.FC<TProps> = ({
       className && moduleExtention ? className['error-message'] : `${className}-error-message`,
   };
 
+  const handleChange = useCallback(
+    (event: React.ChangeEvent<HTMLInputElement>) => {
+      const { value } = event.target;
+      if (onChange) onChange(event);
+      if (onChangeValue) onChangeValue(value);
+    },
+    [onChange, onChangeValue],
+  );
+
   return (
     <InputWrapper
       disabled={disabled}
+      error={isError}
       className={classNames(prime && styles[stile], classes.wrapper)}
     >
       <Label
         aria-label={label}
         stile={stile}
         disabled={disabled}
+        error={isError}
         className={classNames(prime && styles['label'], classes.label)}
       >
         <Heading
           stile={stile}
           disabled={disabled}
+          error={isError}
           className={classNames(prime && styles['heading'], classes.heading)}
         >
           {title}
         </Heading>
         <InputComponent
           {...props}
-          error={error?.length ? error : undefined}
           stile={stile}
           value={value}
           disabled={disabled}
+          error={isError}
           onChange={handleChange}
           className={classNames({ error }, prime && styles['input'], classes.input)}
         />
       </Label>
       {error && (
-        <Error className={classNames(prime && styles['error-message'], classes['error-message'])}>
+        <Error
+          disabled={disabled}
+          className={classNames(prime && styles['error-message'], classes['error-message'])}
+        >
           {error}
         </Error>
       )}
