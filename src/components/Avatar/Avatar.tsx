@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar as AvatarComponent, AvatarSlots, Badge, Box } from '@mui/material';
+import { Avatar as AvatarMUI, AvatarProps, AvatarSlots, Badge, Box } from '@mui/material';
 import classNames from 'classnames';
 
 import { PropsAvatar } from '../utils/types/props/avatar';
@@ -26,6 +26,9 @@ interface IProps extends PropsAvatar {
    */
   status?: TStringOrStatus;
 }
+
+type TAvatarComponent = AvatarProps & TExtendedComponentProps
+const AvatarComponent: React.FC<TAvatarComponent> = (props) => <AvatarMUI {...props} />
 
 export const Avatar: React.FC<IProps> = ({
   firstName,
