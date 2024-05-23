@@ -9,7 +9,12 @@ type TProps = {
   withBox?: boolean;
 };
 
-const ArrowLongDownIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
+const ArrowLongDownIcon: React.FC<TProps> = ({
+  className,
+  color,
+  style,
+  withBox,
+}) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={withBox ? '-5 -3 28 26' : '0 0 18 20'}

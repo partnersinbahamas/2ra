@@ -11,9 +11,17 @@ type TProps = {
   extension: TStylesExtension;
 };
 
-export const IDSProvider: React.FC<TProps> = ({ children, extension = '.scss' }) => {
+export const IDSProvider: React.FC<TProps> = ({
+  children,
+  extension = '.scss',
+}) => {
   const [stylesExtention] = useState<TStylesExtension>(extension);
-  const providerValues = useMemo(() => ({ stylesExtention }), [stylesExtention]);
+  const providerValues = useMemo(
+    () => ({ stylesExtention }),
+    [stylesExtention],
+  );
 
-  return <IDSContext.Provider value={providerValues}>{children}</IDSContext.Provider>;
+  return (
+    <IDSContext.Provider value={providerValues}>{children}</IDSContext.Provider>
+  );
 };

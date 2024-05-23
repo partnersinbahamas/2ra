@@ -9,7 +9,12 @@ type TProps = {
   withBox?: boolean;
 };
 
-const SettingsPinIcon: React.FC<TProps> = ({ className, color, style, withBox }) => {
+const SettingsPinIcon: React.FC<TProps> = ({
+  className,
+  color,
+  style,
+  withBox,
+}) => {
   return (
     <Svg
       xmlns="http://www.w3.org/2000/svg"

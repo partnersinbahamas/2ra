@@ -1,5 +1,11 @@
 import React from 'react';
-import { Avatar as AvatarMUI, AvatarProps, AvatarSlots, Badge, Box } from '@mui/material';
+import {
+  Avatar as AvatarMUI,
+  AvatarProps,
+  AvatarSlots,
+  Badge,
+  Box,
+} from '@mui/material';
 import classNames from 'classnames';
 
 import { PropsAvatar } from '../utils/types/props/avatar';
@@ -28,7 +34,9 @@ interface IProps extends PropsAvatar {
 }
 
 type TAvatarComponent = AvatarProps & TExtendedComponentProps;
-const AvatarComponent: React.FC<TAvatarComponent> = props => <AvatarMUI {...props} />;
+const AvatarComponent: React.FC<TAvatarComponent> = props => (
+  <AvatarMUI {...props} />
+);
 
 export const Avatar: React.FC<IProps> = ({
   firstName,
@@ -69,7 +77,9 @@ export const Avatar: React.FC<IProps> = ({
             data-testid="avatar-abbreviation"
             className={`${className}-abbreviation`}
           >
-            {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
+            {firstName && lastName
+              ? `${firstName[0]}${lastName[0]}`
+              : abbreviation}
           </span>
         </AvatarComponent>
       </div>
@@ -110,7 +120,9 @@ export const Avatar: React.FC<IProps> = ({
           data-testid="avatar-abbreviation"
           className={`${className}-abbreviation`}
         >
-          {firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation}
+          {firstName && lastName
+            ? `${firstName[0]}${lastName[0]}`
+            : abbreviation}
         </span>
       </AvatarComponent>
     </Badge>

@@ -9,7 +9,12 @@ type TProps = {
   withBox?: boolean;
 };
 
-const PercentIcon: React.FC<TProps> = ({ className, color, style, withBox }) => (
+const PercentIcon: React.FC<TProps> = ({
+  className,
+  color,
+  style,
+  withBox,
+}) => (
   <Svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox={withBox ? '-2 -3 20 20' : '0 0 16 14'}

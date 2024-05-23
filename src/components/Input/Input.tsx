@@ -3,7 +3,13 @@ import classNames from 'classnames';
 
 import { TStile } from '../utils/types/types';
 import defaultProps from '../utils/variables/defaultProps';
-import { Error, InputComponent, InputWrapper, Label, Heading } from './Input.styles';
+import {
+  Error,
+  InputComponent,
+  InputWrapper,
+  Label,
+  Heading,
+} from './Input.styles';
 import styles from './Input.module.scss';
 import { useIDS } from '../../providers/IDSProvider';
 import usePrime from '../../hooks/usePrime';
@@ -41,11 +47,18 @@ export const Input: React.FC<TProps> = ({
 
   const classes = {
     wrapper: className && moduleExtention ? className['wrapper'] : className,
-    label: className && moduleExtention ? className['label'] : `${className}-label`,
-    heading: className && moduleExtention ? className['heading'] : `${className}-heading`,
-    input: className && moduleExtention ? className['input'] : `${className}-input`,
+    label:
+      className && moduleExtention ? className['label'] : `${className}-label`,
+    heading:
+      className && moduleExtention
+        ? className['heading']
+        : `${className}-heading`,
+    input:
+      className && moduleExtention ? className['input'] : `${className}-input`,
     'error-message':
-      className && moduleExtention ? className['error-message'] : `${className}-error-message`,
+      className && moduleExtention
+        ? className['error-message']
+        : `${className}-error-message`,
   };
 
   const handleChange = useCallback(
@@ -58,7 +71,11 @@ export const Input: React.FC<TProps> = ({
   );
 
   return (
-    <InputWrapper disabled={disabled} error={isError} className={classNames(classes.wrapper)}>
+    <InputWrapper
+      disabled={disabled}
+      error={isError}
+      className={classNames(classes.wrapper)}
+    >
       <Label
         aria-label={label}
         stile={stile}
@@ -81,13 +98,20 @@ export const Input: React.FC<TProps> = ({
           disabled={disabled}
           error={isError}
           onChange={handleChange}
-          className={classNames({ error }, prime && styles['input'], classes.input)}
+          className={classNames(
+            { error },
+            prime && styles['input'],
+            classes.input,
+          )}
         />
       </Label>
       {error && (
         <Error
           disabled={disabled}
-          className={classNames(prime && styles['error-message'], classes['error-message'])}
+          className={classNames(
+            prime && styles['error-message'],
+            classes['error-message'],
+          )}
         >
           {error}
         </Error>

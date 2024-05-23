@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const ChevronRightIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
+const ChevronRightIcon: React.FC<TIcon> = ({
+  className,
+  color,
+  size,
+  style,
+  withBox,
+}) => {
   switch (size) {
     case 'SMALL':
       return (

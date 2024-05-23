@@ -12,7 +12,9 @@ describe('Avatar', () => {
   const size: TSize = 'medium';
 
   it('renders correclty', () => {
-    const { container } = render(<Avatar size={size} abbreviation={abbreviation} />);
+    const { container } = render(
+      <Avatar size={size} abbreviation={abbreviation} />,
+    );
     const avatarElement = screen.getByTestId('avatar');
     expect(avatarElement).toBeInTheDocument();
     expect(avatarElement).toHaveClass('medium');
@@ -36,7 +38,13 @@ describe('Avatar', () => {
   it('renders on click', async () => {
     const onClickHandler = jest.fn();
 
-    render(<Avatar size={size} abbreviation={abbreviation} onClick={onClickHandler} />);
+    render(
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        onClick={onClickHandler}
+      />,
+    );
 
     const avatarElement = screen.getByTestId('avatar');
     await user.click(avatarElement);
@@ -54,7 +62,12 @@ describe('Avatar', () => {
   it('renders with badged', () => {
     const content = 'Badge content';
     const { container } = render(
-      <Avatar size={size} abbreviation={abbreviation} badged badgeContent={content} />,
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        badged
+        badgeContent={content}
+      />,
     );
 
     const badgeElement = screen.queryByTestId('badge');
@@ -70,7 +83,12 @@ describe('Avatar', () => {
     const lastName = 'Musk';
     const fullNameAbbreviation = `${firstName[0]}${lastName[0]}`;
     const { container } = render(
-      <Avatar size={size} abbreviation={abbreviation} firstName={firstName} lastName={lastName} />,
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        firstName={firstName}
+        lastName={lastName}
+      />,
     );
     const avatarNameElement = screen.getByTestId('avatar-abbreviation');
     expect(avatarNameElement).toHaveTextContent(fullNameAbbreviation);
@@ -94,7 +112,12 @@ describe('Avatar', () => {
   it('renders with className props', () => {
     const className = 'avatar-className';
     const { container } = render(
-      <Avatar size={size} abbreviation={abbreviation} badged className={className} />,
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        badged
+        className={className}
+      />,
     );
     const avatarElement = screen.getByTestId('badge');
     expect(avatarElement).toHaveClass(`${className}-badge`);

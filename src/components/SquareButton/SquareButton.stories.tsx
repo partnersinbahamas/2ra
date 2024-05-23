@@ -10,7 +10,10 @@ const meta = {
     title: { control: 'text' },
     disabled: { control: 'boolean' },
     radius: { control: 'number' },
-    valiant: { control: 'inline-radio', options: ['primary', 'default', 'submit'] },
+    valiant: {
+      control: 'inline-radio',
+      options: ['primary', 'default', 'submit'],
+    },
   },
   args: {
     valiant: 'default',

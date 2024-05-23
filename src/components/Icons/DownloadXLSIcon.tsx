@@ -11,7 +11,12 @@ type TProps = {
   withBox?: boolean;
 };
 
-const DownloadXLSIcon: React.FC<TProps> = ({ className, color, style, withBox }) => {
+const DownloadXLSIcon: React.FC<TProps> = ({
+  className,
+  color,
+  style,
+  withBox,
+}) => {
   const id = uniqueId('download_csv_');
   return (
     <Svg

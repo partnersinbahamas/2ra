@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const ExternalLinkIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
+const ExternalLinkIcon: React.FC<TIcon> = ({
+  className,
+  color,
+  size,
+  style,
+  withBox,
+}) => {
   switch (size) {
     case 'SMALL':
       return (

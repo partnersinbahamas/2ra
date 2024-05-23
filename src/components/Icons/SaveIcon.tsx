@@ -4,7 +4,13 @@ import PropTypes from 'prop-types';
 import { LargeSvg, MediumSvg, SmallSvg } from './Svg';
 import { TIcon } from '.';
 
-const SaveIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) => {
+const SaveIcon: React.FC<TIcon> = ({
+  className,
+  color,
+  size,
+  style,
+  withBox,
+}) => {
   switch (size) {
     case 'SMALL':
       return (
@@ -22,8 +28,18 @@ const SaveIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) =
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <path d="M14 17V11H6V17" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M6 3V7H12" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M14 17V11H6V17"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M6 3V7H12"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </SmallSvg>
       );
 
@@ -43,8 +59,18 @@ const SaveIcon: React.FC<TIcon> = ({ className, color, size, style, withBox }) =
             strokeLinecap="round"
             strokeLinejoin="round"
           />
-          <path d="M17 21V13H7V21" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-          <path d="M7 3V8H15" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+          <path
+            d="M17 21V13H7V21"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M7 3V8H15"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
         </MediumSvg>
       );
 
