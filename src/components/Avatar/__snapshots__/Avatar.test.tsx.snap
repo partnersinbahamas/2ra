@@ -2,18 +2,14 @@
 
 exports[`Avatar renders correclty 1`] = `
 <div>
-  <div
-    class="undefined default"
-  >
+  <div>
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="default"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
       data-testid="avatar"
+      stile="default"
     >
       <span
         class="undefined-abbreviation"
-        data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
         SJ
@@ -26,18 +22,16 @@ exports[`Avatar renders correclty 1`] = `
 exports[`Avatar renders on disabled 1`] = `
 <div>
   <span
-    class="MuiBadge-root undefined default css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <div
-      aria-disabled="true"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="default"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
       data-testid="avatar"
+      disabled=""
+      stile="default"
     >
       <span
         class="undefined-abbreviation"
-        data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
         SJ
@@ -47,54 +41,28 @@ exports[`Avatar renders on disabled 1`] = `
       class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
     >
       <div
-        aria-disabled="true"
-        class="undefined-badge undefined-badge-default MuiBox-root css-0"
-        data-name="badge"
-        data-status="default"
+        class="badge default MuiBox-root css-0"
         data-testid="badge"
+        disabled=""
+        status="default"
       />
     </span>
   </span>
 </div>
 `;
 
-exports[`Avatar renders with background color 1`] = `
-<div>
-  <div
-    class="undefined default"
-  >
-    <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-ww4vf0-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="default"
-      data-testid="avatar"
-    >
-      <span
-        class="undefined-abbreviation"
-        data-name="abbreviation"
-        data-testid="avatar-abbreviation"
-      >
-        SJ
-      </span>
-    </div>
-  </div>
-</div>
-`;
-
 exports[`Avatar renders with badged 1`] = `
 <div>
   <span
-    class="MuiBadge-root undefined default css-1c32n2y-MuiBadge-root"
+    class="MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="default"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
       data-testid="avatar"
+      stile="default"
     >
       <span
         class="undefined-abbreviation"
-        data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
         SJ
@@ -104,10 +72,9 @@ exports[`Avatar renders with badged 1`] = `
       class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
     >
       <div
-        class="undefined-badge undefined-badge-default MuiBox-root css-0"
-        data-name="badge"
-        data-status="default"
+        class="badge default MuiBox-root css-0"
         data-testid="badge"
+        status="default"
       >
         Badge content
       </div>
@@ -116,53 +83,16 @@ exports[`Avatar renders with badged 1`] = `
 </div>
 `;
 
-exports[`Avatar renders with className props 1`] = `
-<div>
-  <span
-    class="MuiBadge-root avatar-className default css-1c32n2y-MuiBadge-root"
-  >
-    <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-className-avatar css-17o22dy-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="default"
-      data-testid="avatar"
-    >
-      <span
-        class="avatar-className-abbreviation"
-        data-name="abbreviation"
-        data-testid="avatar-abbreviation"
-      >
-        SJ
-      </span>
-    </div>
-    <span
-      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
-    >
-      <div
-        class="avatar-className-badge avatar-className-badge-default MuiBox-root css-0"
-        data-name="badge"
-        data-status="default"
-        data-testid="badge"
-      />
-    </span>
-  </span>
-</div>
-`;
-
 exports[`Avatar renders with name 1`] = `
 <div>
-  <div
-    class="undefined default"
-  >
+  <div>
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="default"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
       data-testid="avatar"
+      stile="default"
     >
       <span
         class="undefined-abbreviation"
-        data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
         EM
@@ -174,18 +104,14 @@ exports[`Avatar renders with name 1`] = `
 
 exports[`Avatar renders with stile primary 1`] = `
 <div>
-  <div
-    class="undefined primary"
-  >
+  <div>
     <div
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-name="avatar"
-      data-stile="primary"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-primary undefined-avatar css-17o22dy-MuiAvatar-root"
       data-testid="avatar"
+      stile="primary"
     >
       <span
         class="undefined-abbreviation"
-        data-name="abbreviation"
         data-testid="avatar-abbreviation"
       >
         SJ

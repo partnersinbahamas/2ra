@@ -1,7 +1,40 @@
 @import '../utils/styles/styles.scss';
-
 //default component styles
-[data-name='badge'] {
+
+div.avatar {
+  &-default {
+    border: 2px solid $cool_gray_400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: $cool_gray_200;
+    color: $cool_gray_400;
+    font-weight: 600;
+
+    &[disabled] {
+      background-color: $cool_gray_400;
+      border-color: $cool_gray_500;
+      color: $cool_gray_200;
+    }
+  }
+
+  &-primary {
+    border: 2px solid $cool_gray_400;
+    background-color: $cyan_400;
+    border-color: $blue_400;
+    color: $white;
+    font-weight: 600;
+
+    &[disabled] {
+      background-color: $cyan_500;
+      border-color: $blue_500;
+      color: $cool_gray_200;
+    }
+  }
+}
+
+.badge {
   box-sizing: border-box;
   color: $white;
   min-width: 0.625rem;
@@ -13,68 +46,10 @@
   align-items: center;
   justify-content: center;
 
-  &[aria-disabled='true'] {
+  &[disabled] {
     background-color: $cool_gray_400;
     border-color: $cool_gray_500;
     color: $cool_gray_200;
-  }
-}
-
-// stiles
-.default {
-  @extend %PAvatarStatuses;
-  [data-name='avatar'] {
-    border: 2px solid $cool_gray_400;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    background-color: $cool_gray_200;
-    color: $cool_gray_400;
-    font-weight: 600;
-
-    &[aria-disabled='true'] {
-      background-color: $cool_gray_400;
-      border-color: $cool_gray_500;
-      color: $cool_gray_200;
-    }
-  }
-
-  [data-name='badge'] {
-    &[aria-disabled='true'] {
-      background-color: $cool_gray_400;
-      border-color: $cool_gray_500;
-      color: $cool_gray_200;
-    }
-  }
-}
-
-.primary {
-  @extend %PAvatarStatuses;
-  [data-name='avatar'] {
-    border: 2px solid $cool_gray_400;
-    background-color: $cyan_400;
-    border-color: $blue_400;
-    color: $white;
-    font-weight: 600;
-
-    &[aria-disabled='true'] {
-      background-color: $cyan_500;
-      border-color: $blue_500;
-      color: $cool_gray_200;
-    }
-  }
-
-  [data-name='badge'] {
-    &[aria-disabled='true'] {
-      background-color: $cyan_500;
-      border-color: $blue_500;
-    }
-  }
-
-  [data-status='primary'] {
-    background-color: $cyan_400;
-    border-color: $blue_400;
   }
 }
 

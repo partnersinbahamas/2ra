@@ -1,11 +1,5 @@
 import React from 'react';
-import {
-  Avatar as AvatarMUI,
-  AvatarProps,
-  AvatarSlots,
-  Badge,
-  Box,
-} from '@mui/material';
+import { AvatarSlots, Badge } from '@mui/material';
 import classNames from 'classnames';
 
 import { PropsAvatar } from '../utils/types/props/avatar';
@@ -13,6 +7,10 @@ import { TStringOrStatus } from '../utils/types/types';
 import defaultProps from '../utils/variables/defaultProps';
 
 import styles from './Avatar.module.scss';
+import useModuleExtention from '../../hooks/useModuleExtention';
+import { useIDS } from '../../providers/IDSProvider';
+import useMute from '../../hooks/useMute';
+import { AvatarComponent, BoxComponent } from '../utils/variables/components';
 
 interface IProps extends PropsAvatar {
   /**
@@ -33,16 +31,10 @@ interface IProps extends PropsAvatar {
   status?: TStringOrStatus;
 }
 
-type TAvatarComponent = AvatarProps & TExtendedComponentProps;
-const AvatarComponent: React.FC<TAvatarComponent> = props => (
-  <AvatarMUI {...props} />
-);
-
 export const Avatar: React.FC<IProps> = ({
   firstName,
   lastName,
   abbreviation,
-  backgroundColor,
   badged,
   disabled,
   badgeContent,
@@ -52,30 +44,53 @@ export const Avatar: React.FC<IProps> = ({
   stile = defaultProps.stile,
   onClick,
   src,
+  className,
   ...props
 }) => {
-  const { className } = props;
+  const { muteState } = useMute(stile);
+  const { stylesExtention } = useIDS();
+  const moduleExtention = useModuleExtention(
+    stylesExtention as TStylesExtension,
+  ).moduleExtentionState;
+
   const fullName = `${firstName} ${lastName}`;
+
+  const classes = {
+    wrapper: className && moduleExtention ? className['wrapper'] : className,
+    avatar:
+      className && moduleExtention
+        ? className['avatar']
+        : `${className}-avatar`,
+    abbreviation:
+      className && moduleExtention
+        ? className['abbreviation']
+        : `${className}-abbreviation`,
+    badge:
+      className && moduleExtention ? className['badge'] : `${className}-badge`,
+  };
+
+  const styleses = {
+    avatar: stile && !muteState && styles[`avatar-${stile}`],
+    badge: badged && styles[`badge`],
+    status: status && badged && !muteState && styles[status],
+  };
 
   if (!badged) {
     return (
-      <div className={`${className} ${styles[stile]}`}>
+      <div className={classes.wrapper}>
         <AvatarComponent
           {...props}
-          src={src}
-          data-name="avatar"
           data-testid="avatar"
-          data-stile={stile && stile}
-          aria-disabled={disabled}
-          alt={fullName}
-          sx={{ backgroundColor }}
+          stile={stile && stile}
+          disabled={disabled}
           onClick={onClick}
-          className={classNames(styles[size], `${className}-avatar`)}
+          alt={fullName}
+          src={src}
+          className={classNames(styles[size], styleses.avatar, classes.avatar)}
         >
           <span
-            data-name="abbreviation"
             data-testid="avatar-abbreviation"
-            className={`${className}-abbreviation`}
+            className={classes.abbreviation}
           >
             {firstName && lastName
               ? `${firstName[0]}${lastName[0]}`
@@ -88,37 +103,33 @@ export const Avatar: React.FC<IProps> = ({
 
   return (
     <Badge
-      className={`${className} ${styles[stile]}`}
+      className={classes.wrapper}
       overlap="circular"
       badgeContent={
-        <Box
+        <BoxComponent
           data-testid="badge"
-          data-name="badge"
-          data-status={status}
-          aria-disabled={disabled}
-          className={`${className}-badge ${className}-badge-${status}`}
+          status={status}
+          disabled={disabled}
+          className={classNames(styleses.badge as string, styleses.status)}
         >
           {badgeContent}
-        </Box>
+        </BoxComponent>
       }
       anchorOrigin={anchorOrigin}
     >
       <AvatarComponent
         {...props}
-        src={src}
-        data-name="avatar"
         data-testid="avatar"
-        aria-disabled={disabled}
-        data-stile={stile && stile}
-        alt={fullName}
-        sx={{ backgroundColor }}
+        stile={stile && stile}
+        disabled={disabled}
         onClick={onClick}
-        className={classNames(styles[size], `${className}-avatar`)}
+        alt={fullName}
+        src={src}
+        className={classNames(styles[size], styleses.avatar, classes.avatar)}
       >
         <span
-          data-name="abbreviation"
           data-testid="avatar-abbreviation"
-          className={`${className}-abbreviation`}
+          className={classes.abbreviation}
         >
           {firstName && lastName
             ? `${firstName[0]}${lastName[0]}`

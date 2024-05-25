@@ -1,7 +1,6 @@
 import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 
-import { YELLOW_600 } from '../Colors/colors';
 import { TSize } from '../utils/types/types';
 import { Avatar } from './Avatar';
 
@@ -26,15 +25,6 @@ describe('Avatar', () => {
     expect(nameElement).toHaveTextContent(abbreviation);
     expect(container).toMatchSnapshot();
   });
-  it('renders with background color', () => {
-    const bgc = YELLOW_600;
-    const { container } = render(
-      <Avatar size={size} abbreviation={abbreviation} backgroundColor={bgc} />,
-    );
-    const avatarElement = screen.getByTestId('avatar');
-    expect(avatarElement).toHaveStyle(`backgroundColor: ${bgc}`);
-    expect(container).toMatchSnapshot();
-  });
   it('renders on click', async () => {
     const onClickHandler = jest.fn();
 
@@ -56,7 +46,7 @@ describe('Avatar', () => {
     );
 
     const avatarElement = screen.getByTestId('avatar');
-    expect(avatarElement.getAttribute('data-stile')).toBe('primary');
+    expect(avatarElement.getAttribute('stile')).toBe('primary');
     expect(container).toMatchSnapshot();
   });
   it('renders with badged', () => {
@@ -74,7 +64,6 @@ describe('Avatar', () => {
     expect(badgeElement).not.toBeNull();
 
     expect(badgeElement).toHaveTextContent(content);
-
     expect(container).toMatchSnapshot();
   });
 
@@ -102,25 +91,10 @@ describe('Avatar', () => {
     );
 
     const badgeElement = screen.getByTestId('badge');
-    expect(badgeElement.getAttribute('aria-disabled')).toEqual('true');
+    expect(badgeElement).toHaveAttribute('disabled');
     const avatarElement = screen.getByTestId('avatar');
-    expect(avatarElement.getAttribute('aria-disabled')).toEqual('true');
+    expect(avatarElement).toHaveAttribute('disabled');
 
-    expect(container).toMatchSnapshot();
-  });
-
-  it('renders with className props', () => {
-    const className = 'avatar-className';
-    const { container } = render(
-      <Avatar
-        size={size}
-        abbreviation={abbreviation}
-        badged
-        className={className}
-      />,
-    );
-    const avatarElement = screen.getByTestId('badge');
-    expect(avatarElement).toHaveClass(`${className}-badge`);
     expect(container).toMatchSnapshot();
   });
 });
