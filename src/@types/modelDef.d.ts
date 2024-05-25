@@ -7,8 +7,3 @@ interface IAnchorOrigin {
 }
 
 type TStylesExtension = '.scss' | '.module.scss';
-
-type TExtendedComponentProps = {
-  disabled?: boolean;
-  error?: boolean;
-};
