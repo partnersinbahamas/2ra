@@ -54,6 +54,9 @@ export const Avatar: React.FC<IProps> = ({
   ).moduleExtentionState;
 
   const fullName = `${firstName} ${lastName}`;
+  const name = firstName && lastName
+    ? `${firstName[0]}${lastName[0]}`
+    : abbreviation
 
   const classes = {
     wrapper: className && moduleExtention ? className['wrapper'] : className,
@@ -75,12 +78,17 @@ export const Avatar: React.FC<IProps> = ({
     status: status && badged && !muteState && styles[status],
   };
 
+
+  const id = `avatar-${React.useId()}`;
+
+  console.log(id);
+
   if (!badged) {
     return (
       <div className={classes.wrapper}>
         <AvatarComponent
           {...props}
-          data-testid="avatar"
+          aria-label={`avatar ${name}`}
           stile={stile && stile}
           disabled={disabled}
           onClick={onClick}
@@ -92,9 +100,7 @@ export const Avatar: React.FC<IProps> = ({
             data-testid="avatar-abbreviation"
             className={classes.abbreviation}
           >
-            {firstName && lastName
-              ? `${firstName[0]}${lastName[0]}`
-              : abbreviation}
+            {name}
           </span>
         </AvatarComponent>
       </div>
@@ -119,7 +125,7 @@ export const Avatar: React.FC<IProps> = ({
     >
       <AvatarComponent
         {...props}
-        data-testid="avatar"
+        aria-label={`avatar ${name}`}
         stile={stile && stile}
         disabled={disabled}
         onClick={onClick}
@@ -131,9 +137,7 @@ export const Avatar: React.FC<IProps> = ({
           data-testid="avatar-abbreviation"
           className={classes.abbreviation}
         >
-          {firstName && lastName
-            ? `${firstName[0]}${lastName[0]}`
-            : abbreviation}
+          {name}
         </span>
       </AvatarComponent>
     </Badge>

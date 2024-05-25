@@ -4,8 +4,8 @@ exports[`Avatar renders correclty 1`] = `
 <div>
   <div>
     <div
+      aria-label="avatar SJ"
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-testid="avatar"
       stile="default"
     >
       <span
@@ -25,8 +25,8 @@ exports[`Avatar renders on disabled 1`] = `
     class="MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <div
+      aria-label="avatar SJ"
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-testid="avatar"
       disabled=""
       stile="default"
     >
@@ -57,8 +57,8 @@ exports[`Avatar renders with badged 1`] = `
     class="MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <div
+      aria-label="avatar SJ"
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-testid="avatar"
       stile="default"
     >
       <span
@@ -87,8 +87,8 @@ exports[`Avatar renders with name 1`] = `
 <div>
   <div>
     <div
+      aria-label="avatar EM"
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-testid="avatar"
       stile="default"
     >
       <span
@@ -106,8 +106,8 @@ exports[`Avatar renders with stile primary 1`] = `
 <div>
   <div>
     <div
+      aria-label="avatar SJ"
       class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-primary undefined-avatar css-17o22dy-MuiAvatar-root"
-      data-testid="avatar"
       stile="primary"
     >
       <span

@@ -14,7 +14,7 @@ describe('Avatar', () => {
     const { container } = render(
       <Avatar size={size} abbreviation={abbreviation} />,
     );
-    const avatarElement = screen.getByTestId('avatar');
+    const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
     expect(avatarElement).toBeInTheDocument();
     expect(avatarElement).toHaveClass('medium');
 
@@ -36,7 +36,7 @@ describe('Avatar', () => {
       />,
     );
 
-    const avatarElement = screen.getByTestId('avatar');
+    const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
     await user.click(avatarElement);
     expect(onClickHandler).toHaveBeenCalled();
   });
@@ -45,7 +45,7 @@ describe('Avatar', () => {
       <Avatar size={size} abbreviation={abbreviation} stile="primary" />,
     );
 
-    const avatarElement = screen.getByTestId('avatar');
+    const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
     expect(avatarElement.getAttribute('stile')).toBe('primary');
     expect(container).toMatchSnapshot();
   });
@@ -92,7 +92,7 @@ describe('Avatar', () => {
 
     const badgeElement = screen.getByTestId('badge');
     expect(badgeElement).toHaveAttribute('disabled');
-    const avatarElement = screen.getByTestId('avatar');
+    const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
     expect(avatarElement).toHaveAttribute('disabled');
 
     expect(container).toMatchSnapshot();
