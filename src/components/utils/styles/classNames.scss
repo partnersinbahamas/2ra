@@ -1,3 +1,22 @@
-.mute {
-  @extend %PAvatarStatuses;
+@import './colors.scss';
+
+div.online {
+  background-color: $green_400;
+  border-color: $green_300;
+}
+div.default {
+  background-color: $cool_gray_200;
+  border-color: $cool_gray_400;
+}
+div.sleep {
+  background-color: $violet_600;
+  border-color: $violet_300;
+}
+div.busy {
+  background-color: $red_300;
+  border-color: $red_400;
+}
+div.not-here {
+  background-color: $orange_300;
+  border-color: $orange_500;
 }
