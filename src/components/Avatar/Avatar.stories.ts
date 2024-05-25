@@ -21,7 +21,6 @@ const meta = {
     firstName: story.name,
     lastName: story.name,
     abbreviation: story.abbreviation,
-    backgroundColor: story.backgroundColor,
     badged: story.badged,
     disabled: story.disabled,
     src: story.src,

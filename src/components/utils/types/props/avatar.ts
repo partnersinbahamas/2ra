@@ -6,13 +6,13 @@ export type PropsAvatar = Omit<AvatarProps, 'slotProps' | 'component'> & {
   lastName?: string;
   abbreviation: string;
   size?: TSize;
-  backgroundColor?: string;
   stile?: TStile;
   badged?: boolean;
   disabled?: boolean;
   badgeContent?: any;
   status?: TStringOrStatus;
   anchorOrigin?: IAnchorOrigin;
+  className?: any;
   src?: string;
   onClick?: () => void;
 };
