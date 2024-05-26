@@ -54,32 +54,36 @@ Please to style your custom input component use the mockup bellow.
 ### Guide styles
   .scss
 
-  use the "div" prefix to make the class more specific
+    .component {
+      .component-avatar {
+        &[disabled] {}
+      };
 
-    div.className {
-      &-avatar {
-        &[aria-disabled='true'] {};
-      }
-      &-badge {
-        &[aria-disabled='true'] {};
-        &-"status" {};
-      }
-    }
+      .component-badge {
+        &[status="statusProp"] {
+          &[disabled] {}
+        };
+      };
+
+      .component-abbreviation {};
+    };
+    
 
 .module.scss
 
-    .className {
-      [data-name="avatar"] {
-        &[aria-disabled="true"] {};
-      };
+  use the "div" prefix to make the class more specific
 
-      [data-name="badge"] {
-        &[aria-disabled="true"] {};
-      };
-
-      [data-name="abbreviation"] {};
-      [data-status="primary"] {};
+    div.avatar {
+      &[disabled] {};
     };
+
+    .badge {
+      &[status="statusProp"] {
+        &[disabled] {};
+      };
+    };
+
+    .abbreviation {};
 `,
       },
     },
