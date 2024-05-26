@@ -1,16 +1,15 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { AvatarSlots, Badge } from '@mui/material';
 import classNames from 'classnames';
 
-import { PropsAvatar } from '../utils/types/props/avatar';
-import { TStringOrStatus } from '../utils/types/types';
-import defaultProps from '../utils/variables/defaultProps';
-
-import styles from './Avatar.module.scss';
 import useModuleExtention from '../../hooks/useModuleExtention';
 import { useIDS } from '../../providers/IDSProvider';
 import useMute from '../../hooks/useMute';
 import { AvatarComponent, BoxComponent } from '../utils/variables/components';
+import { PropsAvatar } from '../utils/types/props/avatar';
+import { TStringOrStatus } from '../utils/types/types';
+import defaultProps from '../utils/variables/defaultProps';
+import styles from './Avatar.module.scss';
 
 interface IProps extends PropsAvatar {
   /**
@@ -54,34 +53,36 @@ export const Avatar: React.FC<IProps> = ({
   ).moduleExtentionState;
 
   const fullName = `${firstName} ${lastName}`;
-  const name = firstName && lastName
-    ? `${firstName[0]}${lastName[0]}`
-    : abbreviation
+  const name =
+    firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation;
 
-  const classes = {
-    wrapper: className && moduleExtention ? className['wrapper'] : className,
-    avatar:
-      className && moduleExtention
-        ? className['avatar']
-        : `${className}-avatar`,
-    abbreviation:
-      className && moduleExtention
-        ? className['abbreviation']
-        : `${className}-abbreviation`,
-    badge:
-      className && moduleExtention ? className['badge'] : `${className}-badge`,
-  };
+  const classes = useMemo(
+    () => ({
+      wrapper: className && moduleExtention ? className['wrapper'] : className,
+      avatar:
+        className && moduleExtention
+          ? className['avatar']
+          : `${className}-avatar`,
+      abbreviation:
+        className && moduleExtention
+          ? className['abbreviation']
+          : `${className}-abbreviation`,
+      badge:
+        className && moduleExtention
+          ? className['badge']
+          : `${className}-badge`,
+    }),
+    [className, moduleExtention],
+  );
 
-  const styleses = {
-    avatar: stile && !muteState && styles[`avatar-${stile}`],
-    badge: badged && styles[`badge`],
-    status: status && badged && !muteState && styles[status],
-  };
-
-
-  const id = `avatar-${React.useId()}`;
-
-  console.log(id);
+  const styleses = useMemo(
+    () => ({
+      avatar: stile && !muteState && styles[`avatar-${stile}`],
+      badge: badged && styles[`badge`],
+      status: status && badged && !muteState && styles[status],
+    }),
+    [stile, badged, status],
+  );
 
   if (!badged) {
     return (
@@ -94,7 +95,10 @@ export const Avatar: React.FC<IProps> = ({
           onClick={onClick}
           alt={fullName}
           src={src}
-          className={classNames(styles[size], styleses.avatar, classes.avatar)}
+          className={classNames(
+            styles[size],
+            className ? classes.avatar : styleses.avatar,
+          )}
         >
           <span
             data-testid="avatar-abbreviation"
@@ -116,7 +120,11 @@ export const Avatar: React.FC<IProps> = ({
           data-testid="badge"
           status={status}
           disabled={disabled}
-          className={classNames(styleses.badge as string, styleses.status)}
+          className={classNames(
+            styleses.badge as string,
+            styleses.status,
+            classes.badge,
+          )}
         >
           {badgeContent}
         </BoxComponent>
@@ -131,7 +139,10 @@ export const Avatar: React.FC<IProps> = ({
         onClick={onClick}
         alt={fullName}
         src={src}
-        className={classNames(styles[size], styleses.avatar, classes.avatar)}
+        className={classNames(
+          styles[size],
+          className ? classes.avatar : styleses.avatar,
+        )}
       >
         <span
           data-testid="avatar-abbreviation"
