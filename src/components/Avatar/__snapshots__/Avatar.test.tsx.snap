@@ -5,7 +5,7 @@ exports[`Avatar renders correclty 1`] = `
   <div>
     <div
       aria-label="avatar SJ"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default css-17o22dy-MuiAvatar-root"
       stile="default"
     >
       <span
@@ -26,7 +26,7 @@ exports[`Avatar renders on disabled 1`] = `
   >
     <div
       aria-label="avatar SJ"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default css-17o22dy-MuiAvatar-root"
       disabled=""
       stile="default"
     >
@@ -41,7 +41,7 @@ exports[`Avatar renders on disabled 1`] = `
       class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
     >
       <div
-        class="badge default MuiBox-root css-0"
+        class="badge default undefined-badge MuiBox-root css-0"
         data-testid="badge"
         disabled=""
         status="default"
@@ -51,14 +51,14 @@ exports[`Avatar renders on disabled 1`] = `
 </div>
 `;
 
-exports[`Avatar renders with badged 1`] = `
+exports[`Avatar renders with badge 1`] = `
 <div>
   <span
     class="MuiBadge-root css-1c32n2y-MuiBadge-root"
   >
     <div
       aria-label="avatar SJ"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default css-17o22dy-MuiAvatar-root"
       stile="default"
     >
       <span
@@ -72,7 +72,7 @@ exports[`Avatar renders with badged 1`] = `
       class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
     >
       <div
-        class="badge default MuiBox-root css-0"
+        class="badge default undefined-badge MuiBox-root css-0"
         data-testid="badge"
         status="default"
       >
@@ -88,7 +88,7 @@ exports[`Avatar renders with name 1`] = `
   <div>
     <div
       aria-label="avatar EM"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default undefined-avatar css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default css-17o22dy-MuiAvatar-root"
       stile="default"
     >
       <span
@@ -102,12 +102,12 @@ exports[`Avatar renders with name 1`] = `
 </div>
 `;
 
-exports[`Avatar renders with stile primary 1`] = `
+exports[`Avatar renders with stile 1`] = `
 <div>
   <div>
     <div
       aria-label="avatar SJ"
-      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-primary undefined-avatar css-17o22dy-MuiAvatar-root"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-primary css-17o22dy-MuiAvatar-root"
       stile="primary"
     >
       <span

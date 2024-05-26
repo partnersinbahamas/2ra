@@ -40,16 +40,17 @@ describe('Avatar', () => {
     await user.click(avatarElement);
     expect(onClickHandler).toHaveBeenCalled();
   });
-  it('renders with stile primary', () => {
+  it('renders with stile', () => {
+    const stile = 'primary';
     const { container } = render(
-      <Avatar size={size} abbreviation={abbreviation} stile="primary" />,
+      <Avatar size={size} abbreviation={abbreviation} stile={stile} />,
     );
 
     const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
-    expect(avatarElement.getAttribute('stile')).toBe('primary');
+    expect(avatarElement.getAttribute('stile')).toBe(stile);
     expect(container).toMatchSnapshot();
   });
-  it('renders with badged', () => {
+  it('renders with badge', () => {
     const content = 'Badge content';
     const { container } = render(
       <Avatar
