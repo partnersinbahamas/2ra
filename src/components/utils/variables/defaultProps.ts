@@ -8,6 +8,7 @@ const defaultProps: TDefaultProps = {
     vertical: 'bottom',
     horizontal: 'right',
   },
+  buttonType: 'button',
 };
 
 export default defaultProps;

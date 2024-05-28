@@ -29,6 +29,10 @@ export const story = {
     control: 'radio',
     options: ['text', 'password', 'email', 'number'],
   },
+  buttonType: {
+    control: 'inline-radio',
+    options: ['button', 'submit', 'reset'],
+  },
 
   //handles
   onClick: { action: 'clicked' },

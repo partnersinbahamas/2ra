@@ -7,3 +7,4 @@ interface IAnchorOrigin {
 }
 
 type TStylesExtension = '.scss' | '.module.scss';
+type TButtonType = 'button' | 'submit' | 'reset';

@@ -5,6 +5,7 @@ type TDefaultProps = {
   size: TSize;
   status: TStatus;
   anchorOrigin: IAnchorOrigin;
+  buttonType: TButtonType;
 };
 
 export default TDefaultProps;
