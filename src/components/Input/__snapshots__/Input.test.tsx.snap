@@ -15,7 +15,7 @@ exports[`Input renders correctly 1`] = `
         stile="default"
       />
       <input
-        class="sc-guDLey fpCSGi undefined-input"
+        class="sc-guDLey iZkRAk undefined-input"
         stile="default"
       />
     </label>
@@ -43,7 +43,7 @@ exports[`Input renders on disabled 1`] = `
         Input
       </h3>
       <input
-        class="sc-guDLey fpCSGi undefined-input"
+        class="sc-guDLey iZkRAk undefined-input"
         disabled=""
         stile="default"
       />
@@ -94,7 +94,7 @@ exports[`Input renders with each stile 2`] = `
         Input
       </h3>
       <input
-        class="sc-guDLey fpCSGi undefined-input"
+        class="sc-guDLey iZkRAk undefined-input"
         stile="default"
       />
     </label>
@@ -119,7 +119,7 @@ exports[`Input renders with each stile 3`] = `
         Input
       </h3>
       <input
-        class="sc-guDLey fpCSGi input undefined-input"
+        class="sc-guDLey iZkRAk input undefined-input"
         stile="primary"
       />
     </label>
@@ -145,7 +145,7 @@ exports[`Input renders with error 1`] = `
         stile="default"
       />
       <input
-        class="sc-guDLey fpCSGi error undefined-input"
+        class="sc-guDLey iZkRAk error undefined-input"
         error="error"
         stile="default"
       />

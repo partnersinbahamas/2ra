@@ -36,6 +36,7 @@ const InputComponent = styled.input<TProps>`
     width: 100%;
     padding: 0.625rem;
     font-family: 'Poppins', sans-serif;
+    
     font-weight: 700;
     color: ${COOL_GRAY_400};
     border: 2px solid ${COOL_GRAY_300};
