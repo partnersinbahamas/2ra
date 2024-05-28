@@ -1,0 +1,103 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button renders correctly 1`] = `
+<div>
+  <button
+    class="sc-beySPh fTTjVz medium"
+    stile="default"
+    type="button"
+  >
+    Button
+  </button>
+</div>
+`;
+
+exports[`Button renders with stile 1`] = `
+<div>
+  <button
+    class="sc-beySPh fTTjVz medium"
+    stile="default"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button renders with stile 2`] = `
+<div>
+  <button
+    class="sc-beySPh gCjA-dA medium"
+    stile="primary"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button renders with stile 3`] = `
+<div>
+  <button
+    class="sc-beySPh mHYUy medium"
+    stile="mute"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button renders with title 1`] = `
+<div>
+  <button
+    class="sc-beySPh fTTjVz medium"
+    stile="default"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should render click handler 1`] = `
+<div>
+  <button
+    class="sc-beySPh fTTjVz medium"
+    stile="default"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should renders with body 1`] = `
+<div>
+  <button
+    class="sc-beySPh fTTjVz medium"
+    stile="default"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
