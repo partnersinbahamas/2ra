@@ -2,7 +2,7 @@ import { TStile, TStringOrStatus } from '../types';
 
 type TExtendedComponentProps = {
   disabled?: boolean;
-  error?: boolean | string;
+  error?: TError;
   stile?: TStile;
   status?: TStringOrStatus;
 };

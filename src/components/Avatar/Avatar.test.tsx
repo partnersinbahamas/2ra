@@ -2,6 +2,7 @@ import userEvent from '@testing-library/user-event';
 import { render, screen } from '@testing-library/react';
 
 import { TSize } from '../utils/types/types';
+import { errors } from '../utils/variables';
 import { Avatar } from './Avatar';
 
 describe('Avatar', () => {
@@ -99,10 +100,16 @@ describe('Avatar', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each(['error', true])('renders on error ', (error) => {
+  it.each(errors)('renders on error ', error => {
     const isError = error ? 'true' : false;
     const { container } = render(
-      <Avatar size={size} abbreviation={abbreviation} disabled badged error={error} />,
+      <Avatar
+        size={size}
+        abbreviation={abbreviation}
+        disabled
+        badged
+        error={error}
+      />,
     );
 
     const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
@@ -115,5 +122,5 @@ describe('Avatar', () => {
     expect(badgeElement).toHaveAttribute('error', isError);
 
     expect(container).toMatchSnapshot();
-  })
+  });
 });

@@ -9,7 +9,7 @@ export type PropsAvatar = Omit<AvatarProps, 'slotProps' | 'component'> & {
   stile?: TStile;
   badged?: boolean;
   disabled?: boolean;
-  error?: string | boolean;
+  error?: TError;
   badgeContent?: any;
   status?: TStringOrStatus;
   anchorOrigin?: IAnchorOrigin;
