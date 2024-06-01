@@ -33,6 +33,7 @@ exports[`Avatar renders on disabled 1`] = `
       <span
         class="undefined-abbreviation"
         data-testid="avatar-abbreviation"
+        disabled=""
       >
         SJ
       </span>

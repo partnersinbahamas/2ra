@@ -1,6 +1,6 @@
 @import '../utils/styles/styles.scss';
-//default component styles
 
+//default component styles
 div.avatar {
   &-default {
     border: 2px solid $cool_gray_400;
@@ -17,6 +17,10 @@ div.avatar {
       border-color: $cool_gray_500;
       color: $cool_gray_200;
     }
+
+    &[error] {
+      border-color: $red_400;
+    }
   }
 
   &-primary {
@@ -30,6 +34,10 @@ div.avatar {
       background-color: $cyan_500;
       border-color: $blue_500;
       color: $cool_gray_200;
+    }
+
+    &[error] {
+      border-color: $red_400;
     }
   }
 }
@@ -46,10 +54,23 @@ div.avatar {
   align-items: center;
   justify-content: center;
 
+  &[status='primary'] {
+    background-color: $cyan_400;
+    border-color: $blue_500;
+
+    &[error] {
+      border-color: $red_400;
+    }
+  }
+
   &[disabled] {
     background-color: $cool_gray_400;
     border-color: $cool_gray_500;
     color: $cool_gray_200;
+  }
+
+  &[error] {
+    border-color: $red_400;
   }
 }
 

@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import HDLogo from '../../images/logos/hd-logo-dark-small.png'
+import HDLogo from '../../images/logos/hd-logo-dark-small.png';
 import { Avatar } from '../Avatar/Avatar';
 import { story } from '../utils/variables/story';
 
@@ -29,6 +29,7 @@ const meta = {
     size: story.size,
     status: story.status,
     badgeContent: { control: 'text' },
+    error: story.stringError,
     anchorOrigin: {
       control: {
         type: 'object', // indicate that is an object
@@ -57,15 +58,20 @@ Please to style your custom input component use the mockup bellow.
     .component {
       .component-avatar {
         &[disabled] {}
+        &[error] {};
       };
 
       .component-badge {
         &[status="statusProp"] {
-          &[disabled] {}
+          &[disabled] {};
+          &[error] {};
         };
       };
 
-      .component-abbreviation {};
+      .component-abbreviation {
+        &[error] {};
+        &[disabled] {};
+      };
     };
     
 
@@ -75,15 +81,20 @@ Please to style your custom input component use the mockup bellow.
 
     div.avatar {
       &[disabled] {};
+      &[error] {};
     };
 
     .badge {
       &[status="statusProp"] {
         &[disabled] {};
+        &[error] {};
       };
     };
 
-    .abbreviation {};
+    .abbreviation {
+      &[error] {};
+      &[disabled] {};
+    };
 `,
       },
     },
@@ -110,6 +121,13 @@ export const Disabled: TStory = {
     badged: true,
   },
 };
+export const Error: TStory = {
+  args: {
+    size: 'medium',
+    badged: true,
+    error: true,
+  },
+};
 export const Primary: TStory = {
   args: {
     size: 'medium',
@@ -125,6 +143,15 @@ export const PrimaryDisabled: TStory = {
     status: 'primary',
     badged: true,
     disabled: true,
+  },
+};
+export const PrimaryError: TStory = {
+  args: {
+    size: 'medium',
+    stile: 'primary',
+    status: 'primary',
+    badged: true,
+    error: true,
   },
 };
 export const Badged: TStory = {

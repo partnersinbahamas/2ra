@@ -38,6 +38,7 @@ export const Avatar: React.FC<IProps> = ({
   abbreviation,
   badged,
   disabled,
+  error,
   badgeContent,
   anchorOrigin = defaultProps.anchorOrigin,
   size = defaultProps.size,
@@ -55,6 +56,7 @@ export const Avatar: React.FC<IProps> = ({
   ).moduleExtentionState;
 
   const fullName = `${firstName} ${lastName}`;
+  const isError = error ? 'true' : false;
   const name =
     firstName && lastName ? `${firstName[0]}${lastName[0]}` : abbreviation;
 
@@ -94,6 +96,7 @@ export const Avatar: React.FC<IProps> = ({
           aria-label={`avatar ${name}`}
           stile={stile && stile}
           disabled={disabled}
+          error={isError}
           onClick={onClick}
           alt={fullName}
           src={src}
@@ -102,12 +105,14 @@ export const Avatar: React.FC<IProps> = ({
             className ? classes.avatar : styleses.avatar,
           )}
         >
-          <span
+          <Text
             data-testid="avatar-abbreviation"
             className={classes.abbreviation}
+            error={isError}
+            disabled={disabled}
           >
             {name}
-          </span>
+          </Text>
         </AvatarComponent>
       </div>
     );
@@ -122,6 +127,7 @@ export const Avatar: React.FC<IProps> = ({
           data-testid="badge"
           status={status}
           disabled={disabled}
+          error={isError}
           className={classNames(
             styleses.badge as string,
             styleses.status,
@@ -137,6 +143,7 @@ export const Avatar: React.FC<IProps> = ({
         {...props}
         aria-label={`avatar ${name}`}
         stile={stile && stile}
+        error={isError}
         disabled={disabled}
         onClick={onClick}
         alt={fullName}
@@ -146,12 +153,14 @@ export const Avatar: React.FC<IProps> = ({
           className ? classes.avatar : styleses.avatar,
         )}
       >
-        <span
+        <Text
           data-testid="avatar-abbreviation"
           className={classes.abbreviation}
+          error={isError}
+          disabled={disabled}
         >
           {name}
-        </span>
+        </Text>
       </AvatarComponent>
     </Badge>
   );
