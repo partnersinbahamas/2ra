@@ -52,6 +52,78 @@ exports[`Avatar renders on disabled 1`] = `
 </div>
 `;
 
+exports[`Avatar renders on error  1`] = `
+<div>
+  <span
+    class="MuiBadge-root css-1c32n2y-MuiBadge-root"
+  >
+    <div
+      aria-label="avatar SJ"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default css-17o22dy-MuiAvatar-root"
+      disabled=""
+      error="true"
+      stile="default"
+    >
+      <span
+        class="undefined-abbreviation"
+        data-testid="avatar-abbreviation"
+        disabled=""
+        error="true"
+      >
+        SJ
+      </span>
+    </div>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
+    >
+      <div
+        class="badge default undefined-badge MuiBox-root css-0"
+        data-testid="badge"
+        disabled=""
+        error="true"
+        status="default"
+      />
+    </span>
+  </span>
+</div>
+`;
+
+exports[`Avatar renders on error  2`] = `
+<div>
+  <span
+    class="MuiBadge-root css-1c32n2y-MuiBadge-root"
+  >
+    <div
+      aria-label="avatar SJ"
+      class="MuiAvatar-root MuiAvatar-circular MuiAvatar-colorDefault medium avatar-default css-17o22dy-MuiAvatar-root"
+      disabled=""
+      error="true"
+      stile="default"
+    >
+      <span
+        class="undefined-abbreviation"
+        data-testid="avatar-abbreviation"
+        disabled=""
+        error="true"
+      >
+        SJ
+      </span>
+    </div>
+    <span
+      class="MuiBadge-badge MuiBadge-standard MuiBadge-anchorOriginBottomRight MuiBadge-anchorOriginBottomRightCircular MuiBadge-overlapCircular css-9sufak-MuiBadge-badge"
+    >
+      <div
+        class="badge default undefined-badge MuiBox-root css-0"
+        data-testid="badge"
+        disabled=""
+        error="true"
+        status="default"
+      />
+    </span>
+  </span>
+</div>
+`;
+
 exports[`Avatar renders with badge 1`] = `
 <div>
   <span

@@ -98,4 +98,22 @@ describe('Avatar', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it.each(['error', true])('renders on error ', (error) => {
+    const isError = error ? 'true' : false;
+    const { container } = render(
+      <Avatar size={size} abbreviation={abbreviation} disabled badged error={error} />,
+    );
+
+    const avatarElement = screen.getByLabelText(`avatar ${abbreviation}`);
+    expect(avatarElement).toHaveAttribute('error', isError);
+
+    const avatarNameElement = screen.getByTestId('avatar-abbreviation');
+    expect(avatarNameElement).toHaveAttribute('error', isError);
+
+    const badgeElement = screen.getByTestId('badge');
+    expect(badgeElement).toHaveAttribute('error', isError);
+
+    expect(container).toMatchSnapshot();
+  })
 });
