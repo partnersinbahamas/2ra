@@ -1,7 +1,8 @@
-import { TStile } from "../../utils/types/types";
-import { Button } from "./Button";
-import { render, screen } from "@testing-library/react";
-import userEvent from "@testing-library/user-event";
+import { TStile } from '../../utils/types/types';
+import { stiles } from '../../utils/variables';
+import { Button } from './Button';
+import { render, screen } from '@testing-library/react';
+import userEvent from '@testing-library/user-event';
 
 describe('Button', () => {
   const user = userEvent.setup();
@@ -9,7 +10,7 @@ describe('Button', () => {
   const props = {
     title: 'Button',
     onClick: jest.fn(),
-    body: <div data-testid="body-element" />
+    body: <div data-testid="body-element" />,
   };
 
   it('renders correctly', () => {
@@ -27,7 +28,7 @@ describe('Button', () => {
     expect(container).toMatchSnapshot();
   });
 
-  it.each(['default', 'primary', 'mute'])('renders with stile', (stile) => {
+  it.each(stiles)('renders with stile', stile => {
     const { container } = render(<Button {...props} stile={stile as TStile} />);
 
     const buttonElement = screen.getByRole('button', { name: props.title });
@@ -36,7 +37,7 @@ describe('Button', () => {
   });
 
   it('should render click handler', async () => {
-    const { container } = render(<Button {...props}/>);
+    const { container } = render(<Button {...props} />);
 
     const buttonElement = screen.getByRole('button', { name: props.title });
     await user.click(buttonElement);
@@ -54,4 +55,4 @@ describe('Button', () => {
 
     expect(container).toMatchSnapshot();
   });
-})
+});
