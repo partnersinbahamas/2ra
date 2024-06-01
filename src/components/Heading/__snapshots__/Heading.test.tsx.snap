@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Heading renders correctly 1`] = `
+<div>
+  <h1
+    aria-level="1"
+    class="h1"
+    role="heading"
+  >
+    Heading level 1
+  </h1>
+</div>
+`;
+
+exports[`Heading renders correctly 2`] = `
+<div>
+  <h2
+    aria-level="2"
+    class="h2"
+    role="heading"
+  >
+    Heading level 2
+  </h2>
+</div>
+`;
+
+exports[`Heading renders correctly 3`] = `
+<div>
+  <h3
+    aria-level="3"
+    class="h3"
+    role="heading"
+  >
+    Heading level 3
+  </h3>
+</div>
+`;
+
+exports[`Heading renders correctly 4`] = `
+<div>
+  <h4
+    aria-level="4"
+    class="h4"
+    role="heading"
+  >
+    Heading level 4
+  </h4>
+</div>
+`;
+
+exports[`Heading renders correctly 5`] = `
+<div>
+  <h5
+    aria-level="5"
+    class="h5"
+    role="heading"
+  >
+    Heading level 5
+  </h5>
+</div>
+`;
+
+exports[`Heading renders correctly 6`] = `
+<div>
+  <h6
+    aria-level="6"
+    class="h6"
+    role="heading"
+  >
+    Heading level 6
+  </h6>
+</div>
+`;
