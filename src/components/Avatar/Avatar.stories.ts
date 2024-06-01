@@ -1,6 +1,6 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import me from '../../images/me.png';
+import HDLogo from '../../images/logos/hd-logo-dark-small.png'
 import { Avatar } from '../Avatar/Avatar';
 import { story } from '../utils/variables/story';
 
@@ -13,7 +13,7 @@ const meta = {
   component: Avatar,
   tags: ['autodocs'],
   args: {
-    abbreviation: 'EM',
+    abbreviation: 'HD',
     anchorOrigin: { horizontal: 'right', vertical: 'bottom' },
     stile: 'default',
   },
@@ -95,15 +95,11 @@ type TStory = StoryObj<typeof meta>;
 export const Default: TStory = {
   args: {
     size: 'medium',
-    firstName: 'Steve',
-    lastName: 'Jobs',
   },
 };
 export const Muted: TStory = {
   args: {
     size: 'medium',
-    firstName: 'Steve',
-    lastName: 'Jobs',
     stile: 'mute',
   },
 };
@@ -170,6 +166,6 @@ export const Sleep: TStory = {
 export const BackgroundImage: TStory = {
   args: {
     size: 'large',
-    src: me,
+    src: HDLogo,
   },
 };

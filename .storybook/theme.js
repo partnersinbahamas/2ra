@@ -1,11 +1,11 @@
 import { create } from '@storybook/theming';
 import packageJSON from '../package.json';
-import hdLogo from '../src/images/hd-logo-dark.png';
+import HDLogo from '../src/images/logos/hd-logo-dark.png';
 
 export default create({
   base: 'dark',
-  brandTitle: `2RA-UI ${packageJSON.version}`,
+  brandTitle: `IDS-UI ${packageJSON.version}`,
   brandUrl: 'https://github.com/partnersinbahamas',
-  brandImage: hdLogo,
+  brandImage: HDLogo,
   brandTarget: '_self',
 });
