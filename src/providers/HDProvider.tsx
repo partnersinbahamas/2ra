@@ -1,17 +1,17 @@
 import React, { useMemo, useState } from 'react';
 
-const IDSContext = React.createContext({
+const HDContext = React.createContext({
   stylesExtention: '.scss',
 });
 
-export const useIDS = () => React.useContext(IDSContext);
+export const useHD = () => React.useContext(HDContext);
 
 type TProps = {
   children: React.ReactNode;
   extension: TStylesExtension;
 };
 
-export const IDSProvider: React.FC<TProps> = ({
+export const HDProvider: React.FC<TProps> = ({
   children,
   extension = '.scss',
 }) => {
@@ -22,6 +22,6 @@ export const IDSProvider: React.FC<TProps> = ({
   );
 
   return (
-    <IDSContext.Provider value={providerValues}>{children}</IDSContext.Provider>
+    <HDContext.Provider value={providerValues}>{children}</HDContext.Provider>
   );
 };

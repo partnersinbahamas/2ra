@@ -11,7 +11,7 @@ import {
   Heading,
 } from './Input.styles';
 import styles from './Input.module.scss';
-import { useIDS } from '../../providers/IDSProvider';
+import { useHD } from '../../providers/HDProvider';
 import usePrime from '../../hooks/usePrime';
 import useModuleExtention from '../../hooks/useModuleExtention';
 
@@ -36,7 +36,7 @@ export const Input: React.FC<TProps> = ({
   className,
   ...props
 }) => {
-  const { stylesExtention } = useIDS();
+  const { stylesExtention } = useHD();
   const moduleExtention = useModuleExtention(
     stylesExtention as TStylesExtension,
   ).moduleExtentionState;
