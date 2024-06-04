@@ -6,7 +6,11 @@ type TProps = React.ComponentProps<'hgroup'> & {
   level: TLevel;
 };
 
-const Heading: React.FC<TProps> = ({ level, children, ...props }) => {
+const Heading: React.FC<TProps> = ({
+  level,
+  children = `Heading ${level}`,
+  ...props
+}) => {
   const { className, ...headingProps } = props;
 
   const tag = 'h';

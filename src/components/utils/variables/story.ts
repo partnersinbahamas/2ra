@@ -11,6 +11,7 @@ export const story = {
   backgroundColor: { control: 'color' },
   className: { control: 'text' },
   src: { control: 'text' },
+  children: { control: 'child' },
 
   // options
   stile: {
