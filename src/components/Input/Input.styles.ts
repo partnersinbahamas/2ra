@@ -9,6 +9,7 @@ import {
   RED_400,
 } from '../Colors/colors';
 import { TStile } from '../utils/types/types';
+import { fontTuraRegular, fontTuraRegularBold } from '../utils/variables/fonts';
 import { TProps } from './Input';
 
 const stiled = (stile?: TStile) => stile && !useMute(stile).muteState;
@@ -19,7 +20,6 @@ const InputWrapper = styled.div<TProps>`
   box-sizing: border-box;
 
   display: flex;
-  font-family: 'Poppins', sans-serif;
   flex-direction: column;
 
   * {
@@ -30,14 +30,13 @@ const InputComponent = styled.input<TProps>`
   ${({ stile }) =>
     stiled(stile) &&
     `
+    ${fontTuraRegular}
     transition: .5s;
     box-sizing: border-box;
 
     width: 100%;
     padding: 0.625rem;
-    font-family: 'Poppins', sans-serif;
-    
-    font-weight: 700;
+ 
     color: ${COOL_GRAY_400};
     border: 2px solid ${COOL_GRAY_300};
     border-radius: 0;
@@ -77,6 +76,7 @@ const Error = styled.span<TProps>`
 `;
 
 const Heading = styled.h3<TProps>`
+  ${fontTuraRegularBold}
   margin: 0;
   transition: 0.5s;
 

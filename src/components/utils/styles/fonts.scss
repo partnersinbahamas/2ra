@@ -1,27 +1,27 @@
 %fontTura {
   font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-};
+}
 
 %fontTuraRegular {
   @extend %fontTura;
   font-style: normal !important;
   font-weight: 300 !important;
-};
+}
 
 %fontTuraRegularBold {
   @extend %fontTura;
   font-style: normal !important;
   font-weight: 600 !important;
-};
+}
 
 %fontTuraItalic {
   @extend %fontTura;
   font-style: italic !important;
   font-weight: 300 !important;
-};
+}
 
 %fontTuraItalicBold {
   @extend %fontTura;
   font-style: italic !important;
   font-weight: 600 !important;
-};
+}

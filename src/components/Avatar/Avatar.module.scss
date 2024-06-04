@@ -3,6 +3,7 @@
 //default component styles
 div.avatar {
   &-default {
+    @extend %fontTuraRegularBold;
     border: 2px solid $cool_gray_400;
     display: flex;
     align-items: center;
@@ -10,7 +11,6 @@ div.avatar {
     border-radius: 50%;
     background-color: $cool_gray_200;
     color: $cool_gray_400;
-    font-weight: 600;
 
     &[disabled] {
       background-color: $cool_gray_400;
@@ -24,11 +24,11 @@ div.avatar {
   }
 
   &-primary {
+    @extend %fontTuraRegularBold;
     border: 2px solid $cool_gray_400;
     background-color: $cyan_400;
     border-color: $blue_400;
     color: $white;
-    font-weight: 600;
 
     &[disabled] {
       background-color: $cyan_500;

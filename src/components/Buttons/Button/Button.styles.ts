@@ -12,6 +12,7 @@ import usePrime from '../../../hooks/usePrime';
 import { TStile } from '../../utils/types/types';
 import defaultProps from '../../utils/variables/defaultProps';
 import useMute from '../../../hooks/useMute';
+import { fontTuraRegularBold } from '../../utils/variables/fonts';
 
 const prime = (stile: TStile | undefined) =>
   usePrime(stile || defaultProps.stile).primeState;
@@ -22,9 +23,7 @@ const ButtonComponent = styled.button<TButtonProps>`
   ${({ stile }) =>
     !mute(stile) &&
     `
-    font-family: 'Nunito Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-weight: 700;
-    
+    ${fontTuraRegularBold}
     border-radius: 3em;
     cursor: pointer;
     display: inline-block;
