@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/my-storybook/static/css/main.02a777a6.css",
-    "main.js": "/my-storybook/static/js/main.a322459b.js",
-    "static/js/453.6f6cc812.chunk.js": "/my-storybook/static/js/453.6f6cc812.chunk.js",
-    "index.html": "/my-storybook/index.html",
-    "main.02a777a6.css.map": "/my-storybook/static/css/main.02a777a6.css.map",
-    "main.a322459b.js.map": "/my-storybook/static/js/main.a322459b.js.map",
-    "453.6f6cc812.chunk.js.map": "/my-storybook/static/js/453.6f6cc812.chunk.js.map"
+    "main.css": "/partnersinbahamas/2RA/static/css/main.754ebb54.css",
+    "main.js": "/partnersinbahamas/2RA/static/js/main.f71112cc.js",
+    "static/js/453.3007437b.chunk.js": "/partnersinbahamas/2RA/static/js/453.3007437b.chunk.js",
+    "index.html": "/partnersinbahamas/2RA/index.html",
+    "main.754ebb54.css.map": "/partnersinbahamas/2RA/static/css/main.754ebb54.css.map",
+    "main.f71112cc.js.map": "/partnersinbahamas/2RA/static/js/main.f71112cc.js.map",
+    "453.3007437b.chunk.js.map": "/partnersinbahamas/2RA/static/js/453.3007437b.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.02a777a6.css",
-    "static/js/main.a322459b.js"
+    "static/css/main.754ebb54.css",
+    "static/js/main.f71112cc.js"
   ]
 }
