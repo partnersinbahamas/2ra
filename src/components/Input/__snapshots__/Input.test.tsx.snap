@@ -3,7 +3,7 @@
 exports[`Input renders correctly 1`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL"
+    class="sc-beySPh bvAwne"
   >
     <label
       aria-label="label"
@@ -11,11 +11,11 @@ exports[`Input renders correctly 1`] = `
       stile="default"
     >
       <h3
-        class="sc-eDLKkx huaXkC undefined-heading"
+        class="sc-eDLKkx fLXAhb undefined-heading"
         stile="default"
       />
       <input
-        class="sc-guDLey iZkRAk undefined-input"
+        class="sc-guDLey hJeQqt undefined-input"
         stile="default"
       />
     </label>
@@ -26,7 +26,7 @@ exports[`Input renders correctly 1`] = `
 exports[`Input renders on disabled 1`] = `
 <div>
   <div
-    class="sc-beySPh jyiaZj"
+    class="sc-beySPh eITmsa"
     disabled=""
   >
     <label
@@ -36,14 +36,14 @@ exports[`Input renders on disabled 1`] = `
       stile="default"
     >
       <h3
-        class="sc-eDLKkx huaXkC undefined-heading"
+        class="sc-eDLKkx fLXAhb undefined-heading"
         disabled=""
         stile="default"
       >
         Input
       </h3>
       <input
-        class="sc-guDLey iZkRAk undefined-input"
+        class="sc-guDLey hJeQqt undefined-input"
         disabled=""
         stile="default"
       />
@@ -55,7 +55,7 @@ exports[`Input renders on disabled 1`] = `
 exports[`Input renders with each stile 1`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL"
+    class="sc-beySPh bvAwne"
   >
     <label
       aria-label="Input-label"
@@ -63,7 +63,7 @@ exports[`Input renders with each stile 1`] = `
       stile="mute"
     >
       <h3
-        class="sc-eDLKkx dyNiMt undefined-heading"
+        class="sc-eDLKkx hPtwjE undefined-heading"
         stile="mute"
       >
         Input
@@ -80,7 +80,7 @@ exports[`Input renders with each stile 1`] = `
 exports[`Input renders with each stile 2`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL"
+    class="sc-beySPh bvAwne"
   >
     <label
       aria-label="Input-label"
@@ -88,13 +88,13 @@ exports[`Input renders with each stile 2`] = `
       stile="default"
     >
       <h3
-        class="sc-eDLKkx huaXkC undefined-heading"
+        class="sc-eDLKkx fLXAhb undefined-heading"
         stile="default"
       >
         Input
       </h3>
       <input
-        class="sc-guDLey iZkRAk undefined-input"
+        class="sc-guDLey hJeQqt undefined-input"
         stile="default"
       />
     </label>
@@ -105,7 +105,7 @@ exports[`Input renders with each stile 2`] = `
 exports[`Input renders with each stile 3`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL"
+    class="sc-beySPh bvAwne"
   >
     <label
       aria-label="Input-label"
@@ -113,13 +113,13 @@ exports[`Input renders with each stile 3`] = `
       stile="primary"
     >
       <h3
-        class="sc-eDLKkx huaXkC heading undefined-heading"
+        class="sc-eDLKkx fLXAhb heading undefined-heading"
         stile="primary"
       >
         Input
       </h3>
       <input
-        class="sc-guDLey iZkRAk input undefined-input"
+        class="sc-guDLey hJeQqt input undefined-input"
         stile="primary"
       />
     </label>
@@ -130,7 +130,7 @@ exports[`Input renders with each stile 3`] = `
 exports[`Input renders with error 1`] = `
 <div>
   <div
-    class="sc-beySPh fOhtuL"
+    class="sc-beySPh bvAwne"
     error="error"
   >
     <label
@@ -140,12 +140,12 @@ exports[`Input renders with error 1`] = `
       stile="default"
     >
       <h3
-        class="sc-eDLKkx huaXkC undefined-heading"
+        class="sc-eDLKkx fLXAhb undefined-heading"
         error="error"
         stile="default"
       />
       <input
-        class="sc-guDLey iZkRAk error undefined-input"
+        class="sc-guDLey hJeQqt error undefined-input"
         error="error"
         stile="default"
       />
