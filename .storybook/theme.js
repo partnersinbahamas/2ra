@@ -1,11 +1,11 @@
 import { create } from '@storybook/theming';
 import packageJSON from '../package.json';
-import HDLogo from '../src/images/logos/hd-logo-dark.png';
+import turaLogo from '../src/images/logos/2RA.svg';
 
 export default create({
   base: 'dark',
   brandTitle: `IDS-UI ${packageJSON.version}`,
   brandUrl: 'https://github.com/partnersinbahamas',
-  brandImage: HDLogo,
+  brandImage: turaLogo,
   brandTarget: '_self',
 });
