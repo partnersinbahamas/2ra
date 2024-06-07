@@ -24,13 +24,13 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "storybook dev -p 6006",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
-    "sb": "storybook dev -p 6006",
+    "web": "react-scripts start",
     "build-storybook": "storybook build",
     "prettier": "prettier --write 'src/**/*.{js,json,ts,tsx,css,scss}'",
     "lint": "eslint src/"
