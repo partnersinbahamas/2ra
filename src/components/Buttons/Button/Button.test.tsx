@@ -11,6 +11,7 @@ describe('Button', () => {
     title: 'Button',
     onClick: jest.fn(),
     body: <div data-testid="body-element" />,
+    disabled: false,
   };
 
   it('renders correctly', () => {
@@ -52,6 +53,17 @@ describe('Button', () => {
     const bodyElement = screen.queryByTestId('body-element');
     expect(bodyElement).not.toBeNull();
     expect(bodyElement).toBeVisible();
+
+    expect(container).toMatchSnapshot();
+  });
+
+  it.each(stiles)('should renders on disabled', stile => {
+    const { container } = render(
+      <Button {...props} disabled={true} stile={stile} />,
+    );
+
+    const buttonElement = screen.getByRole('button', { name: props.title });
+    expect(buttonElement).toBeDisabled();
 
     expect(container).toMatchSnapshot();
   });

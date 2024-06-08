@@ -3,7 +3,7 @@
 exports[`Button renders correctly 1`] = `
 <div>
   <button
-    class="sc-beySPh crhrOy medium"
+    class="sc-beySPh jcWKPL medium"
     stile="default"
     type="button"
   >
@@ -15,7 +15,7 @@ exports[`Button renders correctly 1`] = `
 exports[`Button renders with stile 1`] = `
 <div>
   <button
-    class="sc-beySPh mHYUy medium"
+    class="sc-beySPh eKvydP medium"
     stile="mute"
     type="button"
   >
@@ -30,7 +30,7 @@ exports[`Button renders with stile 1`] = `
 exports[`Button renders with stile 2`] = `
 <div>
   <button
-    class="sc-beySPh crhrOy medium"
+    class="sc-beySPh jcWKPL medium"
     stile="default"
     type="button"
   >
@@ -45,7 +45,7 @@ exports[`Button renders with stile 2`] = `
 exports[`Button renders with stile 3`] = `
 <div>
   <button
-    class="sc-beySPh hoqXzN medium"
+    class="sc-beySPh ixbRei medium"
     stile="primary"
     type="button"
   >
@@ -60,7 +60,7 @@ exports[`Button renders with stile 3`] = `
 exports[`Button renders with title 1`] = `
 <div>
   <button
-    class="sc-beySPh crhrOy medium"
+    class="sc-beySPh jcWKPL medium"
     stile="default"
     type="button"
   >
@@ -75,8 +75,56 @@ exports[`Button renders with title 1`] = `
 exports[`Button should render click handler 1`] = `
 <div>
   <button
-    class="sc-beySPh crhrOy medium"
+    class="sc-beySPh jcWKPL medium"
     stile="default"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should renders on disabled 1`] = `
+<div>
+  <button
+    class="sc-beySPh eKvydP medium"
+    disabled=""
+    stile="mute"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should renders on disabled 2`] = `
+<div>
+  <button
+    class="sc-beySPh jcWKPL medium"
+    disabled=""
+    stile="default"
+    type="button"
+  >
+    Button
+    <div
+      data-testid="body-element"
+    />
+  </button>
+</div>
+`;
+
+exports[`Button should renders on disabled 3`] = `
+<div>
+  <button
+    class="sc-beySPh ixbRei medium"
+    disabled=""
+    stile="primary"
     type="button"
   >
     Button
@@ -90,7 +138,7 @@ exports[`Button should render click handler 1`] = `
 exports[`Button should renders with body 1`] = `
 <div>
   <button
-    class="sc-beySPh crhrOy medium"
+    class="sc-beySPh jcWKPL medium"
     stile="default"
     type="button"
   >
