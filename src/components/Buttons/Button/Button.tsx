@@ -10,6 +10,7 @@ export type TProps = React.ComponentProps<'button'> & {
   size?: TSize;
   type?: TButtonType;
   stile?: TStile;
+  disabled?: boolean;
   onClick?: () => void;
   className?: any;
   title?: string;
@@ -20,6 +21,7 @@ export const Button: React.FC<TProps> = ({
   size = defaultProps.size,
   type = defaultProps.buttonType,
   stile = defaultProps.stile,
+  disabled,
   className,
   title = 'Button',
   body,
@@ -29,6 +31,7 @@ export const Button: React.FC<TProps> = ({
     <ButtonComponent
       {...props}
       type={type}
+      disabled={disabled}
       className={classNames(styles[size], className)}
       stile={stile}
     >
