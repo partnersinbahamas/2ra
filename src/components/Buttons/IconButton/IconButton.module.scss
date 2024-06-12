@@ -1,0 +1,31 @@
+@import '../../../components/utils/styles/styles.scss';
+
+.icon {
+  background-color: transparent;
+  border-radius: 50%;
+  transition: 0.3s;
+  border: 0;
+
+  &:hover {
+    background-color: $cool_gray_100;
+  }
+
+  &:active {
+    background-color: $cool_gray_200;
+  }
+}
+
+.small {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.medium {
+  width: 3.125rem;
+  height: 3.125rem;
+}
+
+.large {
+  width: 3.75rem;
+  height: 3.75rem;
+}
