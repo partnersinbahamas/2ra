@@ -1,7 +1,9 @@
 @import '../../../components/utils/styles/styles.scss';
 
-.icon {
+button.icon {
+  position: relative;
   background-color: transparent;
+  overflow: hidden;
   border-radius: 50%;
   transition: 0.3s;
   border: 0;
@@ -11,7 +13,23 @@
   }
 
   &:active {
-    background-color: $cool_gray_200;
+    transition: 0.5s;
+    background-color: rgba($color: $cool_gray_300, $alpha: 0.4);
+  }
+}
+
+.touch {
+  background-color: rgba($color: $cool_gray_300, $alpha: 0.4);
+  border-radius: 50%;
+  transition: 0.3s;
+
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  &-active {
+    animation: touchRippleWaveAction 0.5s;
   }
 }
 
@@ -28,4 +46,18 @@
 .large {
   width: 3.75rem;
   height: 3.75rem;
+}
+
+@keyframes touchRippleWaveAction {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 1;
+  }
+
+  100% {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
 }
