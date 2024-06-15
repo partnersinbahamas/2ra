@@ -27,6 +27,7 @@ const IconButton: FC<TProps> = ({
     <>
       {children}
       <span
+        data-testid="touch-ripple"
         className={classNames(styles.touch, {
           [styles['touch-active']]: isPressed,
         })}
