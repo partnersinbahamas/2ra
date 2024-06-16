@@ -15,6 +15,8 @@ export type TProps = React.ComponentProps<'button'> & {
   className?: any;
   title?: string;
   body?: any;
+  disablePadding?: boolean;
+  nonTitled?: boolean;
 };
 
 export const Button: React.FC<TProps> = ({
@@ -25,6 +27,8 @@ export const Button: React.FC<TProps> = ({
   className,
   title = 'Button',
   body,
+  disablePadding,
+  nonTitled,
   ...props
 }) => {
   return (
@@ -34,8 +38,9 @@ export const Button: React.FC<TProps> = ({
       disabled={disabled}
       className={classNames(styles[size], className)}
       stile={stile}
+      style={disablePadding ? { padding: '0' } : {}}
     >
-      {title}
+      {!nonTitled && title}
       {body && !!Object.keys(body).length && body}
     </ButtonComponent>
   );

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IconButton renders correctly 1`] = `
+<div>
+  <button
+    aria-label="IconButton-element"
+    class="sc-beySPh eKvydP medium icon medium"
+    stile="mute"
+    style="padding: 0px;"
+    type="button"
+  >
+    <svg
+      class="sc-eDLKkx kQekrq"
+      stroke="currentcolor"
+      viewBox="-2 -2 28 28"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <line
+        stroke-linecap="round"
+        stroke-width="2"
+        x1="1"
+        x2="23"
+        y1="23"
+        y2="1"
+      />
+    </svg>
+    <span
+      class="touch"
+      data-testid="touch-ripple"
+    />
+  </button>
+</div>
+`;
