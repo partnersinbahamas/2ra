@@ -1,4 +1,4 @@
-import { FC, ReactElement, useState } from 'react';
+import { Children, FC, ReactElement, cloneElement, useState } from 'react';
 import classNames from 'classnames';
 
 import defaultProps from '../../utils/variables/defaultProps';
@@ -27,9 +27,13 @@ const IconButton: FC<TProps> = ({
 }) => {
   const [isPressed, setIsPressed] = useState<boolean>(false);
 
+  const modifiedChildren = Children.map(children, child =>
+    cloneElement(child, { size: size.toLocaleUpperCase() }),
+  );
+
   const buttonBody = (
     <>
-      {children}
+      {modifiedChildren}
       <span
         data-testid="touch-ripple"
         className={classNames(styles.touch, {
