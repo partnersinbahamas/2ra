@@ -10,6 +10,7 @@ export type TProps = React.ComponentProps<'button'> & {
   size?: TSize;
   type?: TButtonType;
   stile?: TStile;
+  style?: React.CSSProperties;
   disabled?: boolean;
   onClick?: () => void;
   className?: any;
@@ -38,7 +39,10 @@ export const Button: React.FC<TProps> = ({
       disabled={disabled}
       className={classNames(styles[size], className)}
       stile={stile}
-      style={disablePadding ? { padding: '0' } : {}}
+      style={{
+        ...props.style,
+        ...(disablePadding ? { padding: '0' } : {}),
+      }}
     >
       {!nonTitled && title}
       {body && !!Object.keys(body).length && body}
