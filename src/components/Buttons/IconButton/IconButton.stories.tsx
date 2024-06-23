@@ -17,6 +17,8 @@ const meta = {
     label: story.title,
     onClick: story.onClick,
     backgroundColor: story.backgroundColor,
+    showLabel: story.boolean,
+    labelPosition: story.labelPosition,
   },
 } satisfies Meta<typeof IconButton>;
 
