@@ -8,17 +8,21 @@ import { Button } from '../Button/Button';
 import styles from './IconButton.module.scss';
 
 type TProps = React.ComponentProps<'button'> & {
+  className?: string;
   children: ReactElement;
   size?: TSize;
   label?: string;
   onClick?: () => void;
+  backgroundColor?: string;
 };
 
 const IconButton: FC<TProps> = ({
   children,
+  className,
   size = defaultProps.size,
   label,
   onClick,
+  backgroundColor,
   ...props
 }) => {
   const [isPressed, setIsPressed] = useState<boolean>(false);
@@ -47,11 +51,12 @@ const IconButton: FC<TProps> = ({
       {...props}
       stile="mute"
       size={size}
-      className={classNames(styles.icon, styles[size])}
+      className={classNames(styles.icon, styles[size], className)}
       body={buttonBody}
       aria-label={label}
       onClick={handleClick}
       onMouseDown={() => setIsPressed(true)}
+      style={{ backgroundColor }}
       disablePadding
       nonTitled
     />
