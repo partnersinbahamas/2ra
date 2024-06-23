@@ -2,32 +2,80 @@
 
 exports[`IconButton renders correctly 1`] = `
 <div>
-  <button
-    aria-label="IconButton-element"
-    class="sc-beySPh eKvydP medium icon medium"
-    stile="mute"
-    style="padding: 0px;"
-    type="button"
+  <div
+    class="sc-guDLey kkZa-dY"
   >
-    <svg
-      class="sc-hLQSwg iHelPB"
-      stroke="currentcolor"
-      viewBox="-1 -1 26 26"
-      xmlns="http://www.w3.org/2000/svg"
+    <button
+      aria-label="IconButton-element"
+      class="sc-beySPh eKvydP medium icon medium"
+      id="icon-button-:r0:"
+      stile="mute"
+      style="padding: 0px;"
+      type="button"
     >
-      <line
-        stroke-linecap="round"
-        stroke-width="3"
-        x1="1.5"
-        x2="22.5"
-        y1="22.5"
-        y2="1.5"
+      <svg
+        class="sc-jTQCzO gnhoWq"
+        stroke="currentcolor"
+        viewBox="-1 -1 26 26"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          stroke-linecap="round"
+          stroke-width="3"
+          x1="1.5"
+          x2="22.5"
+          y1="22.5"
+          y2="1.5"
+        />
+      </svg>
+      <span
+        class="touch"
+        data-testid="touch-ripple"
       />
-    </svg>
-    <span
-      class="touch"
-      data-testid="touch-ripple"
-    />
-  </button>
+    </button>
+  </div>
+</div>
+`;
+
+exports[`IconButton renders with visible label 1`] = `
+<div>
+  <div
+    class="sc-guDLey kkZa-dY"
+  >
+    <label
+      class="sc-dmyCSP cwbdRF"
+      for="icon-button-:r1:"
+    >
+      IconButton-element
+    </label>
+    <button
+      aria-label="IconButton-element"
+      class="sc-beySPh eKvydP medium icon medium"
+      id="icon-button-:r1:"
+      stile="mute"
+      style="padding: 0px;"
+      type="button"
+    >
+      <svg
+        class="sc-jTQCzO gnhoWq"
+        stroke="currentcolor"
+        viewBox="-1 -1 26 26"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <line
+          stroke-linecap="round"
+          stroke-width="3"
+          x1="1.5"
+          x2="22.5"
+          y1="22.5"
+          y2="1.5"
+        />
+      </svg>
+      <span
+        class="touch"
+        data-testid="touch-ripple"
+      />
+    </button>
+  </div>
 </div>
 `;

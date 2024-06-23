@@ -12,6 +12,7 @@ export const story = {
   className: { control: 'text' },
   src: { control: 'text' },
   children: { control: 'child' },
+  boolean: { control: 'boolean' },
 
   // options
   stile: {
@@ -33,6 +34,10 @@ export const story = {
   buttonType: {
     control: 'inline-radio',
     options: ['button', 'submit', 'reset'],
+  },
+  labelPosition: {
+    control: 'inline-radio',
+    options: ['top', 'bottom', 'left', 'right'],
   },
 
   //handles
