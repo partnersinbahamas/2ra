@@ -1,6 +1,8 @@
 @import '../../../components/utils/styles/styles.scss';
 
-.icon {
+.ibutton {
+  cursor: pointer;
+  width: 100px;
   position: relative;
   background-color: transparent;
   overflow: hidden;
@@ -8,18 +10,45 @@
   transition: 0.3s;
   border: 0;
 
-  &:hover {
-    background-color: $cool_gray_100;
+  &-default {
+    &:hover {
+      background-color: $cool_gray_100;
+    }
+
+    &:active {
+      transition: 0.5s;
+      background-color: rgba($color: $cool_gray_200, $alpha: 0.7);
+    }
+
+    &[disabled] {
+      background-color: $cool_gray_300;
+      color: $cool_gray_500;
+      cursor: not-allowed;
+    }
   }
 
-  &:active {
-    transition: 0.5s;
-    background-color: rgba($color: $cool_gray_300, $alpha: 0.4);
+  &-primary {
+    background-color: rgba($color: $cyan_300, $alpha: 0.5);
+    color: $white;
+
+    &:hover {
+      background-color: rgba($color: $cyan_400, $alpha: 0.5);
+    }
+
+    &:active {
+      transition: 0.5s;
+      background-color: $cyan_300;
+    }
+
+    &[disabled] {
+      background-color: $blue_400;
+      color: $blue_500;
+      cursor: not-allowed;
+    }
   }
 }
 
 .touch {
-  background-color: rgba($color: $cool_gray_300, $alpha: 0.4);
   border-radius: 50%;
   transition: 0.3s;
 
@@ -27,6 +56,14 @@
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+
+  &-default {
+    background-color: rgba($color: $cool_gray_400, $alpha: 0.4);
+  }
+
+  &-primary {
+    background-color: rgba($color: $blue_300, $alpha: 0.7);
+  }
 
   &-active {
     animation: touchRippleWaveAction 0.5s;
