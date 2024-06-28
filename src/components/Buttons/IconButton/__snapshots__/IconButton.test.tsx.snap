@@ -7,8 +7,8 @@ exports[`IconButton renders correctly 1`] = `
   >
     <button
       aria-label="IconButton-element"
-      class="sc-beySPh eKvydP medium icon medium"
-      id="icon-button-:r0:"
+      class="sc-beySPh eKvydP medium undefined-button ibutton ibutton-default medium"
+      id="ibutton-:r0:"
       stile="mute"
       style="padding: 0px;"
       type="button"
@@ -29,7 +29,7 @@ exports[`IconButton renders correctly 1`] = `
         />
       </svg>
       <span
-        class="touch"
+        class="touch touch-default"
         data-testid="touch-ripple"
       />
     </button>
@@ -43,15 +43,15 @@ exports[`IconButton renders with visible label 1`] = `
     class="sc-guDLey kkZa-dY"
   >
     <label
-      class="sc-dmyCSP cwbdRF"
-      for="icon-button-:r1:"
+      class="sc-dmyCSP cwbdRF undefined-label"
+      for="ibutton-:r1:"
     >
       IconButton-element
     </label>
     <button
       aria-label="IconButton-element"
-      class="sc-beySPh eKvydP medium icon medium"
-      id="icon-button-:r1:"
+      class="sc-beySPh eKvydP medium undefined-button ibutton ibutton-default medium"
+      id="ibutton-:r1:"
       stile="mute"
       style="padding: 0px;"
       type="button"
@@ -72,7 +72,7 @@ exports[`IconButton renders with visible label 1`] = `
         />
       </svg>
       <span
-        class="touch"
+        class="touch touch-default"
         data-testid="touch-ripple"
       />
     </button>
