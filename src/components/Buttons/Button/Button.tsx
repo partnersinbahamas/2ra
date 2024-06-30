@@ -13,6 +13,11 @@ export type TProps = TPropsButton & {
   stile?: TStile;
   style?: React.CSSProperties;
   disabled?: boolean;
+  /**
+   * TError
+   * @type string | boolean
+   */
+  error?: TError;
   onClick?: () => void;
   className?: any;
   title?: string;
@@ -26,6 +31,7 @@ export const Button: React.FC<TProps> = ({
   type = defaultProps.buttonType,
   stile = defaultProps.stile,
   disabled,
+  error,
   className,
   title = 'Button',
   body,
@@ -33,10 +39,13 @@ export const Button: React.FC<TProps> = ({
   nonTitled,
   ...props
 }) => {
+  const isError = error ? 'true' : false;
+
   return (
     <ButtonComponent
       {...props}
       type={type}
+      error={isError}
       disabled={disabled}
       className={classNames(styles[size], className)}
       stile={stile}
