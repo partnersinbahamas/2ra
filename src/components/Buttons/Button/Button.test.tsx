@@ -67,4 +67,12 @@ describe('Button', () => {
 
     expect(container).toMatchSnapshot();
   });
+
+  it('renders on error', () => {
+    const { container } = render(<Button {...props} error={true} />);
+    const buttonElement = screen.getByRole('button');
+    expect(buttonElement).toHaveAttribute('error', 'true');
+
+    expect(container).toMatchSnapshot();
+  });
 });

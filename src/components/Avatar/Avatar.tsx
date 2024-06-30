@@ -30,6 +30,11 @@ interface IProps extends PropsAvatar {
    * You definitely can attach your own statuses and style them.
    */
   status?: TStringOrStatus;
+  /**
+   * TError
+   * @type string | boolean
+   */
+  error?: TError;
 }
 
 export const Avatar: React.FC<IProps> = ({

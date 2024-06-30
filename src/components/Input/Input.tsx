@@ -19,7 +19,11 @@ export interface TProps extends InputHTMLAttributes<HTMLInputElement> {
   title?: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
   onChangeValue?: (value: string) => void;
-  error?: string;
+  /**
+   * TError
+   * @type string | boolean
+   */
+  error?: TError;
   stile?: TStile;
   disabled?: boolean;
   className?: any;
@@ -43,7 +47,7 @@ export const Input: React.FC<TProps> = ({
   const prime = usePrime(stile).primeState;
 
   const label = title ? `${title}-label` : 'label';
-  const isError = error?.length ? error : undefined;
+  const isError = error ? 'true' : undefined;
 
   const classes = {
     wrapper: className && moduleExtention ? className['wrapper'] : className,
