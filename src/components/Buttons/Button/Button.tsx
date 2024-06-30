@@ -2,11 +2,12 @@ import React from 'react';
 import classNames from 'classnames';
 
 import defaultProps from '../../utils/variables/defaultProps';
+import TPropsButton from '../../utils/types/props/button';
 import { TSize, TStile } from '../../utils/types/types';
 import { ButtonComponent } from './Button.styles';
 import styles from './Button.module.scss';
 
-export type TProps = React.ComponentProps<'button'> & {
+export type TProps = TPropsButton & {
   size?: TSize;
   type?: TButtonType;
   stile?: TStile;
