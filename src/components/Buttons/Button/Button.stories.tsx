@@ -13,6 +13,7 @@ const meta = {
     className: story.className,
     title: story.title,
     disabled: story.disabled,
+    error: story.stringError,
   },
   parameters: {
     layout: 'centered',
@@ -29,6 +30,7 @@ Please to style your custom input component use the mockup bellow.
 
     button.button {
       &[disabled] {};
+      &[error] {};
     }
     `,
       },
@@ -40,6 +42,7 @@ export default meta;
 type TStory = StoryObj<typeof meta>;
 
 export const Default: TStory = {};
+export const Error: TStory = { args: { error: true } };
 export const DefaultDisabled: TStory = { args: { disabled: true } };
 
 export const Primary: TStory = { args: { stile: 'primary' } };
