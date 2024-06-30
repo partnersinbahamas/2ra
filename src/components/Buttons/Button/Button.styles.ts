@@ -9,6 +9,8 @@ import {
   COOL_GRAY_400,
   COOL_GRAY_500,
   CYAN_400,
+  RED_300,
+  RED_500,
   WHITE,
 } from '../../Colors/colors';
 import usePrime from '../../../hooks/usePrime';
@@ -35,6 +37,12 @@ const ButtonComponent = styled.button<TButtonProps>`
       cursor: pointer;
       display: inline-block;
       line-height: 1;
+
+      &[error] {
+        background-color: ${RED_300};
+        border-color: ${RED_500};
+        color: ${WHITE};
+      };
 
       &[disabled] {
         cursor: not-allowed;
